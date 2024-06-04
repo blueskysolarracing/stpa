@@ -6,14 +6,15 @@ from typing import ClassVar
 
 
 @dataclass
-class ControlStructure(ABC):
-    pass
+class ControlStructure():
+    id: str
+    value: str
 
 
 @dataclass
-class ControlAction(Definition):
-    pass
+class ControlActionFeedback():
+    controller: ControlStructure
+    controlled: ControlStructure
 
-@dataclass
-class ControlFeedback(Definition):
-    pass
+    action: str
+    feedback: str

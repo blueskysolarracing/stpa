@@ -1,5 +1,10 @@
 import xml.etree.ElementTree as ET
 
+from diagrams import ControlStructure, ControlActionFeedback 
+
+def parse_process(cell: ET.Element) -> ControlStructure:
+    return ControlStructure(cell.attrib['id'], cell.attrib['value'])
+
 def parse(root: ET.Element):
     cells = []
     for cell in root.findall('mxCell'):
@@ -8,6 +13,8 @@ def parse(root: ET.Element):
             print(cell.attrib['value'])
             if cell.attrib['parent'] == '1':
                 print('\tprocess')
+                structure = parse_process(cell)
+                print(structure)
             else:
                 print('\tarrow')
 
