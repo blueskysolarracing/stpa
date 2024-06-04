@@ -13,3 +13,7 @@ class ControlStructure(ABC):
 @dataclass
 class ControlAction(Definition):
     pass
+
+@dataclass
+class ControlFeedback(Definition):
+    pass
