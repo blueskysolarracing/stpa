@@ -1,5 +1,5 @@
 from diagram_parser import parse_file
-from diagrams import ControlStructure, ControlAction, ControlFeedback
+from definitions import ControlStructure, ControlAction, ControlFeedback
 
 # def test_example():
     # xml_filename = '/home/aliraeis/Projekte/BlueSkySolarRacing/stpa/examples/simple_control_structure.drawio'

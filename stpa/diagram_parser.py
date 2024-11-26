@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 import re
 from bs4 import BeautifulSoup
 
-from diagrams import ControlStructure, ControlAction, ControlFeedback
+from definitions import ControlStructure, ControlAction, ControlFeedback
 
 controlStructures: dict[str, ControlStructure] = {}
 all_cells: dict[str, ET.Element] = {}
