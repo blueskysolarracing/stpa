@@ -1,5 +1,7 @@
 from diagram_parser import parse_file
+from definitions import Hazard
 from definitions import ControlStructure, ControlAction, ControlFeedback
+from definitions import UnsafeControlAction_notProviding
 
 # def test_example():
     # xml_filename = '/home/aliraeis/Projekte/BlueSkySolarRacing/stpa/examples/simple_control_structure.drawio'
@@ -24,3 +26,8 @@ def test_fig2_11():
     print(diagram_elements)
 
     assert(expected_diagrams == diagram_elements)
+
+
+def test_UCA_definitions():
+    pass
+
