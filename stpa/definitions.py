@@ -161,3 +161,57 @@ class ControlFeedback(ActionFeedback, Definition):
         if isinstance(other, ControlFeedback):
             return self.feedback == other.feedback and self.controlled == other.controlled and self.controller == other.controller
         return False
+
+
+@dataclass(repr=False)
+class UnsafeControlAction(Definition, ABC):
+    _label: ClassVar[str] = 'UCA-'
+    _type_uca: str
+
+    source: ControlStructure
+    hazard: Hazard
+    controlAction: ControlAction 
+    context: str
+
+    def __str__(self) -> str:
+        return (
+            f'{self._label}: {repr(self.source)}'
+            f'{self._type_uca} {repr(self.controlAction)}'
+            f'{self.context}'
+            f'[{self.hazard._label}]'
+        )
+
+
+@dataclass(repr=False)
+class UnsafeControlAction_notProviding(UnsafeControlAction):
+    _type_uca = 'does not provide'
+
+
+@dataclass(repr=False)
+class UnsafeControlAction_providing(UnsafeControlAction):
+    _type_uca = 'provides'
+
+
+@dataclass(repr=False)
+class UnsafeControlAction_providingEarly(UnsafeControlAction):
+    _type_uca = 'provides too early the'
+
+
+@dataclass(repr=False)
+class UnsafeControlAction_providingLate(UnsafeControlAction):
+    _type_uca = 'provides too late the'
+
+
+@dataclass(repr=False)
+class UnsafeControlAction_providingOutOfOrder(UnsafeControlAction):
+    _type_uca = 'provides out of order the'
+
+
+@dataclass(repr=False)
+class UnsafeControlAction_stoppedSoon(UnsafeControlAction):
+    _type_uca= 'stops providing too soon the'
+
+
+@dataclass(repr=False)
+class UnsafeControlAction_appliedLong(UnsafeControlAction):
+    _type_uca = 'applied too long the'
