@@ -166,7 +166,9 @@ class ControlFeedback(ActionFeedback, Definition):
 @dataclass(repr=False)
 class UnsafeControlAction(Definition, ABC):
     _label: ClassVar[str] = 'UCA-'
-    _type_uca: str
+
+    # todo just use an enum for this
+    _type_uca: ClassVar[str]
 
     source: ControlStructure
     hazard: Hazard
@@ -176,9 +178,9 @@ class UnsafeControlAction(Definition, ABC):
     def __str__(self) -> str:
         return (
             f'{self._label}: {repr(self.source)}'
-            f'{self._type_uca} {repr(self.controlAction)}'
-            f'{self.context}'
-            f'[{self.hazard._label}]'
+            f' {self._type_uca} {repr(self.controlAction)}'
+            f' {self.context}'
+            f' [{self.hazard._label}]'
         )
 
 
