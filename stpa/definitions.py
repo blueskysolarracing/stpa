@@ -24,7 +24,7 @@ class Definition(ABC):
         pass
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class Loss(Definition):
     _label: ClassVar[str] = 'L-'
     description: str
@@ -33,7 +33,7 @@ class Loss(Definition):
         return f'{repr(self)}: {self.description}'
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class Hazard(Definition):
     _label: ClassVar[str] = 'H-'
     system: str
@@ -49,7 +49,7 @@ class Hazard(Definition):
         )
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class SystemLevelConstraint(Definition, ABC):
     _label: ClassVar[str] = 'SC-'
 
@@ -60,7 +60,7 @@ class SystemLevelConstraint(Definition, ABC):
     #         self.hazards, self.loss_mitigation = args
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class SystemLevelConstraintType1(SystemLevelConstraint):
     system: str
     enforcement_condition: str
@@ -75,7 +75,7 @@ class SystemLevelConstraintType1(SystemLevelConstraint):
         )
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class SystemLevelConstraintType2(SystemLevelConstraint):
     hazard: Hazard
     loss_mitigation: str
@@ -92,7 +92,7 @@ class SystemLevelConstraintType2(SystemLevelConstraint):
         )
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class SubHazard(SystemLevelConstraint):
     hazard: Hazard
     description: str
@@ -105,7 +105,7 @@ class SubHazard(SystemLevelConstraint):
         return f'{repr(self.hazard)}.'
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class ControlStructure(Definition):
     # id: str
     name: str
@@ -115,20 +115,14 @@ class ControlStructure(Definition):
     def __str__(self) -> str:
         return f'ControlStructure: {self.name}'
 
-    def __hash__(self):
-        return hash(self.name)
-    
-    def __eq__(self, other) -> bool:
-        if isinstance(other, ControlStructure):
-            return self.name == other.name
-        return False
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class ActionFeedback(ABC):
     controlled: ControlStructure
     controller: ControlStructure
 
-@dataclass(repr=False)
+
+@dataclass(repr=False, frozen=True)
 class ControlAction(ActionFeedback, Definition):
     _label: ClassVar[str] = 'Action-'
 
@@ -137,15 +131,8 @@ class ControlAction(ActionFeedback, Definition):
     def __str__(self) -> str:
         return f'{repr(self.controller)} -> {self.action} -> {repr(self.controlled)}'
 
-    def __hash__(self):
-        return hash((self.action, self.controlled.name, self.controller.name))
 
-    def __eq__(self, other) -> bool:
-        if isinstance(other, ControlAction):
-            return self.action == other.action and self.controlled == other.controlled and self.controller == other.controller
-        return False
-
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class ControlFeedback(ActionFeedback, Definition):
     _label: ClassVar[str] = 'Feedback-'
 
@@ -154,16 +141,8 @@ class ControlFeedback(ActionFeedback, Definition):
     def __str__(self) -> str:
         return f'{repr(self.controller)} <- {self.feedback} <- {repr(self.controlled)}'
 
-    def __hash__(self):
-        return hash((self.feedback, self.controlled.name, self.controller.name))
-    
-    def __eq__(self, other) -> bool:
-        if isinstance(other, ControlFeedback):
-            return self.feedback == other.feedback and self.controlled == other.controlled and self.controller == other.controller
-        return False
 
-
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class UnsafeControlAction(Definition, ABC):
     _label: ClassVar[str] = 'UCA-'
 
@@ -184,36 +163,36 @@ class UnsafeControlAction(Definition, ABC):
         )
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class UnsafeControlAction_notProviding(UnsafeControlAction):
     _type_uca = 'does not provide'
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class UnsafeControlAction_providing(UnsafeControlAction):
     _type_uca = 'provides'
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class UnsafeControlAction_providingEarly(UnsafeControlAction):
     _type_uca = 'provides too early the'
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class UnsafeControlAction_providingLate(UnsafeControlAction):
     _type_uca = 'provides too late the'
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class UnsafeControlAction_providingOutOfOrder(UnsafeControlAction):
     _type_uca = 'provides out of order the'
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class UnsafeControlAction_stoppedSoon(UnsafeControlAction):
     _type_uca= 'stops providing too soon the'
 
 
-@dataclass(repr=False)
+@dataclass(repr=False, frozen=True)
 class UnsafeControlAction_appliedLong(UnsafeControlAction):
     _type_uca = 'applied too long the'
