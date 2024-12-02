@@ -5,7 +5,7 @@ from operator import attrgetter
 from typing import ClassVar
 
 
-@dataclass
+@dataclass(frozen=True)
 class Definition(ABC):
     __counter: ClassVar[Counter[str]] = Counter()
     _label: ClassVar[str]
@@ -13,8 +13,10 @@ class Definition(ABC):
 
     def __post_init__(self) -> None:
         count = self.__counter[self._label]
-        self._index = count
-        self.__counter[self._label] += 1
+        # self._index = count
+        object.__setattr__(self, '_index', count)
+        # self.__counter[self._label] += 1
+        object.__setattr__(self, '__counter[self._label]', self.__counter[self._label] + 1)
     
     def __repr__(self) -> str:
         return f'{self._label}{self._index + 1}'
@@ -162,7 +164,7 @@ class UnsafeControlAction(Definition, ABC):
             f' [{self.hazard._label}]'
         )
 
-
+# todo convert this design to enum
 @dataclass(repr=False, frozen=True)
 class UnsafeControlAction_notProviding(UnsafeControlAction):
     _type_uca = 'does not provide'
