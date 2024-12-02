@@ -1,11 +1,8 @@
-from dataclasses import dataclass, field
-
 from diagram_parser import DiagramParser
 from definitions import Hazard
 from definitions import ControlStructure, ControlAction, ControlFeedback
-from definitions import UnsafeControlAction_notProviding
 
-class handbook_example:
+def test_fig2_11():
     flightcrew = ControlStructure('Flight Crew')
     aircraft = ControlStructure('Aircraft')
     wbs = ControlStructure('Wheel Braking Subsytem (WBS)')
@@ -18,18 +15,12 @@ class handbook_example:
     ac3 = ControlAction(controlled=physicalbrakes, controller=bscu, action='Brake')
     ac4 = ControlAction(controlled=physicalbrakes, controller=flightcrew, action='Manual Braking')
 
-    diagrams = {flightcrew, aircraft, wbs, othersubsystems, bscu, physicalbrakes, ac1, ac2, ac3, ac4}
+    expected_diagrams = {flightcrew, aircraft, wbs, othersubsystems, bscu, physicalbrakes, ac1, ac2, ac3, ac4}
 
-example = handbook_example()
-
-def test_fig2_11():
     xml_filename = '/home/aliraeis/Projekte/BlueSkySolarRacing/stpa/examples/handbook_fig2.11.drawio'
-    parser2 = DiagramParser(xml_filename)
-    diagram_elements = parser2.get_elements()
+    parser = DiagramParser(xml_filename)
+    diagram_elements = parser.get_elements()
 
-    assert(example.diagrams == diagram_elements)
+    print(diagram_elements)
 
-
-def test_UCA_definitions():
-    pass
-
+    assert(expected_diagrams == diagram_elements)
