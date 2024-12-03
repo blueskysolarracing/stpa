@@ -12,6 +12,9 @@ class DiagramParser:
         self._all_cells = {}
         self._diagram_elements = set()
         self.parse_file(filename)
+        ControlStructure.reset_counter()
+        ControlAction.reset_counter()
+        ControlFeedback.reset_counter()
 
 
     def get_elements(self) -> set[Union[ControlStructure, ControlAction, ControlFeedback]]:

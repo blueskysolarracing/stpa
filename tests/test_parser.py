@@ -9,11 +9,13 @@ def test_fig2_11():
     othersubsystems = ControlStructure('Other subsystems')
     bscu = ControlStructure('Brake System Control Unit(BSCU)')
     physicalbrakes = ControlStructure('Physical Wheel Brakes')
+    ControlStructure.reset_counter()
 
     ac1 = ControlAction(controlled=othersubsystems, controller=flightcrew, action='Manual controls (Engine throttle, Steer, Reverse thrust, etc.)')
     ac2 = ControlAction(controlled=bscu, controller=flightcrew, action='Arm and Set, Disarm, Brake')
     ac3 = ControlAction(controlled=physicalbrakes, controller=bscu, action='Brake')
     ac4 = ControlAction(controlled=physicalbrakes, controller=flightcrew, action='Manual Braking')
+    ControlAction.reset_counter()
 
     expected_diagrams = {flightcrew, aircraft, wbs, othersubsystems, bscu, physicalbrakes, ac1, ac2, ac3, ac4}
 
