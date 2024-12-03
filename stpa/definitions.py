@@ -13,10 +13,12 @@ class Definition(ABC):
 
     def __post_init__(self) -> None:
         count = self.__counter[self._label]
-        # self._index = count
+        # print(self._label, 'Count: ', count)
         object.__setattr__(self, '_index', count)
-        # self.__counter[self._label] += 1
-        object.__setattr__(self, '__counter[self._label]', self.__counter[self._label] + 1)
+        Definition.__counter[self._label] += 1
+
+    def get_label(self) -> str:
+        return repr(self)
     
     def __repr__(self) -> str:
         return f'{self._label}{self._index + 1}'
@@ -24,15 +26,20 @@ class Definition(ABC):
     @abstractmethod
     def __str__(self) -> str:
         pass
+    
+    @classmethod
+    def reset_counter(cls):
+        for label in cls.__counter:
+            cls.__counter[label] = 0
 
 
 @dataclass(repr=False, frozen=True)
 class Loss(Definition):
     _label: ClassVar[str] = 'L-'
     description: str
-
+    
     def __str__(self) -> str:
-        return f'{repr(self)}: {self.description}'
+        return f'{self.get_label()}: {self.description}'
 
 
 @dataclass(repr=False, frozen=True)
@@ -44,7 +51,7 @@ class Hazard(Definition):
 
     def __str__(self) -> str:
         return (
-            f'{repr(self)}:'
+            f'{self.get_label()}:'
             f' {self.system}'
             f' {self.unsafe_condition}'
             f' {self.losses}'
@@ -70,7 +77,7 @@ class SystemLevelConstraintType1(SystemLevelConstraint):
 
     def __str__(self) -> str:
         return (
-            f'{repr(self)}:'
+            f'{self.get_label()}:'
             f' {self.system}'
             f' {self.enforcement_condition}'
             f' {self.hazards}'
@@ -100,7 +107,7 @@ class SubHazard(SystemLevelConstraint):
     description: str
 
     def __str__(self) -> str:
-        return f'{repr(self)}: {self.description}'
+        return f'{self.get_label()}: {self.description}'
 
     @property
     def _label(self) -> str:  # type: ignore[override]  # TODO
@@ -115,7 +122,12 @@ class ControlStructure(Definition):
     _label: ClassVar[str] = 'CS-'
 
     def __str__(self) -> str:
-        return f'ControlStructure: {self.name}'
+        return f'{self.get_label()}: {self.name}'
+    
+    def __eq__(self, other):
+        if not isinstance(other, ControlStructure):
+            return False
+        return self.name == other.name
 
 
 @dataclass(repr=False, frozen=True)
@@ -131,7 +143,12 @@ class ControlAction(ActionFeedback, Definition):
     action: str
 
     def __str__(self) -> str:
-        return f'{repr(self.controller)} -> {self.action} -> {repr(self.controlled)}'
+        return f'{self.controller} -> {self.action} -> {self.controlled}'
+    
+    def __eq__(self, other):
+        if not isinstance(other, ControlAction):
+            return False
+        return self.action == other.action
 
 
 @dataclass(repr=False, frozen=True)
@@ -141,7 +158,12 @@ class ControlFeedback(ActionFeedback, Definition):
     feedback: str
 
     def __str__(self) -> str:
-        return f'{repr(self.controller)} <- {self.feedback} <- {repr(self.controlled)}'
+        return f'{self.controller} <- {self.feedback} <- {self.controlled}'
+    
+    def __eq__(self, other):
+        if not isinstance(other, ControlFeedback):
+            return False
+        return self.feedback == other.feedback
 
 
 @dataclass(repr=False, frozen=True)
@@ -158,10 +180,10 @@ class UnsafeControlAction(Definition, ABC):
 
     def __str__(self) -> str:
         return (
-            f'{self._label}: {repr(self.source)}'
-            f' {self._type_uca} {repr(self.controlAction)}'
+            f'{self.get_label()}: {self.source}'
+            f' {self._type_uca} {self.controlAction.action}'
             f' {self.context}'
-            f' [{self.hazard._label}]'
+            f' [{self.hazard.get_label()}]'
         )
 
 # todo convert this design to enum
