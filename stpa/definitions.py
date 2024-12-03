@@ -124,10 +124,13 @@ class ControlStructure(Definition):
     def __str__(self) -> str:
         return f'{self.get_label()}: {self.name}'
     
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         if not isinstance(other, ControlStructure):
             return False
         return self.name == other.name
+    
+    def __hash__(self) -> int:
+        return hash(self.name)
 
 
 @dataclass(repr=False, frozen=True)
@@ -145,10 +148,13 @@ class ControlAction(ActionFeedback, Definition):
     def __str__(self) -> str:
         return f'{self.controller} -> {self.action} -> {self.controlled}'
     
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         if not isinstance(other, ControlAction):
             return False
         return self.action == other.action
+
+    def __hash__(self) -> int:
+        return hash(self.action)
 
 
 @dataclass(repr=False, frozen=True)
@@ -160,11 +166,13 @@ class ControlFeedback(ActionFeedback, Definition):
     def __str__(self) -> str:
         return f'{self.controller} <- {self.feedback} <- {self.controlled}'
     
-    def __eq__(self, other):
+    def __eq__(self, other) -> int:
         if not isinstance(other, ControlFeedback):
             return False
         return self.feedback == other.feedback
 
+    def __hash__(self) -> int:
+        return hash(self.feedback)
 
 @dataclass(repr=False, frozen=True)
 class UnsafeControlAction(Definition, ABC):
