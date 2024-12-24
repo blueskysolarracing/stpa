@@ -5,7 +5,51 @@ import xml.etree.ElementTree as ET
 import re
 from bs4 import BeautifulSoup
 
-from stpa.definitions import *
+
+@dataclass(repr=False)
+class ControlStructure(Definition):
+    # id: str
+    name: str
+
+    def __hash__(self):
+        return hash(self.name)
+
+    def __eq__(self, other) -> bool:
+        if isinstance(other, ControlStructure):
+            return self.name == other.name
+        return False
+
+
+@dataclass(repr=False)
+class ActionFeedback(ABC):
+    controlled: ControlStructure
+    controller: ControlStructure
+
+
+@dataclass(repr=False)
+class ControlAction(ActionFeedback):
+    action: str
+
+    def __hash__(self):
+        return hash((self.action, self.controlled.name, self.controller.name))
+
+    def __eq__(self, other) -> bool:
+        if isinstance(other, ControlAction):
+            return self.action == other.action and self.controlled == other.controlled and self.controller == other.controller
+        return False
+
+
+@dataclass(repr=False)
+class ControlFeedback(ActionFeedback):
+    feedback: str
+
+    def __hash__(self):
+        return hash((self.feedback, self.controlled.name, self.controller.name))
+
+    def __eq__(self, other) -> bool:
+        if isinstance(other, ControlFeedback):
+            return self.feedback == other.feedback and self.controlled == other.controlled and self.controller == other.controller
+        return False
 
 controlStructures: dict[str, ControlStructure] = {}
 all_cells: dict[str, ET.Element] = {}

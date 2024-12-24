@@ -1,19 +1,33 @@
 __all__ = (
+    'ControllerConstraint',
     'Definition',
     'Hazard',
     'Loss',
+    'Responsibility',
+    'Scenario',
+    'ScenarioType1',
+    'ScenarioType2',
     'SubHazard',
     'SystemLevelConstraint',
     'SystemLevelConstraintType1',
     'SystemLevelConstraintType2',
+    'SystemLevelConstraintType3',
+    'UnsafeControlAction',
 )
 
 from stpa.definitions import (
+    ControllerConstraint,
     Definition,
     Hazard,
     Loss,
+    Responsibility,
+    Scenario,
+    ScenarioType1,
+    ScenarioType2,
     SubHazard,
     SystemLevelConstraint,
     SystemLevelConstraintType1,
     SystemLevelConstraintType2,
+    SystemLevelConstraintType3,
+    UnsafeControlAction,
 )
