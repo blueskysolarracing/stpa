@@ -51,9 +51,7 @@ hazards = (
 )
 
 def format_hazard(hazard):
-    # Include `hazard.system` only if it's not empty
     system = f"{hazard.system} " if hazard.system else ""
-    # Extract the `name` attribute from each `Loss` object
     losses = ', '.join(loss.name for loss in hazard.losses)
     return f"{hazard.name}: {system}{hazard.unsafe_condition} [{losses}]"
 

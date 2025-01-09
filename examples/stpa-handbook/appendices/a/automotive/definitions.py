@@ -1,12 +1,10 @@
 from stpa import Loss, Hazard, Definition
 
-# Losses
 losses = (
     Loss('L-1', 'Loss of life or serious injury to people'),
     Loss('L-2', 'Damage to the vehicle or objects outside the vehicle'),
 )
 
-# Hazards
 hazards = (
     Hazard(
         'H-1',
@@ -34,7 +32,6 @@ hazards = (
     ),
 )
 
-# Output
 if __name__ == "__main__":
     print("Losses\n------")
     for loss in losses:
