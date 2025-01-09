@@ -89,7 +89,6 @@ unsafe_control_actions = (
         'during landing roll before TBD taxi speed attained (causing reduced deceleration)',
         Definition.get_all('H4-1', 'H4-5'),
     ),
-    # BSCU.1d2 (too long)
     UnsafeControlAction(
         'BSCU.1d2',
         'Autobrake',
@@ -98,7 +97,6 @@ unsafe_control_actions = (
         'during landing roll (causing stop on runway)',
         Definition.get_all('H4-1'),
     ),
-    # BSCU.1d3 (interpretation: continuing brake command “until less than TBD seconds before touchdown” -> effectively too long)
     UnsafeControlAction(
         'BSCU.1d3',
         'Autobrake',
