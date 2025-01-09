@@ -1,162 +1,138 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
-from typing import Union
-
+from enum import auto, Enum
 import xml.etree.ElementTree as ET
-import re
-from bs4 import BeautifulSoup
+
+from stpa.utilities import clean_html_text
+
+GEOMETRY_TAG_NAME = 'mxGeometry'
+CELL_TAG_NAME = 'mxCell'
+CONTROL_STRUCTURE_PARENT = '1'
 
 
-@dataclass(repr=False)
-class ControlStructure(Definition):
-    # id: str
+class ControlType(Enum):
+    ACTION = auto()
+    FEEDBACK = auto()
+
+
+@dataclass
+class Entity:
     name: str
 
-    def __hash__(self):
-        return hash(self.name)
 
-    def __eq__(self, other) -> bool:
-        if isinstance(other, ControlStructure):
-            return self.name == other.name
-        return False
-
-
-@dataclass(repr=False)
-class ActionFeedback(ABC):
-    controlled: ControlStructure
-    controller: ControlStructure
+@dataclass
+class ControlActionOrFeedback:
+    description: str
+    control_type: ControlType
+    controller: Entity
+    controlled: Entity
 
 
-@dataclass(repr=False)
-class ControlAction(ActionFeedback):
-    action: str
+@dataclass
+class ControlStructure:
+    @classmethod
+    def get_control_type(
+            cls,
+            source_cell: ET.Element,
+            target_cell: ET.Element,
+    ) -> ControlType:
+        source_geometry = source_cell.find(GEOMETRY_TAG_NAME)
+        target_geometry = target_cell.find(GEOMETRY_TAG_NAME)
 
-    def __hash__(self):
-        return hash((self.action, self.controlled.name, self.controller.name))
+        assert source_geometry is not None
+        assert target_geometry is not None
 
-    def __eq__(self, other) -> bool:
-        if isinstance(other, ControlAction):
-            return self.action == other.action and self.controlled == other.controlled and self.controller == other.controller
-        return False
+        source_x = int(source_geometry.attrib['x'])
+        source_y = int(source_geometry.attrib['y'])
+        source_height = int(source_geometry.attrib['height'])
+        target_x = int(target_geometry.attrib['x'])
+        target_y = int(target_geometry.attrib['y'])
+        target_height = int(source_geometry.attrib['height'])
+        status = False
 
+        if (
+                source_y <= target_y <= source_y + source_height
+                or target_y <= source_y <= target_y + target_height
+        ):
+            status = source_x < target_x
+        else:
+            status = source_y < target_y
 
-@dataclass(repr=False)
-class ControlFeedback(ActionFeedback):
-    feedback: str
+        return ControlType.ACTION if status else ControlType.FEEDBACK
 
-    def __hash__(self):
-        return hash((self.feedback, self.controlled.name, self.controller.name))
+    @classmethod
+    def parse_diagram(cls, source: str) -> ControlStructure:
+        tree = ET.parse(source)
+        root = tree.getroot()[0][0][0]
+        cells = {}
+        cleaned_values = {}
 
-    def __eq__(self, other) -> bool:
-        if isinstance(other, ControlFeedback):
-            return self.feedback == other.feedback and self.controlled == other.controlled and self.controller == other.controller
-        return False
+        for cell in root.findall(CELL_TAG_NAME):
+            id_ = cell.attrib['id']
+            cells[id_] = cell
 
-controlStructures: dict[str, ControlStructure] = {}
-all_cells: dict[str, ET.Element] = {}
+            if 'value' in cell.attrib:
+                value = cell.attrib['value']
+                cleaned_value = clean_html_text(value)
+                cleaned_values[id_] = cleaned_value
 
-def isSameHeight(source_cell: ET.Element, target_cell: ET.Element) -> bool:
-    source_geom = source_cell.find('mxGeometry')
-    target_geom = target_cell.find('mxGeometry')
-    return int(source_geom.attrib['y']) <= int(target_geom.attrib['y']) <= int(source_geom.attrib['y']) + int(source_geom.attrib['height']) or \
-        int(target_geom.attrib['y']) <= int(source_geom.attrib['y']) <= int(target_geom.attrib['y']) + int(target_geom.attrib['height'])
+        entities = {}
+        parent_cleaned_values = {}
 
-def isSourceHigher(source_cell: ET.Element, target_cell: ET.Element) -> bool:
-    source_geom = source_cell.find('mxGeometry')
-    target_geom = target_cell.find('mxGeometry')
-    return int(source_geom.attrib['y']) < int(target_geom.attrib['y'])
+        for cell in cells.values():
+            id_ = cell.attrib['id']
+            cleaned_value = cleaned_values.get(id_, '')
+            parent = cell.attrib.get('parent', '')
 
-def isSourceToLeft(source_cell: ET.Element, target_cell: ET.Element) -> bool:
-    source_geom = source_cell.find('mxGeometry')
-    target_geom = target_cell.find('mxGeometry')
-    return int(source_geom.attrib['x']) < int(target_geom.attrib['x'])
+            if cleaned_value:
+                if parent == CONTROL_STRUCTURE_PARENT:
+                    entities[id_] = Entity(cleaned_value)
+                else:
+                    parent_cleaned_values[parent] = cleaned_value
 
-def isSourceController(source_cell: ET.Element, target_cell: ET.Element, arrow_value: str) -> bool:
-    if arrow_value.lower().startswith('action'):
-        return True
-    elif arrow_value.lower().startswith('feedback'):
-        return False
+        control_actions_or_feedbacks = []
 
-    if isSameHeight(source_cell, target_cell):
-        return isSourceToLeft(source_cell, target_cell)
-    return isSourceHigher(source_cell, target_cell)
+        for cell in cells.values():
+            if cell.attrib.get('edge') == '1':
+                id_ = cell.attrib['id']
+                cleaned_value = parent_cleaned_values.get(id_, '')
+                source_cell = cells[cell.attrib['source']]
+                target_cell = cells[cell.attrib['target']]
 
-def parse_arrow(cell: ET.Element) -> Union[ControlAction, ControlFeedback]:
-    arrow_cell = all_cells[cell.attrib['parent']]
-    arrow_value = cell.attrib['value']
+                if cleaned_value.lower().startswith('action'):
+                    control_type = ControlType.ACTION
+                elif cleaned_value.lower().startswith('feedback'):
+                    control_type = ControlType.FEEDBACK
+                else:
+                    control_type = cls.get_control_type(
+                        source_cell,
+                        target_cell,
+                    )
 
-    target = controlStructures[arrow_cell.attrib['target']]
-    target_cell = all_cells[arrow_cell.attrib['target']]
-    source = controlStructures[arrow_cell.attrib['source']]
-    source_cell = all_cells[arrow_cell.attrib['source']]
-    
-    if isSourceController(source_cell, target_cell, arrow_value):
-        return ControlAction(controlled=target, controller=source, action=arrow_value)
-    else:
-        return ControlFeedback(controller=target, controlled=source, feedback=arrow_value)
- 
+                source_entity = entities[cell.attrib['source']]
+                target_entity = entities[cell.attrib['target']]
 
-def parse_controlStructure(id: str, cell: ET.Element) -> ControlStructure:
-    if id in controlStructures:
-        raise ValueError(f'The Control Structure with id: {id} and value: {cell.attrib["value"]} has already been found')
-    
-    strct = ControlStructure(cell.attrib['value'])
-    controlStructures[id] = strct
-    return strct
+                match control_type:
+                    case ControlType.ACTION:
+                        controller, controlled = source_entity, target_entity
+                    case ControlType.FEEDBACK:
+                        controller, controlled = target_entity, source_entity
+                    case _:
+                        raise ValueError(
+                            f'unknown control type {repr(control_type)}',
+                        )
 
-def getAllCells(root: ET.Element, cellName='mxCell'):
-    cells = []
-    for cell in root.findall(cellName): 
-        cells.append(cell)
-        cells.extend(getAllCells(cell, cellName))
-    return cells
+                control_action_or_feedback = ControlActionOrFeedback(
+                    cleaned_value,
+                    control_type,
+                    controller,
+                    controlled,
+                )
 
-def clean_text(html_text):
-    # Remove HTML tags using BeautifulSoup
-    soup = BeautifulSoup(html_text, "html.parser")
-    clean = soup.get_text()
-    
-    # Remove extra spaces and non-printable characters
-    clean = re.sub(r'\s+', ' ', clean)  # Replace multiple spaces with a single space
-    clean = clean.strip()  # Remove leading and trailing spaces
-    
-    return clean
+                control_actions_or_feedbacks.append(control_action_or_feedback)
 
-def parse_file(xml_filename: str) -> set[Union[ControlStructure, ControlAction, ControlFeedback]]:
-    def iscontrolStructure(cell: ET.Element) -> bool:
-        return cell.attrib['parent'] == '1'
-    tree = ET.parse(xml_filename)
-    root = tree.getroot()[0][0][0]
+        return cls(list(entities.values()), control_actions_or_feedbacks)
 
-    diagram_elements = set()
-    controlStructures, arrows = [], []
-
-    # for cell in root.findall('mxCell'): 
-    cells = getAllCells(root)
-    for cell in cells: 
-        id = cell.attrib['id'] 
-        if id in all_cells: 
-            raise ValueError(f'Cell with {id} is not unique') 
-        all_cells[id] = cell 
-        
-        if 'value' in cell.attrib and cell.attrib['value'] != '': 
-            cell.attrib['value'] = clean_text(cell.attrib['value'])
-            print('Adding cell with value: ', cell.attrib['value'])
-            if iscontrolStructure(cell):
-                controlStructures.append(cell)
-            else:
-                arrows.append(cell)
-
-    for cell in controlStructures:
-        print(f'Parsing controlStructure with id: {cell.attrib['id']} and value: {cell.attrib['value']}')
-        diagram_elements.add(parse_controlStructure(cell.attrib['id'], cell))
-
-    for cell in arrows:
-        print(f'Parsing arrow with id: {cell.attrib['id']} and value: {cell.attrib['value']}')
-        diagram_elements.add(parse_arrow(cell))
-
-    return diagram_elements
-
-
-# xml_filename = '/home/aliraeis/Projekte/BlueSkySolarRacing/stpa/examples/handbook_fig2.11.drawio'
-# diagram_elements = parse_file(xml_filename)
-# print(diagram_elements)
+    entities: list[Entity]
+    control_actions_or_feedbacks: list[ControlActionOrFeedback]

@@ -1,7 +1,16 @@
 __all__ = (
+    'CELL_TAG_NAME',
+    'clean_html_text',
+    'ControlActionOrFeedback',
     'ControllerConstraint',
+    'ControlStructure',
+    'CONTROL_STRUCTURE_PARENT',
+    'ControlType',
     'Definition',
+    'Entity',
+    'GEOMETRY_TAG_NAME',
     'Hazard',
+    'HTML_PARSER',
     'Loss',
     'Responsibility',
     'Scenario',
@@ -31,3 +40,13 @@ from stpa.definitions import (
     SystemLevelConstraintType3,
     UnsafeControlAction,
 )
+from stpa.control_structures import (
+    CELL_TAG_NAME,
+    ControlActionOrFeedback,
+    ControlStructure,
+    CONTROL_STRUCTURE_PARENT,
+    ControlType,
+    Entity,
+    GEOMETRY_TAG_NAME,
+)
+from stpa.utilities import clean_html_text, HTML_PARSER
