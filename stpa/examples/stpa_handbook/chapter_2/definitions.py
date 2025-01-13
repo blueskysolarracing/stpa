@@ -1,6 +1,8 @@
+# type: ignore
+
 from textwrap import dedent
 
-from stpa import (
+from stpa.definitions import (
     ControllerConstraint,
     Definition,
     Hazard,
@@ -15,7 +17,7 @@ from stpa import (
     UnsafeControlAction,
 )
 
-losses = (
+LOSSES = (
     Loss('L-1', 'Loss of life or injury to people'),
     Loss('L-2', 'Loss of or damage to vehicle'),
     Loss('L-3', 'Loss of or damage to objects outside the vehicle'),
@@ -32,7 +34,7 @@ losses = (
     Loss('L-8', 'Loss of power generation'),
 )
 
-hazards = (
+HAZARDS = (
     Hazard(
         'H-1',
         'Aircraft',
@@ -83,7 +85,7 @@ hazards = (
     ),
 )
 
-system_level_constraints = (
+SYSTEM_LEVEL_CONSTRAINTS = (
     SystemLevelConstraintType1(
         'SC-1',
         'Aircraft',
@@ -110,7 +112,7 @@ system_level_constraints = (
     ),
 )
 
-sub_hazards = {
+SUB_HAZARDS = {
     'H-4': (
         # Deceleration
         SubHazard(
@@ -177,7 +179,7 @@ sub_hazards = {
     )
 }
 
-system_level_constraints += (
+SYSTEM_LEVEL_CONSTRAINTS += (
     SystemLevelConstraintType3(
         'SC-6.1',
         Definition.get('H-4.1'),
@@ -201,7 +203,7 @@ system_level_constraints += (
     ),
 )
 
-responsibilities = (
+RESPONSIBILITIES = (
     # Physical Wheel Brakes
     Responsibility(
         'R-1',
@@ -256,7 +258,7 @@ responsibilities = (
     ),
 )
 
-unsafe_control_actions = (
+UNSAFE_CONTROL_ACTIONS = (
     # Brake
 
     # Not providing causes hazard
@@ -350,7 +352,7 @@ unsafe_control_actions = (
     # Stopped too soon, applied too long
 )
 
-controller_constraints = (
+CONTROLLER_CONSTRAINTS = (
     ControllerConstraint(
         'C-1',
         'BSCU Autobrake',
@@ -401,7 +403,7 @@ controller_constraints = (
     ),
 )
 
-scenarios = (
+SCENARIOS = (
     ScenarioType1(
         'Scenario 1 for UCA-1',
         (
@@ -558,47 +560,3 @@ scenarios = (
         Definition.get('H-4.1'),
     ),
 )
-
-print('Losses\n------\n')
-
-for loss in losses:
-    print(loss)
-
-print('\nHazards\n-------\n')
-
-for hazard in hazards:
-    print(hazard)
-
-print('\nSystem Level Constraints\n------------------------\n')
-
-for system_level_constraint in system_level_constraints:
-    print(system_level_constraint)
-
-print('\nSub hazards\n------------------------\n')
-
-for key, value in sub_hazards.items():
-    print(Definition.get(key))
-
-    for sub_hazard in value:
-        print('\t', end='')
-        print(sub_hazard)
-
-print('\nResponsibilities\n----------------\n')
-
-for responsibility in responsibilities:
-    print(responsibility)
-
-print('\nUnsafe Control Actions\n----------------------\n')
-
-for unsafe_control_action in unsafe_control_actions:
-    print(unsafe_control_action)
-
-print('\nController Constraints\n----------------------\n')
-
-for controller_constraint in controller_constraints:
-    print(controller_constraint)
-
-print('\nScenarios\n---------\n')
-
-for scenario in scenarios:
-    print(scenario)

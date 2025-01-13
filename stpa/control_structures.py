@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import auto, Enum
+from pathlib import Path
 import xml.etree.ElementTree as ET
 
 from stpa.utilities import clean_html_text
@@ -16,12 +17,12 @@ class ControlType(Enum):
     FEEDBACK = auto()
 
 
-@dataclass
+@dataclass(frozen=True)
 class Entity:
     name: str
 
 
-@dataclass
+@dataclass(frozen=True)
 class ControlActionOrFeedback:
     description: str
     control_type: ControlType
@@ -29,7 +30,7 @@ class ControlActionOrFeedback:
     controlled: Entity
 
 
-@dataclass
+@dataclass(frozen=True)
 class ControlStructure:
     @classmethod
     def get_control_type(
@@ -62,7 +63,7 @@ class ControlStructure:
         return ControlType.ACTION if status else ControlType.FEEDBACK
 
     @classmethod
-    def parse_diagram(cls, source: str) -> ControlStructure:
+    def parse_diagram(cls, source: str | Path) -> ControlStructure:
         tree = ET.parse(source)
         root = tree.getroot()[0][0][0]
         cells = {}
@@ -132,7 +133,10 @@ class ControlStructure:
 
                 control_actions_or_feedbacks.append(control_action_or_feedback)
 
-        return cls(list(entities.values()), control_actions_or_feedbacks)
+        return cls(
+            frozenset(entities.values()),
+            frozenset(control_actions_or_feedbacks),
+        )
 
-    entities: list[Entity]
-    control_actions_or_feedbacks: list[ControlActionOrFeedback]
+    entities: frozenset[Entity]
+    control_actions_or_feedbacks: frozenset[ControlActionOrFeedback]
