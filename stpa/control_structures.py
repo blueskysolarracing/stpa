@@ -95,7 +95,11 @@ class ControlStructure:
         control_actions_or_feedbacks = []
 
         for cell in cells.values():
-            if cell.attrib.get('edge') == '1':
+            if (
+                    cell.attrib.get('edge') == '1'
+                    and 'source' in cell.attrib
+                    and 'target' in cell.attrib
+            ):
                 id_ = cell.attrib['id']
                 cleaned_value = parent_cleaned_values.get(id_, '')
                 source_cell = cells[cell.attrib['source']]
