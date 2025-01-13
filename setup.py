@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from setuptools import find_packages, setup
+from setuptools import find_packages, setup, find_namespace_packages
 
 setup(
     name='stpa',
