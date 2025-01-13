@@ -14,6 +14,10 @@ class Definition(ABC):
     name: str
 
     @classmethod
+    def clear(cls) -> None:
+        cls.__lookup.clear()
+
+    @classmethod
     def get(cls, name: str) -> Definition:
         return cls.__lookup[name]
 
@@ -23,7 +27,7 @@ class Definition(ABC):
 
     def __post_init__(self) -> None:
         if self.name in self.__lookup:
-            raise ValueError(f'name {repr(self.name)} is already defined')
+            warn(f'name {repr(self.name)} is already defined')
 
         if not fullmatch(self._NAME_PATTERN, self.name):
             warn('name {repr(self.name)} doesn\'t follow the standard pattern')
@@ -55,12 +59,23 @@ class Hazard(Definition):
     losses: list[Loss]
 
     def __str__(self) -> str:
-        return (
-            f'{self.name}:'
-            f' {self.system}'
-            f' {self.unsafe_condition}'
-            f' {self.losses}'
-        )
+        if not self.system:
+            str_ = f'{self.name}: {self.unsafe_condition} {self.losses}'
+        elif '{}' in self.unsafe_condition:
+            str_ = (
+                f'{self.name}:'
+                f' {self.unsafe_condition.format(self.system)}'
+                f' {self.losses}'
+            )
+        else:
+            str_ = (
+                f'{self.name}:'
+                f' {self.system}'
+                f' {self.unsafe_condition}'
+                f' {self.losses}'
+            )
+
+        return str_
 
 
 @dataclass(repr=False)

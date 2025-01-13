@@ -1,8 +1,11 @@
-from stpa import UnsafeControlAction, Definition
+# type: ignore
 
+from stpa import Definition, Hazard, UnsafeControlAction
 
+HAZARDS = Hazard('H-1', '', '', []), Hazard('H-2', '', '', [])
 
-unsafe_control_actions = (
+UNSAFE_CONTROL_ACTIONS = (
+    # Hold Command
     UnsafeControlAction(
         'UCA-AH-1',
         'AH',
@@ -59,6 +62,7 @@ unsafe_control_actions = (
         'after vehicle stops, begins to roll',
         Definition.get_all('H-1'),
     ),
+    # Release Command
     UnsafeControlAction(
         'UCA-AH-10',
         'AH',
@@ -91,6 +95,7 @@ unsafe_control_actions = (
         'after accelerator applied, engine torque exceeds wheel torque',
         Definition.get_all('H-1', 'H-2'),
     ),
+    # Additional Pressure Command
     UnsafeControlAction(
         'UCA-AH-14',
         'AH',
@@ -119,13 +124,8 @@ unsafe_control_actions = (
         'UCA-AH-16',
         'AH',
         'provides {} too late',
-        'ADDITIONALPRESSURE',
+        'ADDITIONAL-PRESSURE',
         'after vehicle is slipping',
         Definition.get_all('H-1', 'H-2'),
-    ),     
+    ),
 )
-
-if __name__ == "__main__":
-    print("Unsafe Control Actions\n------")
-    for uca in unsafe_control_actions:
-        print(uca)

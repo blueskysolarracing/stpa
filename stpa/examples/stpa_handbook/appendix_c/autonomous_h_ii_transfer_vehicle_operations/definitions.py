@@ -1,6 +1,10 @@
-from stpa import UnsafeControlAction, Definition
+# type: ignore
 
-unsafe_control_actions = (
+from stpa import Definition, Hazard, UnsafeControlAction
+
+HAZARDS = (Hazard('H-1', '', '', []),)
+
+UNSAFE_CONTROL_ACTIONS = (
     UnsafeControlAction(
         'UCA-HTV-1',
         'ISS crew',
@@ -60,9 +64,9 @@ unsafe_control_actions = (
     UnsafeControlAction(
         'UCA-HTV-8',
         'ISS crew',
-        'provides {} too late',
+        'provides {} too late, more than X minutes',
         'Free Drift Cmd',
-        'more than X minutes after HTV stops',
+        'after HTV stops',
         Definition.get_all('H-1'),
     ),
     UnsafeControlAction(
@@ -102,15 +106,18 @@ unsafe_control_actions = (
         'ISS crew',
         'performs',
         'Capture',
-        'with excessive/insufficient movement (can impact HTV, cause collision course)',
+        (
+            'with excessive/insufficient movement (can impact HTV, cause'
+            ' collision course)'
+        ),
         Definition.get_all('H-1'),
     ),
     UnsafeControlAction(
         'UCA-HTV-14',
         'ISS crew',
-        'performs {} too late',
+        'performs {} too late, more than X minutes',
         'Capture',
-        'more than X minutes after HTV deactivated',
+        'after HTV deactivated',
         Definition.get_all('H-1'),
     ),
     UnsafeControlAction(
@@ -130,8 +137,3 @@ unsafe_control_actions = (
         Definition.get_all('H-1'),
     ),
 )
-
-if __name__ == "__main__":
-    print("Unsafe Control Actions\n------")
-    for uca in unsafe_control_actions:
-        print(uca)

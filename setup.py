@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 
-from setuptools import find_packages, setup, find_namespace_packages
+from setuptools import find_packages, setup
 
 setup(
     name='stpa',
     version='0.0.0',
-    description='A Python framework for the digitalization of STPA for real-life systems',
+    description=(
+        'A Python framework for the digitalization of STPA for real-life'
+        ' systems'
+    ),
     long_description=open('README.rst').read(),
     long_description_content_type='text/x-rst',
     url='https://github.com/blueskysolarracing/stpa',

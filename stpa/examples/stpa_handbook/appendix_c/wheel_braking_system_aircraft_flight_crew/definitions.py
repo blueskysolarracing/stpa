@@ -1,12 +1,27 @@
-from stpa import UnsafeControlAction, Definition
+# type: ignore
 
-unsafe_control_actions = (
+from stpa import Definition, Hazard, SubHazard, UnsafeControlAction
+
+HAZARDS = Hazard('H4', '', '', [])
+
+SUB_HAZARDS = (
+    SubHazard('H4-1', Definition.get('H4'), ''),
+    SubHazard('H4.1', Definition.get('H4'), ''),
+    SubHazard('H4-2', Definition.get('H4'), ''),
+    SubHazard('H4.4', Definition.get('H4'), ''),
+    SubHazard('H4-5', Definition.get('H4'), ''),
+)
+
+UNSAFE_CONTROL_ACTIONS = (
     UnsafeControlAction(
         'CREW.1a1',
         'Crew',
         'does not provide',
         'manual braking',
-        'during landing, RTO, or taxiing when Autobrake is not providing braking or is providing insufficient braking',
+        (
+            'during landing, RTO, or taxiing when Autobrake is not providing'
+            ' braking or is providing insufficient braking'
+        ),
         Definition.get_all('H4.1'),
     ),
     UnsafeControlAction(
@@ -22,7 +37,11 @@ unsafe_control_actions = (
         'Crew',
         'provides',
         'manual braking',
-        'with excessive pedal pressure (resulting in loss of control, passenger/crew injury, brake overheating, brake fade or tire burst during landing)',
+        (
+            'with excessive pedal pressure (resulting in loss of control,'
+            ' passenger/crew injury, brake overheating, brake fade or tire'
+            ' burst during landing)'
+        ),
         Definition.get_all('H4-1', 'H4-5'),
     ),
     UnsafeControlAction(
@@ -30,7 +49,7 @@ unsafe_control_actions = (
         'Crew',
         'provides',
         'manual braking',
-        'during normal takeoff',
+        'provided during normal takeoff',
         Definition.get_all('H4-2', 'H4-5'),
     ),
     UnsafeControlAction(
@@ -44,16 +63,20 @@ unsafe_control_actions = (
     UnsafeControlAction(
         'CREW.1c2',
         'Crew',
-        'provides {} too late',
+        'provides {} too late (TBD)',
         'manual braking',
-        'to avoid collision or conflict with another object (can overload braking capability given aircraft weight, speed, distance to object (conflict), and tarmac conditions)',
+        (
+            'to avoid collision or conflict with another object (can overload'
+            ' braking capability given aircraft weight, speed, distance to'
+            ' object (conflict), and tarmac conditions)'
+        ),
         Definition.get_all('H4-1', 'H4-5'),
     ),
     UnsafeControlAction(
         'CREW.1d1',
         'Crew',
         'stops providing',
-        'manual braking',
+        'manual braking command',
         'before safe taxi speed (TBD) is reached',
         Definition.get_all('H4.1', 'H4.4'),
     ),
@@ -70,7 +93,10 @@ unsafe_control_actions = (
         'Crew',
         'does not arm',
         'Autobrake',
-        'before landing (causing loss of automatic brake operation when spoilers deploy. Crew reaction time may lead to overshoot.)',
+        (
+            'before landing (causing loss of automatic brake operation when'
+            ' spoilers deploy. Crew reaction time may lead to overshoot.)'
+        ),
         Definition.get_all('H4-1', 'H4-5'),
     ),
     UnsafeControlAction(
@@ -78,7 +104,11 @@ unsafe_control_actions = (
         'Crew',
         'does not arm',
         'Autobrake',
-        'prior to takeoff (resulting in insufficient braking during rejected takeoff, assuming that Autobrake is responsible for braking during RTO after crew throttle down)',
+        (
+            'prior to takeoff (resulting in insufficient braking during'
+            ' rejected takeoff, assuming that Autobrake is responsible for'
+            ' braking during RTO after crew throttle down)'
+        ),
         Definition.get_all('H4-2'),
     ),
     UnsafeControlAction(
@@ -86,15 +116,21 @@ unsafe_control_actions = (
         'Crew',
         'does not arm',
         'Autobrake',
-        'to maximum level during takeoff. (assumes that maximum braking force is necessary for rejected takeoff)',
+        (
+            'to maximum level during takeoff. (assumes that maximum braking'
+            ' force is necessary for rejected takeoff)'
+        ),
         Definition.get_all('H4-2'),
     ),
     UnsafeControlAction(
         'CREW.2b2',
         'Crew',
         'armed {} with too high of a deceleration rate',
-        'Autobrake',
-        'for runway conditions (resulting in loss of control and passenger or crew injury).',
+        'autobrake',
+        (
+            'for runway conditions (resulting in loss of control and passenger'
+            ' or crew injury).'
+        ),
         Definition.get_all('H4-1', 'H4-5'),
     ),
     UnsafeControlAction(
@@ -118,7 +154,11 @@ unsafe_control_actions = (
         'Crew',
         'disarms',
         'Autobrake',
-        'during landing or RTO (resulting in loss of automatic brake operation when spoilers deploy. Crew reaction time may lead to overshoot)',
+        (
+            'during landing or RTO (resulting in loss of automatic brake'
+            ' operation when spoilers deploy. Crew reaction time may lead to'
+            ' overshoot)'
+        ),
         Definition.get_all('H4-1', 'H4-5'),
     ),
     UnsafeControlAction(
@@ -126,7 +166,11 @@ unsafe_control_actions = (
         'Crew',
         'disarms {} more than TBD seconds',
         'Autobrake',
-        'after (a) aircraft descent exceeds TBD fps, (b) visibility is less than TBD ft, (c) etc…, (resulting in either loss of control of aircraft or loss of acceleration during (re)takeoff)',
+        (
+            'after (a) aircraft descent exceeds TBD fps, (b) visibility is'
+            ' less than TBD ft, (c) etc…, (resulting in either loss of control'
+            ' of aircraft or loss of acceleration during (re)takeoff)'
+        ),
         Definition.get_all('H4-1', 'H4-2', 'H4-5'),
     ),
     UnsafeControlAction(
@@ -134,7 +178,10 @@ unsafe_control_actions = (
         'Crew',
         'does not power off',
         'BSCU',
-        'in the event of abnormal WBS behavior (needed to enable alternate braking mode)',
+        (
+            'in the event of abnormal WBS behavior (needed to enable alternate'
+            ' braking mode)'
+        ),
         Definition.get_all('H4-1', 'H4-2', 'H4-5'),
     ),
     UnsafeControlAction(
@@ -150,15 +197,10 @@ unsafe_control_actions = (
         'Crew',
         'powers off',
         'BSCU',
-        'when Autobrake is needed (or about to be used) and WBS if funtioning normally',
-        Definition.get_all('H4-1', 'H4-5'),
-    ),
-    UnsafeControlAction(
-        'CREW.4c1',
-        'Crew',
-        'powers off {} too late',
-        'BSCU',
-        '(TBD) to enable alternate braking mode in the event of abnormal WBS behavior',
+        (
+            'when Autobrake is needed (or about to be used) and WBS if'
+            ' funtioning normally'
+        ),
         Definition.get_all('H4-1', 'H4-5'),
     ),
     UnsafeControlAction(
@@ -166,7 +208,21 @@ unsafe_control_actions = (
         'Crew',
         'powers off',
         'BSCU',
-        'when Anti-Skid functionality is needed (or will be needed) and WBS is functioning normally',
+        (
+            'when Anti-Skid functionality is needed (or will be needed) and'
+            ' WBS is functioning normally'
+        ),
+        Definition.get_all('H4-1', 'H4-5'),
+    ),
+    UnsafeControlAction(
+        'CREW.4c1',
+        'Crew',
+        'powers off {} too late',
+        'BSCU',
+        (
+            '(TBD) to enable alternate braking mode in the event of abnormal'
+            ' WBS behavior'
+        ),
         Definition.get_all('H4-1', 'H4-5'),
     ),
     UnsafeControlAction(
@@ -174,12 +230,29 @@ unsafe_control_actions = (
         'Crew',
         'powers off {} too early',
         'BSCU',
-        'before Autobrake or Anti-Skid behavior is completed when it is needed',
+        (
+            'before Autobrake or Anti-Skid behavior is completed when it is'
+            ' needed'
+        ),
+        Definition.get_all('H4-1', 'H4-5'),
+    ),
+    UnsafeControlAction(
+        'CREW.5a1',
+        'Crew',
+        'does not power on',
+        'BSCU',
+        (
+            'when Normal braking mode, Autobrake, or Anti-Skid is to be used'
+            ' and WBS functioning normally'
+        ),
+        Definition.get_all('H4-1', 'H4-5'),
+    ),
+    UnsafeControlAction(
+        'CREW.5c1',
+        'Crew',
+        'powers on {} too late',
+        'BSCU',
+        'after Normal braking mode, Autobrake, or Anti-Skid is needed',
         Definition.get_all('H4-1', 'H4-5'),
     ),
 )
-
-if __name__ == "__main__":
-    print("Unsafe Control Actions\n------")
-    for uca in unsafe_control_actions:
-        print(uca)

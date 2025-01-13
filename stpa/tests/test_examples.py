@@ -1,15 +1,32 @@
+from importlib import import_module
 from pathlib import Path
 from textwrap import dedent
 from unittest import TestCase
 
-from stpa import ControlActionOrFeedback, ControlStructure, ControlType, Entity
+from stpa.control_structures import (
+    ControlActionOrFeedback,
+    ControlStructure,
+    ControlType,
+    Entity,
+)
+from stpa.definitions import Definition
 
 
 class ExamplesTestCase(TestCase):
-    def test_stpa_handbook_chapter_2_definitions(self) -> None:
-        import stpa.examples.stpa_handbook.chapter_2.definitions as definitions
+    def tearDown(self) -> None:
+        Definition.clear()
 
-        losses = definitions.LOSSES  # type: ignore[attr-defined]
+
+class STPAHandbookExamplesTestCase(ExamplesTestCase):
+    pass
+
+
+class STPAHandbookChapter2ExamplesTestCase(STPAHandbookExamplesTestCase):
+    def test_definitions(self) -> None:
+        definitions = import_module(
+            'stpa.examples.stpa_handbook.chapter_2.definitions',
+        )
+        losses = definitions.LOSSES
         raw_losses = (
             'L-1: Loss of life or injury to people',
             'L-2: Loss of or damage to vehicle',
@@ -25,10 +42,12 @@ class ExamplesTestCase(TestCase):
             'L-8: Loss of power generation',
         )
 
+        self.assertEqual(len(losses), len(raw_losses))
+
         for loss, raw_loss in zip(losses, raw_losses):
             self.assertEqual(str(loss), raw_loss)
 
-        hazards = definitions.HAZARDS  # type: ignore[attr-defined]
+        hazards = definitions.HAZARDS
         raw_hazards = (
             (
                 'H-1: Aircraft violate minimum separation standards in flight'
@@ -55,12 +74,12 @@ class ExamplesTestCase(TestCase):
             ),
         )
 
+        self.assertEqual(len(hazards), len(raw_hazards))
+
         for hazard, raw_hazard in zip(hazards, raw_hazards):
             self.assertEqual(str(hazard), raw_hazard)
 
-        system_level_constraints = (
-            definitions.SYSTEM_LEVEL_CONSTRAINTS  # type: ignore[attr-defined]
-        )
+        system_level_constraints = definitions.SYSTEM_LEVEL_CONSTRAINTS
         raw_system_level_constraints = (
             (
                 'SC-1: Aircraft must satisfy minimum separation standards from'
@@ -90,6 +109,11 @@ class ExamplesTestCase(TestCase):
             ),
         )
 
+        self.assertEqual(
+            len(system_level_constraints),
+            len(raw_system_level_constraints),
+        )
+
         for system_level_constraint, raw_system_level_constraint in zip(
                 system_level_constraints,
                 raw_system_level_constraints,
@@ -99,7 +123,7 @@ class ExamplesTestCase(TestCase):
                 raw_system_level_constraint,
             )
 
-        sub_hazards = definitions.SUB_HAZARDS  # type: ignore[attr-defined]
+        sub_hazards = definitions.SUB_HAZARDS
         raw_sub_hazards = {
             'H-4': (
                 (
@@ -136,13 +160,15 @@ class ExamplesTestCase(TestCase):
             ),
         }
 
+        self.assertCountEqual(sub_hazards.keys(), raw_sub_hazards.keys())
+
         for key, value in sub_hazards.items():
+            self.assertEqual(len(value), len(raw_sub_hazards[key]))
+
             for sub_hazard, raw_sub_hazard in zip(value, raw_sub_hazards[key]):
                 self.assertEqual(str(sub_hazard), raw_sub_hazard)
 
-        responsibilities = (
-            definitions.RESPONSIBILITIES  # type: ignore[attr-defined]
-        )
+        responsibilities = definitions.RESPONSIBILITIES
         raw_responsibilities = (
             (
                 'R-1: Decelerate wheels when commanded by BSCU or Flight Crew'
@@ -169,15 +195,15 @@ class ExamplesTestCase(TestCase):
             ),
         )
 
+        self.assertEqual(len(responsibilities), len(raw_responsibilities))
+
         for responsibility, raw_responsibility in zip(
                 responsibilities,
                 raw_responsibilities,
         ):
             self.assertEqual(str(responsibility), raw_responsibility)
 
-        unsafe_control_actions = (
-            definitions.UNSAFE_CONTROL_ACTIONS  # type: ignore[attr-defined]
-        )
+        unsafe_control_actions = definitions.UNSAFE_CONTROL_ACTIONS
         raw_unsafe_control_actions = (
             (
                 'UCA-1: BSCU Autobrake does not provide the Brake control'
@@ -221,6 +247,11 @@ class ExamplesTestCase(TestCase):
             ),
         )
 
+        self.assertEqual(
+            len(unsafe_control_actions),
+            len(raw_unsafe_control_actions),
+        )
+
         for unsafe_control_action, raw_unsafe_control_action in zip(
                 unsafe_control_actions,
                 raw_unsafe_control_actions,
@@ -230,9 +261,7 @@ class ExamplesTestCase(TestCase):
                 raw_unsafe_control_action,
             )
 
-        controller_constraints = (
-            definitions.CONTROLLER_CONSTRAINTS  # type: ignore[attr-defined]
-        )
+        controller_constraints = definitions.CONTROLLER_CONSTRAINTS
         raw_controller_constraints = (
             (
                 'C-1: BSCU Autobrake must provide the Brake control action'
@@ -261,6 +290,11 @@ class ExamplesTestCase(TestCase):
             ),
         )
 
+        self.assertEqual(
+            len(controller_constraints),
+            len(raw_controller_constraints),
+        )
+
         for controller_constraint, raw_controller_constraint in zip(
                 controller_constraints,
                 raw_controller_constraints,
@@ -270,7 +304,7 @@ class ExamplesTestCase(TestCase):
                 raw_controller_constraint,
             )
 
-        scenarios = definitions.SCENARIOS  # type: ignore[attr-defined]
+        scenarios = definitions.SCENARIOS
         raw_scenarios = (
             (
                 'Scenario 1 for UCA-1: The BSCU Autobrake physical controller'
@@ -383,14 +417,18 @@ class ExamplesTestCase(TestCase):
             ),
         )
 
+        self.assertEqual(len(scenarios), len(raw_scenarios))
+
         for scenario, raw_scenario in zip(scenarios, raw_scenarios):
-            self.maxDiff = None
             self.assertEqual(str(scenario), raw_scenario)
 
-    def test_stpa_handbook_figure_2_11(self) -> None:
-        import stpa.examples.stpa_handbook.chapter_2 as chapter_2
+    def test_figure_2_11(self) -> None:
+        chapter_2 = import_module('stpa.examples.stpa_handbook.chapter_2')
+        pathname = chapter_2.__file__
 
-        path = Path(chapter_2.__file__).parent / 'figure-2.11.xml'
+        assert isinstance(pathname, str)
+
+        path = Path(pathname).parent / 'figure-2.11.xml'
         control_structure = ControlStructure.parse_diagram(path)
         flight_crew = Entity('Flight Crew')
         aircraft = Entity('Aircraft')
@@ -464,3 +502,672 @@ class ExamplesTestCase(TestCase):
                 frozenset(control_actions_or_feedbacks),
             ),
         )
+
+
+class STPAHandbookAppendixAExamplesTestCase(STPAHandbookExamplesTestCase):
+    def test_nuclear_power_plant_definitions(
+            self,
+    ) -> None:
+        definitions = import_module(
+            (
+                'stpa'
+                '.examples'
+                '.stpa_handbook'
+                '.appendix_a'
+                '.nuclear_power_plant'
+                '.definitions'
+            ),
+        )
+        losses = definitions.LOSSES
+        raw_losses = (
+            'L1: People injured or killed',
+            'L2: Environment contaminated',
+            'L3: Equipment damage (economic loss)',
+            'L4: Loss of electrical power generation',
+        )
+
+        self.assertEqual(len(losses), len(raw_losses))
+
+        for loss, raw_loss in zip(losses, raw_losses):
+            self.assertEqual(str(loss), raw_loss)
+
+        hazards = definitions.HAZARDS
+        raw_hazards = (
+            'H1: Release of radioactive materials [L1, L2, L3, L4]',
+            'H2: Reactor temperature too high [L1, L2, L3, L4]',
+            'H3: Equipment operated beyond limits [L3, L4]',
+            'H4: Reactor shut down [L4]',
+        )
+
+        self.assertEqual(len(hazards), len(raw_hazards))
+
+        for hazard, raw_hazard in zip(hazards, raw_hazards):
+            self.assertEqual(str(hazard), raw_hazard)
+
+    def test_aircraft_definitions(self) -> None:
+        definitions = import_module(
+            (
+                'stpa'
+                '.examples'
+                '.stpa_handbook'
+                '.appendix_a'
+                '.aircraft'
+                '.definitions'
+            ),
+        )
+        losses = definitions.LOSSES
+        raw_losses = (
+            'L1: Loss of life or serious injury to people',
+            'L2: Damage to the aircraft or objects outside the aircraft',
+        )
+
+        self.assertEqual(len(losses), len(raw_losses))
+
+        for loss, raw_loss in zip(losses, raw_losses):
+            self.assertEqual(str(loss), raw_loss)
+
+        hazards = definitions.HAZARDS
+        raw_hazards = (
+            (
+                'H-1: Aircraft violate minimum separation standards in flight'
+                ' [L1, L2]'
+            ),
+            'H-2: Controlled flight of aircraft into terrain [L1, L2]',
+            'H-3: Loss of aircraft control [L1, L2]',
+            'H-4: Aircraft airframe integrity is lost [L1, L2]',
+            'H-5: Aircraft environment is harmful to human health [L1, L2]',
+            (
+                'H-6: Aircraft departs designated taxiway, runway, or apron on'
+                ' ground [L1, L2]'
+            ),
+            (
+                'H-7: Aircraft comes too close to other objects on the ground'
+                ' [L1, L2]'
+            ),
+        )
+
+        self.assertEqual(len(hazards), len(raw_hazards))
+
+        for hazard, raw_hazard in zip(hazards, raw_hazards):
+            self.assertEqual(str(hazard), raw_hazard)
+
+    def test_radiation_therapy_definitions(
+            self,
+    ) -> None:
+        definitions = import_module(
+            (
+                'stpa'
+                '.examples'
+                '.stpa_handbook'
+                '.appendix_a'
+                '.radiation_therapy'
+                '.definitions'
+            ),
+        )
+        losses = definitions.LOSSES
+        raw_losses = (
+            (
+                'L1: The patient is injured or killed from overexposure or'
+                ' undertreatment.'
+            ),
+            'L2: A nonpatient is injured or killed by radiation.',
+            'L3: Damage or loss of equipment.',
+            'L4: Physical injury to a patient or nonpatient during treatment.',
+        )
+
+        self.assertEqual(len(losses), len(raw_losses))
+
+        for loss, raw_loss in zip(losses, raw_losses):
+            self.assertEqual(str(loss), raw_loss)
+
+        hazards = definitions.HAZARDS
+        raw_hazards = (
+            (
+                'H1: Wrong dose: Dose delivered to patient is wrong in either'
+                ' amount, location, or timing [L1]'
+            ),
+            'H2: A nonpatient is unnecessarily exposed to radiation [L2]',
+            'H3: Equipment is subject to unnecessary stress [L3]',
+            'H4: Persons are subjected to nonradiological injury [L4]',
+        )
+
+        self.assertEqual(len(hazards), len(raw_hazards))
+
+        for hazard, raw_hazard in zip(hazards, raw_hazards):
+            self.assertEqual(str(hazard), raw_hazard)
+
+        sub_hazards = definitions.SUB_HAZARDS
+        raw_sub_hazards = {
+            'H1': (
+                'H1a: Right patient, right dose, wrong location.',
+                'H1b: Right patient, wrong dose, right location.',
+                'H1c: Right patient, wrong dose, wrong location.',
+                'H1d: Wrong patient.',
+            )
+        }
+
+        self.assertCountEqual(sub_hazards.keys(), raw_sub_hazards.keys())
+
+        for key, value in sub_hazards.items():
+            self.assertEqual(len(value), len(raw_sub_hazards[key]))
+
+            for sub_hazard, raw_sub_hazard in zip(value, raw_sub_hazards[key]):
+                self.assertEqual(str(sub_hazard), raw_sub_hazard)
+
+    def test_military_aviation_definitions(
+            self,
+    ) -> None:
+        definitions = import_module(
+            (
+                'stpa'
+                '.examples'
+                '.stpa_handbook'
+                '.appendix_a'
+                '.military_aviation'
+                '.definitions'
+            ),
+        )
+        losses = definitions.LOSSES
+        raw_losses = (
+            (
+                'M-1: Loss of or damage to the aircraft or equipment on the'
+                ' aircraft'
+            ),
+            'M-2: Serious injury or fatality to personnel',
+            'M-3: Inability to complete the mission',
+        )
+
+        self.assertEqual(len(losses), len(raw_losses))
+
+        for loss, raw_loss in zip(losses, raw_losses):
+            self.assertEqual(str(loss), raw_loss)
+
+        hazards = definitions.HAZARDS
+        raw_hazards = (
+            (
+                'H-1: Violation of minimum separation standards from fixed or'
+                ' moving objects [M-1, M-2, M-3]'
+            ),
+            'H-2: Inability to control the aircraft [M-1, M-2, M-3]',
+            'H-3: Loss of airframe integrity [M-1, M-2, M-3]',
+            'H-4: Uncommanded detonation [M-1, M-2, M-3]',
+            'H-5: Uncommanded launch [M-1, M-2, M-3]',
+            'H-6: Collateral damage or friendly fire [M-1, M-2, M-3]',
+            (
+                'H-7: Non-deployment (detonation and/or launch) of ordinance'
+                ' when commanded [M-3]'
+            ),
+        )
+
+        self.assertEqual(len(hazards), len(raw_hazards))
+
+        for hazard, raw_hazard in zip(hazards, raw_hazards):
+            self.assertEqual(str(hazard), raw_hazard)
+
+    def test_automotive_definitions(self) -> None:
+        definitions = import_module(
+            'stpa.examples.stpa_handbook.appendix_a.automotive.definitions',
+        )
+        losses = definitions.LOSSES
+        raw_losses = (
+            'L1: Loss of life or serious injury to people',
+            'L2: Damage to the vehicle or objects outside the vehicle',
+        )
+
+        self.assertEqual(len(losses), len(raw_losses))
+
+        for loss, raw_loss in zip(losses, raw_losses):
+            self.assertEqual(str(loss), raw_loss)
+
+        hazards = definitions.HAZARDS
+        raw_hazards = (
+            (
+                'H1: Vehicle does not maintain safe distance from nearby'
+                ' objects [L1, L2]'
+            ),
+            'H2: Vehicle enters dangerous area/region [L1, L2]',
+            (
+                'H3: Vehicle exceeds safe operating envelope for environment'
+                ' (speed, lateral/longitudinal forces) [L1, L2]'
+            ),
+            (
+                'H4: Vehicle occupants exposed to harmful effects and/or'
+                ' health hazards (e.g. fire, excessive temperature, inability'
+                ' to escape, door closes on passengers, etc.) [L1, L2]'
+            ),
+        )
+
+        self.assertEqual(len(hazards), len(raw_hazards))
+
+        for hazard, raw_hazard in zip(hazards, raw_hazards):
+            self.assertEqual(str(hazard), raw_hazard)
+
+
+class STPAHandbookAppendixCExamplesTestCase(STPAHandbookExamplesTestCase):
+    def test_automotive_auto_hold_system_definitions(
+            self,
+    ) -> None:
+        definitions = import_module(
+            (
+                'stpa'
+                '.examples'
+                '.stpa_handbook'
+                '.appendix_c'
+                '.automotive_auto_hold_system'
+                '.definitions'
+            ),
+        )
+        unsafe_control_actions = definitions.UNSAFE_CONTROL_ACTIONS
+        raw_unsafe_control_actions = (
+            (
+                'UCA-AH-1: AH does not provide HOLD when vehicle stops and'
+                ' brake pedal released [H-1, H-2]'
+            ),
+            (
+                'UCA-AH-2: AH provides HOLD when driver is applying the'
+                ' accelerator [H-1]'
+            ),
+            'UCA-AH-3: AH provides HOLD when AH is DISABLED [H-1]',
+            'UCA-AH-4: AH provides HOLD when vehicle is moving [H-1]',
+            (
+                'UCA-AH-5: AH provides HOLD when driver is not applying'
+                ' brake [H-1, H-2]'
+            ),
+            (
+                'UCA-AH-6: AH provides HOLD too early before the required time'
+                ' at rest has not been met [H-1]'
+            ),
+            (
+                'UCA-AH-7: AH provides HOLD too late after vehicle stops,'
+                ' begins to roll [H-1]'
+            ),
+            (
+                'UCA-AH-10: AH does not provide RELEASE when driver applies'
+                ' accelerator pedal [H-1, H-2]'
+            ),
+            (
+                'UCA-AH-12: AH provides RELEASE when driver is not applying'
+                ' accelerator [H-1, H-2]'
+            ),
+            (
+                'UCA-AH-13: AH provides RELEASE too early before there is'
+                ' sufficient wheel torque [H-1, H-2]'
+            ),
+            (
+                'UCA-AH-13: AH provides RELEASE too late after accelerator'
+                ' applied, engine torque exceeds wheel torque [H-1, H-2]'
+            ),
+            (
+                'UCA-AH-14: AH does not provide ADDITIONALPRESSURE when'
+                ' vehicle is slipping and AH is active [H-1, H-2]'
+            ),
+            (
+                'UCA-AH-15: AH provides ADDITIONALPRESSURE when AH is not'
+                ' active [H-1, H-2]'
+            ),
+            (
+                'UCA-AH-16: AH provides ADDITIONALPRESSURE when brake system'
+                ' specs are exceeded [H-1, H-2]'
+            ),
+            (
+                'UCA-AH-16: AH provides ADDITIONAL-PRESSURE too late after'
+                ' vehicle is slipping [H-1, H-2]'
+            ),
+        )
+
+        self.assertEqual(
+            len(unsafe_control_actions),
+            len(raw_unsafe_control_actions),
+        )
+
+        for unsafe_control_action, raw_unsafe_control_action in zip(
+                unsafe_control_actions,
+                raw_unsafe_control_actions,
+        ):
+            self.assertEqual(
+                str(unsafe_control_action),
+                raw_unsafe_control_action,
+            )
+
+    def test_autonomous_h_ii_transfer_vehicle_operations_definitions(
+            self,
+    ) -> None:
+        definitions = import_module(
+            (
+                'stpa'
+                '.examples'
+                '.stpa_handbook'
+                '.appendix_c'
+                '.autonomous_h_ii_transfer_vehicle_operations'
+                '.definitions'
+            ),
+        )
+        unsafe_control_actions = definitions.UNSAFE_CONTROL_ACTIONS
+        raw_unsafe_control_actions = (
+            (
+                'UCA-HTV-1: ISS crew does not provide Abort Cmd when emergency'
+                ' condition exists [H-1]'
+            ),
+            (
+                'UCA-HTV-2: ISS crew provides Abort Cmd when HTV is captured'
+                ' [H-1]'
+            ),
+            (
+                'UCA-HTV-3: ISS crew provides Abort Cmd when ISS is in Abort'
+                ' path [H-1]'
+            ),
+            (
+                'UCA-HTV-4: ISS crew provides Abort Cmd too late to avoid'
+                ' collision [H-1]'
+            ),
+            (
+                'UCA-HTV-5: ISS crew provides Abort Cmd too early before'
+                ' capture is released [H-1]'
+            ),
+            (
+                'UCA-HTV-6: ISS crew does not provide Free Drift Cmd when HTV'
+                ' is stopped in capture box [H-1]'
+            ),
+            (
+                'UCA-HTV-7: ISS crew provides Free Drift Cmd when HTV is'
+                ' approaching ISS [H-1]'
+            ),
+            (
+                'UCA-HTV-8: ISS crew provides Free Drift Cmd too late, more'
+                ' than X minutes after HTV stops [H-1]'
+            ),
+            (
+                'UCA-HTV-9: ISS crew provides Free Drift Cmd too early before'
+                ' HTV stops [H-1]'
+            ),
+            (
+                'UCA-HTV-10: ISS crew does not perform Capture when HTV is in'
+                ' capture box in free drift [H-1]'
+            ),
+            (
+                'UCA-HTV-11: ISS crew performs Capture when HTV is not in free'
+                ' drift [H-1]'
+            ),
+            'UCA-HTV-12: ISS crew performs Capture when HTV is aborting [H-1]',
+            (
+                'UCA-HTV-13: ISS crew performs Capture with'
+                ' excessive/insufficient movement (can impact HTV, cause'
+                ' collision course) [H-1]'
+            ),
+            (
+                'UCA-HTV-14: ISS crew performs Capture too late, more than X'
+                ' minutes after HTV deactivated [H-1]'
+            ),
+            (
+                'UCA-HTV-15: ISS crew performs Capture too early before HTV'
+                ' deactivated [H-1]'
+            ),
+            (
+                'UCA-HTV-16: ISS crew continues performing Capture too long'
+                ' after emergency condition exists [H-1]'
+            ),
+        )
+
+        self.assertEqual(
+            len(unsafe_control_actions),
+            len(raw_unsafe_control_actions),
+        )
+
+        for unsafe_control_action, raw_unsafe_control_action in zip(
+                unsafe_control_actions,
+                raw_unsafe_control_actions,
+        ):
+            self.assertEqual(
+                str(unsafe_control_action),
+                raw_unsafe_control_action,
+            )
+
+    def test_wheel_braking_system_aircraft_flight_crew_definitions(
+            self,
+    ) -> None:
+        definitions = import_module(
+            (
+                'stpa'
+                '.examples'
+                '.stpa_handbook'
+                '.appendix_c'
+                '.wheel_braking_system_aircraft_flight_crew'
+                '.definitions'
+            ),
+        )
+        unsafe_control_actions = definitions.UNSAFE_CONTROL_ACTIONS
+        raw_unsafe_control_actions = (
+            (
+                'CREW.1a1: Crew does not provide manual braking during'
+                ' landing, RTO, or taxiing when Autobrake is not providing'
+                ' braking or is providing insufficient braking [H4.1]'
+            ),
+            (
+                'CREW.1b1: Crew provides manual braking with insufficient'
+                ' pedal pressure [H4.1]'
+            ),
+            (
+                'CREW.1b2: Crew provides manual braking with excessive pedal'
+                ' pressure (resulting in loss of control, passenger/crew'
+                ' injury, brake overheating, brake fade or tire burst during'
+                ' landing) [H4-1, H4-5]'
+            ),
+            (
+                'CREW.1b3: Crew provides manual braking provided during normal'
+                ' takeoff [H4-2, H4-5]'
+            ),
+            (
+                'CREW.1c1: Crew provides manual braking before touchdown'
+                ' (causes wheel lockup, loss of control, tire burst) [H4.1]'
+            ),
+            (
+                'CREW.1c2: Crew provides manual braking too late (TBD) to'
+                ' avoid collision or conflict with another object (can'
+                ' overload braking capability given aircraft weight, speed,'
+                ' distance to object (conflict), and tarmac conditions) [H4-1,'
+                ' H4-5]'
+            ),
+            (
+                'CREW.1d1: Crew stops providing manual braking command before'
+                ' safe taxi speed (TBD) is reached [H4.1, H4.4]'
+            ),
+            (
+                'CREW.1d2: Crew provides manual braking too long (resulting in'
+                ' stopped aircraft on runway or active taxiway) [H4-1]'
+            ),
+            (
+                'CREW.2a1: Crew does not arm Autobrake before landing (causing'
+                ' loss of automatic brake operation when spoilers deploy. Crew'
+                ' reaction time may lead to overshoot.) [H4-1, H4-5]'
+            ),
+            (
+                'CREW.2a2: Crew does not arm Autobrake prior to takeoff'
+                ' (resulting in insufficient braking during rejected takeoff,'
+                ' assuming that Autobrake is responsible for braking during'
+                ' RTO after crew throttle down) [H4-2]'
+            ),
+            (
+                'CREW.2b1: Crew does not arm Autobrake to maximum level during'
+                ' takeoff. (assumes that maximum braking force is necessary'
+                ' for rejected takeoff) [H4-2]'
+            ),
+            (
+                'CREW.2b2: Crew armed autobrake with too high of a'
+                ' deceleration rate for runway conditions (resulting in loss'
+                ' of control and passenger or crew injury). [H4-1, H4-5]'
+            ),
+            (
+                'CREW.2c1: Crew provides arm command too late (TBD) (resulting'
+                ' in insufficient time for BSCU to apply brakes) [H4-1, H4-5]'
+            ),
+            (
+                'CREW.3a1: Crew does not disarm Autobrake during TOGA'
+                ' (resulting in loss of acceleration during (re)takeoff)'
+                ' [H4-1, H4-2, H4-5]'
+            ),
+            (
+                'CREW.3b1: Crew disarms Autobrake during landing or RTO'
+                ' (resulting in loss of automatic brake operation when'
+                ' spoilers deploy. Crew reaction time may lead to overshoot)'
+                ' [H4-1, H4-5]'
+            ),
+            (
+                'CREW.3c1: Crew disarms Autobrake more than TBD seconds after'
+                ' (a) aircraft descent exceeds TBD fps, (b) visibility is less'
+                ' than TBD ft, (c) etc…, (resulting in either loss of control'
+                ' of aircraft or loss of acceleration during (re)takeoff)'
+                ' [H4-1, H4-2, H4-5]'
+            ),
+            (
+                'CREW.4a1: Crew does not power off BSCU in the event of'
+                ' abnormal WBS behavior (needed to enable alternate braking'
+                ' mode) [H4-1, H4-2, H4-5]'
+            ),
+            (
+                'CREW.4b1: Crew powers off BSCU when Autobraking is needed and'
+                ' WBS functioning normally [H4-1, H4-5]'
+            ),
+            (
+                'CREW.4b2: Crew powers off BSCU when Autobrake is needed (or'
+                ' about to be used) and WBS if funtioning normally [H4-1,'
+                ' H4-5]'
+            ),
+            (
+                'CREW.4b3: Crew powers off BSCU when Anti-Skid functionality'
+                ' is needed (or will be needed) and WBS is functioning'
+                ' normally [H4-1, H4-5]'
+            ),
+            (
+                'CREW.4c1: Crew powers off BSCU too late (TBD) to enable'
+                ' alternate braking mode in the event of abnormal WBS behavior'
+                ' [H4-1, H4-5]'
+            ),
+            (
+                'CREW.4c2: Crew powers off BSCU too early before Autobrake or'
+                ' Anti-Skid behavior is completed when it is needed [H4-1,'
+                ' H4-5]'
+            ),
+            (
+                'CREW.5a1: Crew does not power on BSCU when Normal braking'
+                ' mode, Autobrake, or Anti-Skid is to be used and WBS'
+                ' functioning normally [H4-1, H4-5]'
+            ),
+            (
+                'CREW.5c1: Crew powers on BSCU too late after Normal braking'
+                ' mode, Autobrake, or Anti-Skid is needed [H4-1, H4-5]'
+            ),
+        )
+
+        self.assertEqual(
+            len(unsafe_control_actions),
+            len(raw_unsafe_control_actions),
+        )
+
+        for unsafe_control_action, raw_unsafe_control_action in zip(
+                unsafe_control_actions,
+                raw_unsafe_control_actions,
+        ):
+            self.assertEqual(
+                str(unsafe_control_action),
+                raw_unsafe_control_action,
+            )
+
+    def test_aircraft_brake_system_control_unit_autobrake_definitions(
+            self,
+    ) -> None:
+        definitions = import_module(
+            (
+                'stpa'
+                '.examples'
+                '.stpa_handbook'
+                '.appendix_c'
+                '.aircraft_brake_system_control_unit_autobrake'
+                '.definitions'
+            ),
+        )
+        unsafe_control_actions = definitions.UNSAFE_CONTROL_ACTIONS
+        raw_unsafe_control_actions = (
+            (
+                'BSCU.1a1: Autobrake does not provide Brake command during RTO'
+                ' to V1 (resulting in inability to stop within available'
+                ' runway length) [H4-1, H4-5]'
+            ),
+            (
+                'BSCU.1a2: Autobrake does not provides Brake command during'
+                ' landing roll when BSCU is armed (resulting in insufficient'
+                ' deceleration and potential overshoot) [H4-1, H4-5]'
+            ),
+            (
+                'BSCU.1a4: Autobrake does not provide Brake command after'
+                ' takeoff (needed to lock wheels, results in potential'
+                ' equipment damage during landing gear retraction or wheel'
+                ' rotation in flight) [H4-6]'
+            ),
+            (
+                'BSCU.1b1: Autobrake provides excessive Braking commands'
+                ' during landing roll [H4-1, H4-5]'
+            ),
+            (
+                'BSCU.1b2: Autobrake provides Braking command inappropriately'
+                ' during takeoff (resulting in inadequate acceleration) [H4-1,'
+                ' H4-2, H4-5]'
+            ),
+            (
+                'BSCU.1b3: Autobrake provides Brake command with insufficient'
+                ' level (resulting in insufficient deceleration during landing'
+                ' roll) [H4-1, H4-5]'
+            ),
+            (
+                'BSCU.1c1: Autobrake provides Braking command before touchdown'
+                ' (resulting in tire burst, loss of control, injury, other'
+                ' damage) [H4-1, H4-5]'
+            ),
+            (
+                'BSCU.1c2: Autobrake provides Brake command more than TBD'
+                ' seconds after touchdown (resulting in insufficient'
+                ' deceleration and potential loss of control, overshoot)'
+                ' [H4-1, H4-5]'
+            ),
+            (
+                'BSCU.1c3: Autobrake provides Brake command at any time before'
+                ' wheels have left ground and RTO has not been requested'
+                ' (brake might be applied to stop wheels before gear'
+                ' retraction) [H4-1, H4-2, H4-5]'
+            ),
+            (
+                'BSCU.1c4: Autobrake provides Brake more than TBD seconds'
+                ' after V1 during rejected takeoff (assumes that Autobrake is'
+                ' responsible for braking during RTO after crew throttle down)'
+                ' [H4-2]'
+            ),
+            (
+                'BSCU.1d1: Autobrake stops providing Brake during landing roll'
+                ' before TBD taxi speed attained (causing reduced'
+                ' deceleration) [H4-1, H4-5]'
+            ),
+            (
+                'BSCU.1d2: Autobrake provides Brake command too long (more'
+                ' than TBD seconds) during landing roll (causing stop on'
+                ' runway) [H4-1]'
+            ),
+            (
+                'BSCU.1d3: Autobrake provides Brake command for tire lock'
+                ' until less than TBD seconds before touchdown during approach'
+                ' (resulting in loss of control, equipment damage) [H4-1,'
+                ' H4-5]'
+            ),
+        )
+
+        self.assertEqual(
+            len(unsafe_control_actions),
+            len(raw_unsafe_control_actions),
+        )
+
+        for unsafe_control_action, raw_unsafe_control_action in zip(
+                unsafe_control_actions,
+                raw_unsafe_control_actions,
+        ):
+            self.assertEqual(
+                str(unsafe_control_action),
+                raw_unsafe_control_action,
+            )
