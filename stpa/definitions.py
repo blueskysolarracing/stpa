@@ -30,7 +30,9 @@ class Definition(ABC):
             warn(f'name {repr(self.name)} is already defined')
 
         if not fullmatch(self._NAME_PATTERN, self.name):
-            warn('name {repr(self.name)} doesn\'t follow the standard pattern')
+            warn(
+                f'name {repr(self.name)} doesn\'t follow the standard pattern',
+            )
 
         self.__lookup[self.name] = self
 
