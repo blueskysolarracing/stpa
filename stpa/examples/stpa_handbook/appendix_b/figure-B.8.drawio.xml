@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0" version="26.0.7">
+  <diagram name="Page-1" id="_iJeM5Gl7BfQskmT1D37">
+    <mxGraphModel dx="1434" dy="822" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="wHpY2BJYcZKhQIPgiKTD-1" target="wHpY2BJYcZKhQIPgiKTD-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-17" value="Abort/Retreat/Hold&lt;div&gt;FRGF Separation&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="wHpY2BJYcZKhQIPgiKTD-6" connectable="0" vertex="1">
+          <mxGeometry x="-0.42" relative="1" as="geometry">
+            <mxPoint x="2" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-1" value="JAXA Ground&amp;nbsp;&lt;div&gt;Station&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="wHpY2BJYcZKhQIPgiKTD-3" target="wHpY2BJYcZKhQIPgiKTD-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-18" value="Acknowledgements&amp;nbsp;&lt;div&gt;HTV Status&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="wHpY2BJYcZKhQIPgiKTD-7" connectable="0" vertex="1">
+          <mxGeometry x="0.1" y="-3" relative="1" as="geometry">
+            <mxPoint x="-20" y="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-3" value="NASA Ground&lt;div&gt;Station&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="wHpY2BJYcZKhQIPgiKTD-4" target="wHpY2BJYcZKhQIPgiKTD-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-20" value="HTV Mode&lt;div&gt;HTV Fault Status&lt;/div&gt;&lt;div&gt;Crew Status&lt;/div&gt;&lt;div&gt;Telemetry&lt;/div&gt;" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];" parent="wHpY2BJYcZKhQIPgiKTD-10" connectable="0" vertex="1">
+          <mxGeometry x="0.0286" y="-3" relative="1" as="geometry">
+            <mxPoint x="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-4" value="International Space&lt;div&gt;Station (ISS)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="465" y="210" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-5" value="Autonomous H-II&amp;nbsp;&lt;div&gt;Transfer Vehicle (HTV)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="455" y="380" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.325;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="wHpY2BJYcZKhQIPgiKTD-3" target="wHpY2BJYcZKhQIPgiKTD-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-19" value="Abort/Retreat/Hold&lt;div&gt;FRGF Separation Enable/Hold&lt;/div&gt;&lt;div&gt;FRGF Separation&lt;/div&gt;" style="edgeLabel;html=1;align=right;verticalAlign=middle;resizable=0;points=[];" parent="wHpY2BJYcZKhQIPgiKTD-9" connectable="0" vertex="1">
+          <mxGeometry x="-0.0703" y="3" relative="1" as="geometry">
+            <mxPoint x="-8" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="wHpY2BJYcZKhQIPgiKTD-4" target="wHpY2BJYcZKhQIPgiKTD-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="360" as="sourcePoint" />
+            <mxPoint x="450" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-21" value="Free Drift&lt;div&gt;Capture&lt;/div&gt;&lt;div&gt;Abort/Retreat/Hold&lt;/div&gt;&lt;div&gt;FRGF Separation Enable/Inhibit&lt;/div&gt;&lt;div&gt;FRGF Separation&lt;/div&gt;" style="edgeLabel;html=1;align=right;verticalAlign=middle;resizable=0;points=[];" parent="wHpY2BJYcZKhQIPgiKTD-14" connectable="0" vertex="1">
+          <mxGeometry x="0.0603" y="-1" relative="1" as="geometry">
+            <mxPoint x="-8" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.712;exitY=0.043;exitDx=0;exitDy=0;entryX=0.804;entryY=0.986;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" parent="1" source="wHpY2BJYcZKhQIPgiKTD-5" target="wHpY2BJYcZKhQIPgiKTD-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="360" as="sourcePoint" />
+            <mxPoint x="450" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wHpY2BJYcZKhQIPgiKTD-22" value="HTV Mode,&lt;div&gt;HTV Fault Status,&lt;/div&gt;&lt;div&gt;Position (visual),&lt;/div&gt;&lt;div&gt;Speed (visual)&lt;/div&gt;" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];" parent="wHpY2BJYcZKhQIPgiKTD-16" connectable="0" vertex="1">
+          <mxGeometry x="-0.068" y="1" relative="1" as="geometry">
+            <mxPoint x="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
