@@ -5,6 +5,9 @@ from stpa import UnsafeControlAction
 import pandas as pd
 from textwrap import wrap
 from pylatex.utils import escape_latex
+import re
+from collections import defaultdict
+from enum import Enum
 
 class LatexTableGenerator(ABC):
     
@@ -41,7 +44,7 @@ class LatexTableGenerator(ABC):
             '\\newcolumntype{R}[1]{>{\\raggedright\\arraybackslash}p{#1}}',
             '\\begin{table}[h]',
             '\\resizebox{\\textwidth}{!}{%\n'
-            '\\begin{tabular}{|' + '|'.join([f'R{{{self._COLUMN_WIDTHS_CM[column]:.2f}cm}}' for column in self.COLUMN_NAMES]) + '|}',
+            '\\begin{tabular}{|' + '|'.join([f'R{{{self._COLUMN_WIDTHS_CM.get(column, 2):.2f}cm}}' for column in self.COLUMN_NAMES]) + '|}',
             '\\hline'
         ]
         
@@ -50,7 +53,7 @@ class LatexTableGenerator(ABC):
         latex.append('\\hline')
         
         for _, row in df.iterrows():
-            formatted_row = [self._escape_latex(cell) for cell in row]
+            formatted_row = [self._escape_latex(cell) if cell else 'N/A' for cell in row]
             latex.append(' & '.join(formatted_row) + ' \\\\ ')
             latex.append('\\hline')
         
@@ -81,7 +84,7 @@ class UCATableGenerator(LatexTableGenerator, ABC):
         
         self.unsafe_control_actions = unsafe_control_actions
     
-class UCAAttributeTableGenerator(UCATableGenerator):
+class UCAAttributesTableGenerator(UCATableGenerator):
     
     COLUMN_NAMES : ClassVar[list[str]] = ["Source", "Name", "Type", "Control Action", "Context", "Hazards"]
     _COLUMN_WIDTHS_CM : ClassVar[dict[str, float]] = {
@@ -114,11 +117,114 @@ class UCAAttributeTableGenerator(UCATableGenerator):
         df = pd.DataFrame(rows, columns=self.COLUMN_NAMES)
         return df
     
+    
+
+class UCAType:
+    NEGATIVE = "NEGATIVE"
+    POSITIVE = "POSITIVE"
+    TIMING = "TIMING"
+    STATE_CHANGE = "STATE_CHANGE"
+    UNKNOWN = "UNKNOWN"
+    
+class UCAByTypesTableGenerator(UCATableGenerator):
+    
+    COLUMN_NAMES : ClassVar[list[str]] = ["Control Action", 
+                                          "Providing causes hazard", 
+                                          "Not providing causes hazard",
+                                          "Incorrect timing/order",
+                                          "Stopped too soon/Applied too long"]
+    _COLUMN_WIDTHS_CM : ClassVar[dict[str, float]] = {
+        "Control Action": 2,
+        "Providing causes hazard": 3,
+        "Not providing causes hazard": 3,
+        "Incorrect timing/order": 3,
+        "Stopped too soon/Applied too long": 3,
+    }
+    
+    @staticmethod
+    def categorize_uca_type(uca_type: str) -> UCAType:
+        """
+        Categorizes a control action string into main types:
+        - NEGATIVE: Does not provide/perform
+        - POSITIVE: Provides/performs (without timing)
+        - TIMING: Provides too early/late/long/before/after
+        - STATE_CHANGE: Stops/continues providing
+        - UNKNOWN: Doesn't match known patterns
+        """
+        
+        # Normalize string to lowercase for matching
+        type = uca_type.lower()
+        
+        # Negative patterns
+        if re.match(r"does not (provide|perform|arm|power|disarm)", type):
+            return UCAType.NEGATIVE
+        
+        # State change patterns
+        if re.match(r"(stops|continues)", type):
+            return UCAType.STATE_CHANGE
+        
+        # Timing patterns
+        timing_words = r"(before|after|early|late|long|until|more than)"
+        if re.search(fr"provides.*{timing_words}", type) or \
+        re.search(fr"performs.*{timing_words}", type):
+            return UCAType.TIMING
+        
+        # Basic positive patterns (without timing)
+        if re.match(r"(provides|performs|arms|powers|disarms|armed)", type):
+            return UCAType.POSITIVE
+            
+        return UCAType.UNKNOWN
+
+    def get_all_row_values(self) -> pd.DataFrame:
+        """
+        Returns a list of all row values for the table being generated.
+        """
+        
+        control_actions_to_ucas= defaultdict(list[UnsafeControlAction])
+        
+        for uca in self.unsafe_control_actions:
+            
+            for key in control_actions_to_ucas.keys():
+                if uca.control_action in key or key in uca.control_action:
+                    control_actions_to_ucas[key].append(uca)
+                    break
+            else:
+                control_actions_to_ucas[uca.control_action].append(uca)
+            
+        rows = []
+            
+        for control_action, ucas in control_actions_to_ucas.items():
+            new_row = [control_action]
+            ucas_by_type = {
+                UCAType.NEGATIVE: [],
+                UCAType.POSITIVE: [],
+                UCAType.TIMING: [],
+                UCAType.STATE_CHANGE: []
+            }
+            for uca in ucas:
+                uca_type = self.categorize_uca_type(uca.type_)
+                ucas_by_type[uca_type].append(uca)
+            
+            new_row.append("\n\n".join([str(uca) for uca in ucas_by_type[UCAType.POSITIVE]]))
+            new_row.append("\n\n".join([str(uca) for uca in ucas_by_type[UCAType.NEGATIVE]]))
+            new_row.append("\n\n".join([str(uca) for uca in ucas_by_type[UCAType.TIMING]]))
+            new_row.append("\n\n".join([str(uca) for uca in ucas_by_type[UCAType.STATE_CHANGE]]))
+            
+            rows.append(new_row)
+            
+        df = pd.DataFrame(rows, columns=self.COLUMN_NAMES)
+        return df
+        
+        
+        
+        
+        
+        
 if __name__ == "__main__":
     
-    uca_table_generator = UCAAttributeTableGenerator(UNSAFE_CONTROL_ACTIONS[0:5])
+    uca_table_generator = UCAByTypesTableGenerator(UNSAFE_CONTROL_ACTIONS[0:100])
     latex = uca_table_generator.generate()
-    with open("misc/resources/uca_table.tex", "w") as f:
+    with open("misc/resources/uca_by_types_table.tex", "w") as f:
         f.write(latex)
     
     

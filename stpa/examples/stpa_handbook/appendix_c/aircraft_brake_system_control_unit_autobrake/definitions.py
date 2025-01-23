@@ -92,8 +92,8 @@ UNSAFE_CONTROL_ACTIONS = (
     UnsafeControlAction(
         'BSCU.1c3',
         'Autobrake',
-        'provides',
-        'Brake command at any time',
+        'provides {} at any time',
+        'Brake command',
         (
             'before wheels have left ground and RTO has not been requested'
             ' (brake might be applied to stop wheels before gear retraction)'
