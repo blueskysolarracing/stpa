@@ -428,7 +428,7 @@ class STPAHandbookChapter2ExamplesTestCase(STPAHandbookExamplesTestCase):
 
         assert isinstance(pathname, str)
 
-        path = Path(pathname).parent / 'figure-2.11.xml'
+        path = Path(pathname).parent / 'figure-2.11.drawio.xml'
         control_structure = ControlStructure.parse_diagram(path)
         flight_crew = Entity('Flight Crew')
         aircraft = Entity('Aircraft')
