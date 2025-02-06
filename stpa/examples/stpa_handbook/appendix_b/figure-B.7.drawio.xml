@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0" version="26.0.7">
+  <diagram name="Page-1" id="Wq69mGZA0gJVYM6l5QWm">
+    <mxGraphModel dx="1434" dy="822" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-15" target="ci-c7fPQLx81ArY2wnVB-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-33" value="Driver&amp;nbsp;&lt;div&gt;presence,&amp;nbsp;&lt;/div&gt;&lt;div&gt;Inclination&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-31" vertex="1" connectable="0">
+          <mxGeometry x="0.0333" y="-5" relative="1" as="geometry">
+            <mxPoint x="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-15" value="Physical Vehicle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=bottom;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="110" y="310" width="480" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-4" value="Driver" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="40" width="760" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-5" target="ci-c7fPQLx81ArY2wnVB-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-28" value="Hold Release&amp;nbsp;&lt;div&gt;Additional Pressure&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-25" vertex="1" connectable="0">
+          <mxGeometry x="0.1642" y="-2" relative="1" as="geometry">
+            <mxPoint x="-28" y="-28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-5" value="Auto-Hold Module" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="190" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-6" value="Propulsion System" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="350" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-7" value="Braking System" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="238" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-8" value="Environment &amp;amp; Other Drivers" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="670" y="325" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.148;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-4" target="ci-c7fPQLx81ArY2wnVB-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-10" value="Enable/Disable AH&lt;div&gt;Brake pedal on/off&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-9" vertex="1" connectable="0">
+          <mxGeometry x="-0.1398" y="2" relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.376;entryY=0.967;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=11;" parent="1" source="ci-c7fPQLx81ArY2wnVB-5" target="ci-c7fPQLx81ArY2wnVB-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-12" value="AH&amp;nbsp;&lt;div&gt;Enabled/Disabled&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-11" vertex="1" connectable="0">
+          <mxGeometry x="0.2244" y="2" relative="1" as="geometry">
+            <mxPoint x="1" y="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.114;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.049;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-4" target="ci-c7fPQLx81ArY2wnVB-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="280" as="sourcePoint" />
+            <mxPoint x="450" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-19" value="Brake&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-18" vertex="1" connectable="0">
+          <mxGeometry x="0.2542" y="2" relative="1" as="geometry">
+            <mxPoint x="-27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.098;exitY=-0.017;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.143;entryY=1.025;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-15" target="ci-c7fPQLx81ArY2wnVB-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="280" as="sourcePoint" />
+            <mxPoint x="450" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-21" value="Pedal&amp;nbsp;&lt;div&gt;Response&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-20" vertex="1" connectable="0">
+          <mxGeometry x="-0.1771" y="2" relative="1" as="geometry">
+            <mxPoint x="14" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.365;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-7" target="ci-c7fPQLx81ArY2wnVB-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-27" value="Wheel Speed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-26" vertex="1" connectable="0">
+          <mxGeometry x="0.3238" relative="1" as="geometry">
+            <mxPoint x="36" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.887;entryY=0.983;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-6" target="ci-c7fPQLx81ArY2wnVB-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-32" value="Accel pos.&amp;nbsp;&lt;div&gt;PRNDL&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-30" vertex="1" connectable="0">
+          <mxGeometry x="0.3692" y="2" relative="1" as="geometry">
+            <mxPoint x="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-34" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.672;exitY=0.983;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.927;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-4" target="ci-c7fPQLx81ArY2wnVB-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="280" as="sourcePoint" />
+            <mxPoint x="450" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-35" value="Accelerate, Shift" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-34" vertex="1" connectable="0">
+          <mxGeometry x="-0.2286" y="-3" relative="1" as="geometry">
+            <mxPoint x="-38" y="-56" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.71;entryY=0.983;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-15" target="ci-c7fPQLx81ArY2wnVB-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-37" value="Vehicle speed,&amp;nbsp;&lt;div&gt;Visual feedback, etc.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-36" vertex="1" connectable="0">
+          <mxGeometry x="0.1956" y="-2" relative="1" as="geometry">
+            <mxPoint x="28" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-38" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-15" target="ci-c7fPQLx81ArY2wnVB-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="520" as="sourcePoint" />
+            <mxPoint x="660" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.882;entryY=1.008;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ci-c7fPQLx81ArY2wnVB-8" target="ci-c7fPQLx81ArY2wnVB-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-c7fPQLx81ArY2wnVB-40" value="Visual cues&amp;nbsp;&lt;div&gt;Physical feedback&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ci-c7fPQLx81ArY2wnVB-39" vertex="1" connectable="0">
+          <mxGeometry x="0.2814" relative="1" as="geometry">
+            <mxPoint x="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
