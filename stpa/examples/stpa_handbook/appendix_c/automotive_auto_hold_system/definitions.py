@@ -1,8 +1,7 @@
 # type: ignore
 
-from stpa import Definition, Hazard, UnsafeControlAction
-
-HAZARDS = Hazard('H-1', '', '', []), Hazard('H-2', '', '', [])
+from stpa.definitions import Definition, Hazard, UnsafeControlAction
+from stpa.examples.stpa_handbook.appendix_a import *
 
 UNSAFE_CONTROL_ACTIONS = (
     # Hold Command

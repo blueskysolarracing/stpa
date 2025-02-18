@@ -1,0 +1,25 @@
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{table}[h]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|R{2.00cm}|R{2.00cm}|R{2.00cm}|R{3.00cm}|R{3.00cm}|R{4.00cm}|}
+\hline
+\textbf{Source} & \textbf{Name} & \textbf{Type} & \textbf{Control Action} & \textbf{Context} & \textbf{Hazards} \\
+\hline
+BSCU Autobrake & UCA{-}1 & does not provide & the Brake control action & during landing roll when the BSCU is armed & H{-}4.1: Deceleration is insufficient upon landing, rejected takeoff, or during taxiing \\ 
+\hline
+Autobrake & BSCU.1a1 & does not provide & Brake command & during RTO to V1 (resulting in inability to stop within available runway length) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+AH & UCA{-}AH{-}1 & does not provide & HOLD & when vehicle stops and brake pedal released & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}1 & does not provide & Abort Cmd & when emergency condition exists & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+Crew & CREW.1a1 & does not provide & manual braking & during landing, RTO, or taxiing when Autobrake is not providing braking or is providing insufficient braking & H4.1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing \\ 
+\hline
+\end{tabular}
+}
+\end{table}

@@ -1,16 +1,7 @@
 # type: ignore
 
-from stpa import Definition, Hazard, SubHazard, UnsafeControlAction
-
-HAZARDS = Hazard('H4', '', '', [])
-
-SUB_HAZARDS = (
-    SubHazard('H4-1', Definition.get('H4'), ''),
-    SubHazard('H4.1', Definition.get('H4'), ''),
-    SubHazard('H4-2', Definition.get('H4'), ''),
-    SubHazard('H4.4', Definition.get('H4'), ''),
-    SubHazard('H4-5', Definition.get('H4'), ''),
-)
+from stpa.definitions import Definition, Hazard, SubHazard, UnsafeControlAction
+from stpa.examples.stpa_handbook.chapter_3 import definitions 
 
 UNSAFE_CONTROL_ACTIONS = (
     UnsafeControlAction(

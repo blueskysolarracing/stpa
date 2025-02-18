@@ -1,14 +1,15 @@
 # type: ignore
 
-from stpa import Definition, Hazard, SubHazard, UnsafeControlAction
+from stpa.definitions import Definition, Hazard, SubHazard, UnsafeControlAction
+from stpa.examples.stpa_handbook.chapter_2 import *
 
-HAZARDS = Hazard('H4', '', '', [])
+HAZARDS = Hazard('H4', 'aircraft', 'An {} on the ground comes too close to moving or stationary objects or inadvertently leaves the taxiway', [])
 
 SUB_HAZARDS = (
-    SubHazard('H4-1', Definition.get('H4'), ''),
-    SubHazard('H4-2', Definition.get('H4'), ''),
-    SubHazard('H4-5', Definition.get('H4'), ''),
-    SubHazard('H4-6', Definition.get('H4'), ''),
+    SubHazard('H4-1', Definition.get('H4'), 'Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing'),
+    SubHazard('H4-2', Definition.get('H4'), 'Deceleration after the V116 point during takeoff'),
+    SubHazard('H4-5', Definition.get('H4'), 'Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.)'),
+    SubHazard('H4-6', Definition.get('H4'), 'Main gear wheel rotation is not stopped when (continues after) the landing gear is retracted'),
 )
 
 UNSAFE_CONTROL_ACTIONS = (
@@ -142,3 +143,5 @@ UNSAFE_CONTROL_ACTIONS = (
         Definition.get_all('H4-1', 'H4-5'),
     ),
 )
+
+print(Definition.get_all('H4-1', 'H4-5'))

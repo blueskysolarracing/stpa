@@ -1,4 +1,4 @@
-from stpa.examples.stpa_handbook import UNSAFE_CONTROL_ACTIONS
+from stpa.examples.stpa_handbook import UNSAFE_CONTROL_ACTIONS, app_c_aas_defs, app_c_abscua_defs, app_c_ahtvo_defs, app_c_wbscafc_defs, c2_defs
 from abc import ABC, abstractmethod
 from typing import ClassVar
 from stpa import UnsafeControlAction
@@ -42,9 +42,9 @@ class LatexTableGenerator(ABC):
         latex = [
             
             '\\newcolumntype{R}[1]{>{\\raggedright\\arraybackslash}p{#1}}',
-            '\\begin{table}[h]',
-            '\\resizebox{\\textwidth}{!}{%\n'
-            '\\begin{tabular}{|' + '|'.join([f'R{{{self._COLUMN_WIDTHS_CM.get(column, 2):.2f}cm}}' for column in self.COLUMN_NAMES]) + '|}',
+            # '\\begin{table}[h]',
+            # '\\resizebox{\\textwidth}{!}{%\n'
+            '\\begin{tabularx}{\\textwidth}{|' + '|'.join([f'R{{{self._COLUMN_WIDTHS_CM.get(column, 2):.2f}cm}}' for column in self.COLUMN_NAMES]) + '|}',
             '\\hline'
         ]
         
@@ -58,9 +58,9 @@ class LatexTableGenerator(ABC):
             latex.append('\\hline')
         
         latex.extend([
-            '\\end{tabular}',
-            '}',
-            '\\end{table}'
+            '\\end{tabularx}',
+            # '}',
+            # '\\end{table}'
         ])
         
         return '\n'.join(latex)
@@ -222,9 +222,9 @@ class UCAByTypesTableGenerator(UCATableGenerator):
         
 if __name__ == "__main__":
     
-    uca_table_generator = UCAByTypesTableGenerator(UNSAFE_CONTROL_ACTIONS[0:100])
+    uca_table_generator = UCAAttributesTableGenerator(UNSAFE_CONTROL_ACTIONS)
     latex = uca_table_generator.generate()
-    with open("misc/resources/uca_by_types_table.tex", "w") as f:
+    with open("misc/resources/all_ucas.tex", "w") as f:
         f.write(latex)
     
     

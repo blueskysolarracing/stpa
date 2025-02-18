@@ -1,0 +1,258 @@
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{tabularx}{\textwidth}{|R{2.00cm}|R{2.00cm}|R{2.00cm}|R{3.00cm}|R{3.00cm}|R{4.00cm}|}
+\hline
+\textbf{Source} & \textbf{Name} & \textbf{Type} & \textbf{Control Action} & \textbf{Context} & \textbf{Hazards} \\
+\hline
+BSCU Autobrake & UCA{-}1 & does not provide & the Brake control action & during landing roll when the BSCU is armed & H{-}4.1: Deceleration is insufficient upon landing, rejected takeoff, or during taxiing \\ 
+\hline
+BSCU Autobrake & UCA{-}2 & provides & Brake control action & during a normal takeoff & H{-}4.3: Deceleration occurs after V1 point during takeoff\newline%
+\newline%
+H{-}4.6: Acceleration is insufficient during takeoff \\ 
+\hline
+BSCU Autobrake & UCA{-}5 & provides with an insufficient level of braking & Brake control action & during landing roll & H{-}4.1: Deceleration is insufficient upon landing, rejected takeoff, or during taxiing \\ 
+\hline
+BSCU Autobrake & UCA{-}6 & provides with directional or asymmetrical braking & Brake control action & during landing roll & H{-}4.1: Deceleration is insufficient upon landing, rejected takeoff, or during taxiing\newline%
+\newline%
+H{-}4.2: Asymmetric deceleration maneuvers aircraft toward other objects \\ 
+\hline
+BSCU Autobrake & UCA{-}3 & provides too late (\textgreater{}TBD seconds) & the Brake control action & after touchdown & H{-}4.1: Deceleration is insufficient upon landing, rejected takeoff, or during taxiing \\ 
+\hline
+BSCU Autobrake & UCA{-}4 & stops providing too early (before TBD taxi speed attained) & the Brake control action & when aircraft lands & H{-}4.1: Deceleration is insufficient upon landing, rejected takeoff, or during taxiing \\ 
+\hline
+Crew & Crew{-}UCA{-}1 & does not provide & BSCU Power Off & when abnormal WBS behavior occurs & H{-}4.1: Deceleration is insufficient upon landing, rejected takeoff, or during taxiing\newline%
+\newline%
+H{-}4.4: Excessive acceleration provided while taxiing\newline%
+\newline%
+H{-}7: UAV does not complete surveillance mission {[}L{-}4{]} \\ 
+\hline
+Crew & Crew{-}UCA{-}2 & provides & BSCU Power Off & when Anti{-}Skid functionality is needed and WBS is functioning normally & H{-}4.1: Deceleration is insufficient upon landing, rejected takeoff, or during taxiing\newline%
+\newline%
+H{-}7: UAV does not complete surveillance mission {[}L{-}4{]} \\ 
+\hline
+Crew & Crew{-}UCA{-}3 & powers off too early before Autobrake or Anti{-}Skid behavior is completed & BSCU & when it is needed & H{-}4.1: Deceleration is insufficient upon landing, rejected takeoff, or during taxiing\newline%
+\newline%
+H{-}7: UAV does not complete surveillance mission {[}L{-}4{]} \\ 
+\hline
+Autobrake & BSCU.1a1 & does not provide & Brake command & during RTO to V1 (resulting in inability to stop within available runway length) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Autobrake & BSCU.1a2 & does not provides & Brake command & during landing roll when BSCU is armed (resulting in insufficient deceleration and potential overshoot) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Autobrake & BSCU.1a4 & does not provide & Brake command & after takeoff (needed to lock wheels, results in potential equipment damage during landing gear retraction or wheel rotation in flight) & H4{-}6: Main gear wheel rotation is not stopped when (continues after) the landing gear is retracted \\ 
+\hline
+Autobrake & BSCU.1b1 & provides & excessive Braking commands & during landing roll & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Autobrake & BSCU.1b2 & provides & Braking command inappropriately & during takeoff (resulting in inadequate acceleration) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}2: Deceleration after the V116 point during takeoff\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Autobrake & BSCU.1b3 & provides & Brake command with insufficient level & (resulting in insufficient deceleration during landing roll) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Autobrake & BSCU.1c1 & provides before touchdown & Braking command & (resulting in tire burst, loss of control, injury, other damage) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Autobrake & BSCU.1c2 & provides more than TBD seconds after touchdown & Brake command & (resulting in insufficient deceleration and potential loss of control, overshoot) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Autobrake & BSCU.1c3 & provides at any time & Brake command & before wheels have left ground and RTO has not been requested (brake might be applied to stop wheels before gear retraction) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}2: Deceleration after the V116 point during takeoff\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Autobrake & BSCU.1c4 & provides more than TBD seconds & Brake & after V1 during rejected takeoff (assumes that Autobrake is responsible for braking during RTO after crew throttle down) & H4{-}2: Deceleration after the V116 point during takeoff \\ 
+\hline
+Autobrake & BSCU.1d1 & stops providing & Brake & during landing roll before TBD taxi speed attained (causing reduced deceleration) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Autobrake & BSCU.1d2 & provides too long (more than TBD seconds) & Brake command & during landing roll (causing stop on runway) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing \\ 
+\hline
+Autobrake & BSCU.1d3 & provides until less than TBD seconds & Brake command for tire lock & before touchdown during approach (resulting in loss of control, equipment damage) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+AH & UCA{-}AH{-}1 & does not provide & HOLD & when vehicle stops and brake pedal released & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}2 & provides & HOLD & when driver is applying the accelerator & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}3 & provides & HOLD & when AH is DISABLED & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}4 & provides & HOLD & when vehicle is moving & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}5 & provides & HOLD & when driver is not applying brake & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}6 & provides too early & HOLD & before the required time at rest has not been met & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}7 & provides too late & HOLD & after vehicle stops, begins to roll & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}10 & does not provide & RELEASE & when driver applies accelerator pedal & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}12 & provides & RELEASE & when driver is not applying accelerator & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}13 & provides too early & RELEASE & before there is sufficient wheel torque & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}13 & provides too late & RELEASE & after accelerator applied, engine torque exceeds wheel torque & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}14 & does not provide & ADDITIONALPRESSURE & when vehicle is slipping and AH is active & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}15 & provides & ADDITIONALPRESSURE & when AH is not active & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}16 & provides & ADDITIONALPRESSURE & when brake system specs are exceeded & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+AH & UCA{-}AH{-}16 & provides too late & ADDITIONAL{-}PRESSURE & after vehicle is slipping & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]}\newline%
+\newline%
+H{-}2: Aircraft airframe integrity is lost {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}1 & does not provide & Abort Cmd & when emergency condition exists & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}2 & provides & Abort Cmd & when HTV is captured & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}3 & provides & Abort Cmd & when ISS is in Abort path & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}4 & provides too late & Abort Cmd & to avoid collision & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}5 & provides too early & Abort Cmd & before capture is released & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}6 & does not provide & Free Drift Cmd & when HTV is stopped in capture box & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}7 & provides & Free Drift Cmd & when HTV is approaching ISS & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}8 & provides too late, more than X minutes & Free Drift Cmd & after HTV stops & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}9 & provides too early & Free Drift Cmd & before HTV stops & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}10 & does not perform & Capture & when HTV is in capture box in free drift & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}11 & performs & Capture & when HTV is not in free drift & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}12 & performs & Capture & when HTV is aborting & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}13 & performs & Capture & with excessive/insufficient movement (can impact HTV, cause collision course) & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}14 & performs too late, more than X minutes & Capture & after HTV deactivated & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}15 & performs too early & Capture & before HTV deactivated & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+ISS crew & UCA{-}HTV{-}16 & continues performing too long & Capture & after emergency condition exists & H{-}1: Aircraft violate minimum separation standards in flight {[}L{-}1, L{-}2, L{-}4, L{-}5{]} \\ 
+\hline
+Crew & CREW.1a1 & does not provide & manual braking & during landing, RTO, or taxiing when Autobrake is not providing braking or is providing insufficient braking & H4.1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing \\ 
+\hline
+Crew & CREW.1b1 & provides & manual braking & with insufficient pedal pressure & H4.1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing \\ 
+\hline
+Crew & CREW.1b2 & provides & manual braking & with excessive pedal pressure (resulting in loss of control, passenger/crew injury, brake overheating, brake fade or tire burst during landing) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.1b3 & provides & manual braking & provided during normal takeoff & H4{-}2: Deceleration after the V116 point during takeoff\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.1c1 & provides & manual braking & before touchdown (causes wheel lockup, loss of control, tire burst) & H4.1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing \\ 
+\hline
+Crew & CREW.1c2 & provides too late (TBD) & manual braking & to avoid collision or conflict with another object (can overload braking capability given aircraft weight, speed, distance to object (conflict), and tarmac conditions) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.1d1 & stops providing & manual braking command & before safe taxi speed (TBD) is reached & H4.1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4.4: Unintentional aircraft directional control (differential braking) \\ 
+\hline
+Crew & CREW.1d2 & provides too long & manual braking & (resulting in stopped aircraft on runway or active taxiway) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing \\ 
+\hline
+Crew & CREW.2a1 & does not arm & Autobrake & before landing (causing loss of automatic brake operation when spoilers deploy. Crew reaction time may lead to overshoot.) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.2a2 & does not arm & Autobrake & prior to takeoff (resulting in insufficient braking during rejected takeoff, assuming that Autobrake is responsible for braking during RTO after crew throttle down) & H4{-}2: Deceleration after the V116 point during takeoff \\ 
+\hline
+Crew & CREW.2b1 & does not arm & Autobrake & to maximum level during takeoff. (assumes that maximum braking force is necessary for rejected takeoff) & H4{-}2: Deceleration after the V116 point during takeoff \\ 
+\hline
+Crew & CREW.2b2 & armed with too high of a deceleration rate & autobrake & for runway conditions (resulting in loss of control and passenger or crew injury). & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.2c1 & provides too late (TBD) & arm command & (resulting in insufficient time for BSCU to apply brakes) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.3a1 & does not disarm & Autobrake & during TOGA (resulting in loss of acceleration during (re)takeoff) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}2: Deceleration after the V116 point during takeoff\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.3b1 & disarms & Autobrake & during landing or RTO (resulting in loss of automatic brake operation when spoilers deploy. Crew reaction time may lead to overshoot) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.3c1 & disarms more than TBD seconds & Autobrake & after (a) aircraft descent exceeds TBD fps, (b) visibility is less than TBD ft, (c) etc…, (resulting in either loss of control of aircraft or loss of acceleration during (re)takeoff) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}2: Deceleration after the V116 point during takeoff\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.4a1 & does not power off & BSCU & in the event of abnormal WBS behavior (needed to enable alternate braking mode) & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}2: Deceleration after the V116 point during takeoff\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.4b1 & powers off & BSCU & when Autobraking is needed and WBS functioning normally & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.4b2 & powers off & BSCU & when Autobrake is needed (or about to be used) and WBS if funtioning normally & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.4b3 & powers off & BSCU & when Anti{-}Skid functionality is needed (or will be needed) and WBS is functioning normally & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.4c1 & powers off too late & BSCU & (TBD) to enable alternate braking mode in the event of abnormal WBS behavior & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.4c2 & powers off too early & BSCU & before Autobrake or Anti{-}Skid behavior is completed when it is needed & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.5a1 & does not power on & BSCU & when Normal braking mode, Autobrake, or Anti{-}Skid is to be used and WBS functioning normally & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+Crew & CREW.5c1 & powers on too late & BSCU & after Normal braking mode, Autobrake, or Anti{-}Skid is needed & H4{-}1: Inadequate aircraft deceleration upon landing, rejected takeoff, or taxiing\newline%
+\newline%
+H4{-}5: Aircraft maneuvers out of safe regions (taxiways, runways, terminal gates, ramps, etc.) \\ 
+\hline
+\end{tabularx}

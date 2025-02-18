@@ -1,3 +1,5 @@
+
+from .appendix_a import *
 from .chapter_2 import definitions as c2_defs
 from .appendix_c.aircraft_brake_system_control_unit_autobrake import (
     definitions as app_c_abscua_defs,
@@ -19,3 +21,4 @@ UNSAFE_CONTROL_ACTIONS = (
     *app_c_ahtvo_defs.UNSAFE_CONTROL_ACTIONS,
     *app_c_wbscafc_defs.UNSAFE_CONTROL_ACTIONS,
 )
+
