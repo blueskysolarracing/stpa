@@ -349,7 +349,7 @@ Examples:
 
 {}
 
-Classify the quality of the following loss scenario:
+Classify the quality of the following loss scenario.
 
 Scenario: {}
 
