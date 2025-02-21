@@ -1,5 +1,7 @@
 __all__ = (
     'CELL_TAG_NAME',
+    'classify_raw_scenario_quality',
+    'classify_raw_unsafe_control_action_quality',
     'clean_html_text',
     'ControlActionOrFeedback',
     'ControllerConstraint',
@@ -8,10 +10,15 @@ __all__ = (
     'ControlType',
     'Definition',
     'Entity',
+    'generate_raw_scenarios',
+    'generate_raw_unsafe_control_actions',
     'GEOMETRY_TAG_NAME',
     'Hazard',
     'HTML_PARSER',
     'Loss',
+    'QualityResponse',
+    'query_equality',
+    'query_linkage',
     'Responsibility',
     'Scenario',
     'ScenarioType1',
@@ -22,6 +29,7 @@ __all__ = (
     'SystemLevelConstraintType2',
     'SystemLevelConstraintType3',
     'UnsafeControlAction',
+    'YesOrNoResponse',
 )
 
 from stpa.definitions import (
@@ -49,4 +57,17 @@ from stpa.control_structures import (
     Entity,
     GEOMETRY_TAG_NAME,
 )
-from stpa.utilities import clean_html_text, HTML_PARSER
+from stpa.utilities import (
+    clean_html_text,
+    HTML_PARSER,
+    QualityResponse,
+    YesOrNoResponse,
+)
+from stpa.synthesis import (
+    classify_raw_scenario_quality,
+    classify_raw_unsafe_control_action_quality,
+    generate_raw_scenarios,
+    generate_raw_unsafe_control_actions,
+    query_equality,
+    query_linkage,
+)
