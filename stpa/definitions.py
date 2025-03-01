@@ -130,7 +130,7 @@ class SystemLevelConstraintType3(SystemLevelConstraint):
 
 
 @dataclass(repr=False)
-class SubHazard(SystemLevelConstraint):
+class SubHazard(Definition):
     _NAME_PATTERN = compile(r'H-\d+\.\d+')
     hazard: Hazard
     description: str

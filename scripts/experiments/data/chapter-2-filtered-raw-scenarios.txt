@@ -1,0 +1,50 @@
+Crew fails to power BSCU off during WBS anomaly, causing runway overrun [Crew-UCA-1].
+Satellite fails data collection due to power subsystem failure [H-5].
+Brake command not sent due to signal transmission error [UCA-1].
+Brake system does not engage due to command blocking attack [H-4].
+Brake command delay due to system processing lag [UCA-3].
+Sensor failure provides erroneous airframe integrity data, risking accidental power-off of anti-skid [Crew-UCA-2] [H-2].
+Software glitch in BSCU causes asymmetrical braking, jeopardizing aircraft stability upon landing [UCA-6] [H-4.1].
+Communication error between flight crew and BSCU prevents activation of necessary Brake control, threatening minimum separation [H-1].
+The Flight Crew erroneously engages the BSCU during takeoff, activating braking [UCA-2], leading to insufficient acceleration [H-4.6].
+Ground crew incorrectly configures BSCU, enabling brakes during takeoff [UCA-2], causing operational hazard [H-4.6].
+Crew confusion during BSCU alert fails to engage manual braking [Crew-UCA-1], risking control loss on landing [H-4.1].
+Autobrake engages due to false touchdown signal in mid-air, risking structural load exceedance [UCA-2, H-4.6].
+Engine throttle control system fails, causing aircraft to overshoot the runway [H-4.1].
+Electrical surge affects onboard avionics, misreporting aircraft altitude [H-1].
+Fuel imbalance disturbs load distribution, leading to ineffective braking control and hazard H-4.2.
+Sensor malfunction leads to an early stop of Brake action [UCA-4], resulting in runway overrun [H-4.1].
+Sensor faults result in incorrect Brake application [UCA-5], causing collision [H-4.1].
+Pilot’s neglect of instrument cross-checks leads to faulty altitude adjustment. [H-6]
+BSCU power failure during a critical maneuver leads to an inability to execute braking commands. [UCA-4, H-4]
+Mechanical failure causes uncommanded roll during flight, risking aircraft integrity. [H-2]
+Sensor failure during approach causes the aircraft to deviate from the safe path, risking collision with ground objects [H-3].
+Icing conditions impact aerodynamic surfaces, leading to flight instability [H-2].
+Pilots do not notice a wind shear threat, causing unsafe proximity to the runway edge [H-3].
+Loss of airframe integrity due to undetected material fatigue, causing mission abort [H-2].
+Crew misinterprets non-critical warning, deactivates BSCU prematurely [Crew-UCA-3], risking incomplete deceleration [H-4.1].
+Autobrake activates too early before touchdown, causing stress on the landing gear [UCA-3, H-2].
+Satellite misoriented, unable to collect scheduled data [H-5].
+Brake command is sent too early, causing insufficient taxi speed upon landing [UCA-4][H-4.1].
+Sensors indicate spurious zero-speed, causing erroneous brake application reversal by BSCU [H-4.1].
+Secure information lost due to mishandling of encoded data [L-6].
+Mission software interacts inappropriately, causing unwarranted WBS engagement outside test protocols [H-7].
+Autobrake activates during normal takeoff due to a sensor error, reducing takeoff speed [UCA-2, H-4.6].
+The Autobrake Controller sends Brake control actions intermittently due to fluctuating hydraulic pressure [UCA-5].
+Incorrect brake pressure leads to skidding during takeoff, increasing wear and damage [UCA-5, H-4.3].
+Ill-timed autopilot disengagement increases proximity to other aircraft [H-1].
+Brake system valves stick open due to mechanical failure, causing unintended brake application [UCA-6, H-4.1].
+Engine failure is not detected, resulting in loss of aircraft power during critical flight [H-2].
+The aircraft's speed sensor fails, leading to a stall mid-flight [H-1].
+Physical controller anomaly sends unintended Brake command [UCA-2]. Results in excessive deceleration [H-4.3].
+BSCU Power Off command is given under normal operations, affecting anti-skid feature [H-4, Crew-UCA-2].
+Aerial navigation failure causes aircraft to violate separation standards [H-1], causing mission failure [L-4].
+Pilot misjudgment during UAV operation results in unsafe approach to terrain [H-6], causing damage [L-2].
+Crew's failure to monitor wheel speed loss results in BSCU not automatically compensating [UCA-5, H-4].
+Failure in redundant brake systems occurs simultaneously due to overlapping scheduled maintenance [H-4].
+Autobrake engages asymmetrically during takeoff [UCA-6], initiating uncontrollable spin [H-4.2].
+Wet runway causes inaccurate wheel speed feedback, delaying brake application [UCA-2, H-4.1].
+Excessive accelerative force due to inappropriate Autobrake engagement during taxi [UCA-2, H-4.3].
+The control system fails to register a change in terrain, leading to a hazardous flight path [H-6].
+BSCU provides braking action during takeoff [UCA-2], increasing risk of aborted takeoff [H-4.3].
+Internal cargo fire triggered by improperly secured dangerous goods [H-2].

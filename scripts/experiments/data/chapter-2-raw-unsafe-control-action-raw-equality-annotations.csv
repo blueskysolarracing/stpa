@@ -1,0 +1,1226 @@
+,unsafe_control_action_0,unsafe_control_action_1,equality
+0,BSCU Disarm command is not issued upon successful landing [H-2],BSCU triggers Brake too late after turbulence passes [H-6],False
+1,Hydraulic Controller closes valves during critical braking [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+2,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+3,Hydraulic Controller closes valves during critical braking [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+4,Flight Crew maintains Manual control state unnecessarily long [H-2],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+5,Wheel Brakes maintain full pressure post-stop [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+6,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Hydraulic Controller does not open valves during Autobrake mode [H-3],False
+7,Hydraulic system remains engaged after command ends [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+8,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Hydraulic system disengages prematurely [H-2],False
+9,Autobrake Controller stops providing Brake command too early during landing [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+10,BSCU provides Arm and Set command prematurely before required conditions [H-1],Autobrake engages without command during manual operation [H-2],False
+11,Hydraulic Controller closes valves during critical braking [H-3],Hydraulic system remains engaged after command ends [H-3],False
+12,BSCU triggers Brake too late after turbulence passes [H-6],BSCU fault falsely triggers emergency protocol [H-2],False
+13,Autobrake Controller does not provide Brake command during emergency landing [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+14,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+15,Autobrake Controller stops providing Brake command too early during landing [H-3],Flight Crew does not utilize Reverse thrust on slippery runway [H-1],False
+16,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Manual Braking State not entered after system fault detection [H-6],True
+17,Autobrake Controller provides Brake command during takeoff roll [H-3],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+18,BSCU triggers Brake too late after turbulence passes [H-6],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+19,Flight Crew omits BSCU mode check during pre-flight [H-1],Wheel Brakes provide inconsistent braking power [H-3],False
+20,Hydraulic Controller fails to provide adequate pressure [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+21,BSCU Disarm command is not issued upon successful landing [H-2],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+22,Flight Crew applies Reverse thrust during normal landing [H-2],BSCU triggers Brake too late after turbulence passes [H-6],False
+23,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Wheels provide inaccurate Wheel Speed data [H-6],False
+24,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Autobrake engages without command during manual operation [H-2],False
+25,Flight Crew maintains Manual control state unnecessarily long [H-2],Flight Crew engages Steering control during high-speed approach [H-6],False
+26,Wheels provide inaccurate Wheel Speed data [H-6],BSCU fault falsely triggers emergency protocol [H-2],False
+27,BSCU power turns off during normal operation [H-2],Other subsystems do not receive Manual Controls from Flight Crew [H-6],True
+28,BSCU engages Autobrake mode during normal taxi [H-3],Other subsystems trigger erroneous state transition [H-6],False
+29,Wheel Brakes maintain full pressure post-stop [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+30,BSCU does not engage Autobrake mode when required [H-1],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+31,BSCU fault falsely triggers emergency protocol [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],False
+32,Flight Crew engages Steering control during high-speed approach [H-6],BSCU fault falsely triggers emergency protocol [H-2],False
+33,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Other subsystems trigger erroneous state transition [H-6],False
+34,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Autobrake engages without command during manual operation [H-2],False
+35,Autobrake Controller stops providing Brake command too early during landing [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+36,Hydraulic system remains engaged after command ends [H-3],Hydraulic system disengages prematurely [H-2],False
+37,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+38,BSCU provides Arm and Set command too late for takeoff roll [H-1],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+39,Wheels do not provide feedback for Wheel Speed [H-6],BSCU Disarm command is not issued upon successful landing [H-2],False
+40,Wheels provide inaccurate Wheel Speed data [H-6],Autobrake deceleration rate set incorrectly [H-1],False
+41,BSCU Disarm command is issued before landing completion [H-2],BSCU fault signal ignored during landing [H-2],True
+42,Flight Crew engages Steering control during high-speed approach [H-6],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+43,Hydraulic Controller provides excessive pressure to brakes [H-3],Hydraulic system remains engaged after command ends [H-3],True
+44,BSCU does not engage Autobrake mode when required [H-1],BSCU power does not turn off during system fault [H-2],False
+45,Wheels provide inaccurate Wheel Speed data [H-6],Wheel Brakes maintain full pressure post-stop [H-2],False
+46,BSCU power does not turn off during system fault [H-2],Manual Braking State not entered after system fault detection [H-6],False
+47,Flight Crew applies Reverse thrust during normal landing [H-2],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+48,BSCU Disarm command is issued before landing completion [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],False
+49,BSCU engages Autobrake mode during normal taxi [H-3],Autobrake engages without command during manual operation [H-2],False
+50,Autobrake engages without command during manual operation [H-2],Autobrake disengages prematurely during emergency braking [H-3],False
+51,Autobrake engages without command during manual operation [H-2],BSCU fault falsely triggers emergency protocol [H-2],True
+52,Flight Crew maintains Manual control state unnecessarily long [H-2],BSCU fault falsely triggers emergency protocol [H-2],False
+53,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+54,Other subsystems receive erroneous Manual Controls causing hazard [H-6],BSCU triggers Brake too early upon detecting turbulence [H-6],True
+55,BSCU does not engage Autobrake mode when required [H-1],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+56,Flight Crew maintains Manual control state unnecessarily long [H-2],Flight Crew does not engage Steering control during taxi [H-3],False
+57,BSCU Disarm command is issued before landing completion [H-2],BSCU triggers Brake too late after turbulence passes [H-6],False
+58,BSCU triggers Brake too late after turbulence passes [H-6],Autobrake disengages prematurely during emergency braking [H-3],False
+59,Manual Braking State not entered after system fault detection [H-6],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+60,BSCU Disarm command is not issued upon successful landing [H-2],Manual Braking State not entered after system fault detection [H-6],False
+61,Hydraulic Controller closes valves during critical braking [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+62,Autobrake Controller provides Brake command during takeoff roll [H-3],Autobrake engages without command during manual operation [H-2],False
+63,Flight Crew does not engage Steering control during taxi [H-3],Hydraulic system remains engaged after command ends [H-3],False
+64,Autobrake deceleration rate change too late for necessary correction [H-1],Other subsystems trigger erroneous state transition [H-6],False
+65,BSCU power turns off during normal operation [H-2],BSCU fault falsely triggers emergency protocol [H-2],True
+66,Autobrake Controller provides Brake command during takeoff roll [H-3],Flight Crew does not utilize Reverse thrust on slippery runway [H-1],False
+67,Autobrake Controller does not provide Brake command during emergency landing [H-3],Hydraulic Controller does not open valves during Autobrake mode [H-3],True
+68,BSCU power turns off during normal operation [H-2],Autobrake engages without command during manual operation [H-2],True
+69,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+70,Flight Crew conducts BSCU mode change mid-flight [H-1],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+71,BSCU Disarm command is issued before landing completion [H-2],Wheel Brakes provide inconsistent braking power [H-3],False
+72,Hydraulic Controller provides excessive pressure to brakes [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+73,BSCU provides Arm and Set command prematurely before required conditions [H-1],Other subsystems trigger erroneous state transition [H-6],False
+74,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],False
+75,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+76,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Hydraulic Controller opens valves too early before receiving Brake command [H-3],False
+77,Flight Crew enters Manual control state too late after Autobrake failure [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+78,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],BSCU fault signal ignored during landing [H-2],True
+79,Autobrake deceleration rate set incorrectly [H-1],BSCU fault signal ignored during landing [H-2],True
+80,BSCU triggers Brake too late after turbulence passes [H-6],Hydraulic system disengages prematurely [H-2],False
+81,Flight Crew omits BSCU mode check during pre-flight [H-1],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+82,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+83,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Wheels provide inaccurate Wheel Speed data [H-6],False
+84,Flight Crew engages Steering control during high-speed approach [H-6],Hydraulic system remains engaged after command ends [H-3],False
+85,Hydraulic Controller does not open valves during Autobrake mode [H-3],Hydraulic system disengages prematurely [H-2],True
+86,BSCU provides Arm and Set command too late for takeoff roll [H-1],Flight Crew does not engage Steering control during taxi [H-3],False
+87,BSCU provides Arm and Set command too late for takeoff roll [H-1],Flight Crew omits BSCU mode check during pre-flight [H-1],True
+88,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],BSCU Disarm command is not issued upon successful landing [H-2],False
+89,Autobrake Controller does not provide Brake command during emergency landing [H-3],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+90,BSCU provides Arm and Set command prematurely before required conditions [H-1],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+91,BSCU does not engage Autobrake mode when required [H-1],BSCU Disarm command is issued before landing completion [H-2],False
+92,Autobrake Controller provides Brake command during takeoff roll [H-3],Wheels do not provide feedback for Wheel Speed [H-6],False
+93,BSCU provides Arm and Set command too late for takeoff roll [H-1],BSCU power does not turn off during system fault [H-2],False
+94,Autobrake Controller provides Brake command during takeoff roll [H-3],Flight Crew applies Reverse thrust during normal landing [H-2],False
+95,Autobrake Controller does not provide Brake command during emergency landing [H-3],Hydraulic Controller opens valves too early before receiving Brake command [H-3],True
+96,Wheels do not provide feedback for Wheel Speed [H-6],BSCU fault signal ignored during landing [H-2],False
+97,Flight Crew engages Steering control during high-speed approach [H-6],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",True
+98,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Flight Crew does not engage Steering control during taxi [H-3],True
+99,BSCU triggers Brake too early upon detecting turbulence [H-6],Manual Braking State not entered after system fault detection [H-6],True
+100,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU engages Autobrake mode during normal taxi [H-3],False
+101,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Hydraulic system disengages prematurely [H-2],True
+102,Wheels do not provide feedback for Wheel Speed [H-6],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+103,Hydraulic Controller does not open valves during Autobrake mode [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+104,BSCU provides Arm and Set command too late for takeoff roll [H-1],BSCU Disarm command is not issued upon successful landing [H-2],False
+105,Flight Crew maintains Manual control state unnecessarily long [H-2],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+106,BSCU provides Arm and Set command prematurely before required conditions [H-1],Flight Crew applies reverse thrust out of sequence [H-6],False
+107,BSCU provides Arm and Set command prematurely before required conditions [H-1],Flight Crew omits BSCU mode check during pre-flight [H-1],True
+108,Hydraulic Controller fails to provide adequate pressure [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+109,Wheels do not provide feedback for Wheel Speed [H-6],BSCU Disarm command is issued before landing completion [H-2],False
+110,Flight Crew engages Steering control during high-speed approach [H-6],Flight Crew applies reverse thrust out of sequence [H-6],True
+111,BSCU power turns off during normal operation [H-2],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+112,Brake System Control Unit switches to alternate mode without necessity [H-2],BSCU Disarm command is not issued upon successful landing [H-2],True
+113,Hydraulic Controller opens valves too early before receiving Brake command [H-3],BSCU Disarm command is not issued upon successful landing [H-2],False
+114,Brake System Control Unit switches to alternate mode without necessity [H-2],BSCU fault falsely triggers emergency protocol [H-2],True
+115,Wheels do not provide feedback for Wheel Speed [H-6],Autobrake deceleration rate set incorrectly [H-1],False
+116,BSCU power turns off during normal operation [H-2],BSCU triggers Brake too late after turbulence passes [H-6],False
+117,Hydraulic Controller does not open valves during Autobrake mode [H-3],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],True
+118,Autobrake Controller provides Brake command during takeoff roll [H-3],Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],False
+119,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Manual Braking State not entered after system fault detection [H-6],True
+120,Hydraulic Controller fails to provide adequate pressure [H-3],Autobrake engages without command during manual operation [H-2],True
+121,Hydraulic Controller closes valves during critical braking [H-3],BSCU power does not turn off during system fault [H-2],False
+122,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+123,Flight Crew engages Steering control during high-speed approach [H-6],Flight Crew neglects reverse thrust check during systems test [H-6],False
+124,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Other subsystems trigger erroneous state transition [H-6],False
+125,Flight Crew applies Reverse thrust during normal landing [H-2],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+126,Flight Crew applies Reverse thrust during normal landing [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],True
+127,Autobrake disengages prematurely during emergency braking [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+128,Flight Crew applies Reverse thrust during normal landing [H-2],Hydraulic system remains engaged after command ends [H-3],False
+129,BSCU provides Arm and Set command too late for takeoff roll [H-1],BSCU Disarm command is issued before landing completion [H-2],False
+130,Flight Crew engages Steering control during high-speed approach [H-6],Hydraulic Controller fails to provide adequate pressure [H-3],False
+131,Wheels provide inaccurate Wheel Speed data [H-6],BSCU Disarm command is not issued upon successful landing [H-2],False
+132,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+133,Hydraulic Controller fails to provide adequate pressure [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+134,BSCU engages Autobrake mode during normal taxi [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+135,Hydraulic Controller provides excessive pressure to brakes [H-3],Manual Braking State not entered after system fault detection [H-6],True
+136,BSCU power does not turn off during system fault [H-2],Hydraulic system disengages prematurely [H-2],True
+137,Autobrake deceleration rate set incorrectly [H-1],Other subsystems trigger erroneous state transition [H-6],False
+138,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Other subsystems trigger erroneous state transition [H-6],False
+139,Autobrake Controller provides Brake command during takeoff roll [H-3],Manual Braking State not entered after system fault detection [H-6],False
+140,Autobrake Controller stops providing Brake command too early during landing [H-3],Hydraulic Controller opens valves too early before receiving Brake command [H-3],True
+141,Manual Braking State not entered after system fault detection [H-6],BSCU fault falsely triggers emergency protocol [H-2],True
+142,Autobrake Controller does not provide Brake command during emergency landing [H-3],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+143,Autobrake Controller does not provide Brake command during emergency landing [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+144,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+145,Hydraulic Controller closes valves during critical braking [H-3],Autobrake deceleration rate set incorrectly [H-1],True
+146,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Wheels provide inaccurate Wheel Speed data [H-6],False
+147,Hydraulic Controller provides excessive pressure to brakes [H-3],BSCU fault signal ignored during landing [H-2],False
+148,Wheels provide inaccurate Wheel Speed data [H-6],Other subsystems trigger erroneous state transition [H-6],True
+149,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+150,BSCU Disarm command is not issued upon successful landing [H-2],Hydraulic Controller fails to provide adequate pressure [H-3],False
+151,Wheel Brakes maintain full pressure post-stop [H-2],BSCU fault signal ignored during landing [H-2],False
+152,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+153,Flight Crew engages Steering control during high-speed approach [H-6],Autobrake deceleration rate set incorrectly [H-1],False
+154,Brake System Control Unit switches to alternate mode without necessity [H-2],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+155,Wheel Brakes provide inconsistent braking power [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+156,Brake System Control Unit does not switch to alternate braking mode when required [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+157,BSCU power does not turn off during system fault [H-2],BSCU fault falsely triggers emergency protocol [H-2],True
+158,Autobrake deceleration rate set incorrectly [H-1],Hydraulic system remains engaged after command ends [H-3],False
+159,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Autobrake disengages prematurely during emergency braking [H-3],False
+160,BSCU does not engage Autobrake mode when required [H-1],BSCU provides Arm and Set command prematurely before required conditions [H-1],False
+161,BSCU power does not turn off during system fault [H-2],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+162,Autobrake Controller provides Brake command during takeoff roll [H-3],Flight Crew enters Manual control state too late after Autobrake failure [H-3],True
+163,BSCU engages Autobrake mode during normal taxi [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+164,Flight Crew does not engage Steering control during taxi [H-3],Autobrake engages without command during manual operation [H-2],False
+165,Hydraulic Controller does not open valves during Autobrake mode [H-3],Hydraulic Controller opens valves too early before receiving Brake command [H-3],True
+166,Wheels provide inaccurate Wheel Speed data [H-6],Manual Braking State not entered after system fault detection [H-6],True
+167,Wheels do not provide feedback for Wheel Speed [H-6],Manual Braking State not entered after system fault detection [H-6],False
+168,Hydraulic Controller closes valves during critical braking [H-3],Autobrake engages without command during manual operation [H-2],True
+169,Wheels do not provide feedback for Wheel Speed [H-6],Autobrake deceleration rate change too late for necessary correction [H-1],False
+170,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+171,Autobrake disengages prematurely during emergency braking [H-3],Hydraulic system remains engaged after command ends [H-3],False
+172,Other subsystems do not receive Manual Controls from Flight Crew [H-6],BSCU Disarm command is issued before landing completion [H-2],False
+173,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Manual Braking State not entered after system fault detection [H-6],False
+174,Hydraulic Controller does not open valves during Autobrake mode [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+175,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Flight Crew applies reverse thrust out of sequence [H-6],True
+176,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+177,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+178,BSCU triggers Brake too late after turbulence passes [H-6],Manual Braking State not entered after system fault detection [H-6],True
+179,Hydraulic Controller closes valves during critical braking [H-3],BSCU fault signal ignored during landing [H-2],False
+180,BSCU engages Autobrake mode during normal taxi [H-3],Hydraulic Controller does not open valves during Autobrake mode [H-3],True
+181,BSCU provides Arm and Set command prematurely before required conditions [H-1],Autobrake disengages prematurely during emergency braking [H-3],False
+182,Brake System Control Unit switches to alternate mode without necessity [H-2],Wheel Brakes provide inconsistent braking power [H-3],False
+183,BSCU provides Arm and Set command too late for takeoff roll [H-1],Hydraulic Controller closes valves during critical braking [H-3],False
+184,Autobrake Controller stops providing Brake command too early during landing [H-3],Wheels do not provide feedback for Wheel Speed [H-6],False
+185,BSCU power does not turn off during system fault [H-2],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+186,Flight Crew does not engage Steering control during taxi [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+187,Autobrake Controller provides Brake command during takeoff roll [H-3],Hydraulic system disengages prematurely [H-2],False
+188,Autobrake engages without command during manual operation [H-2],Autobrake deceleration rate set incorrectly [H-1],True
+189,Autobrake Controller does not provide Brake command during emergency landing [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+190,BSCU power does not turn off during system fault [H-2],BSCU Disarm command is not issued upon successful landing [H-2],False
+191,Hydraulic Controller opens valves too early before receiving Brake command [H-3],BSCU fault signal ignored during landing [H-2],False
+192,Flight Crew maintains Manual control state unnecessarily long [H-2],Flight Crew omits BSCU mode check during pre-flight [H-1],True
+193,Flight Crew applies Reverse thrust during normal landing [H-2],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+194,BSCU Disarm command is issued before landing completion [H-2],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+195,BSCU power turns off during normal operation [H-2],Other subsystems trigger erroneous state transition [H-6],False
+196,BSCU triggers Brake too late after turbulence passes [H-6],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+197,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Flight Crew applies Reverse thrust during normal landing [H-2],False
+198,Other subsystems receive erroneous Manual Controls causing hazard [H-6],BSCU Disarm command is not issued upon successful landing [H-2],False
+199,Wheels do not provide feedback for Wheel Speed [H-6],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+200,BSCU provides Arm and Set command too late for takeoff roll [H-1],Flight Crew neglects reverse thrust check during systems test [H-6],False
+201,BSCU provides Arm and Set command prematurely before required conditions [H-1],Autobrake deceleration rate set incorrectly [H-1],False
+202,BSCU provides Arm and Set command too late for takeoff roll [H-1],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+203,Autobrake Controller does not provide Brake command during emergency landing [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+204,BSCU power does not turn off during system fault [H-2],BSCU Disarm command is issued before landing completion [H-2],False
+205,Wheels provide inaccurate Wheel Speed data [H-6],BSCU Disarm command is issued before landing completion [H-2],False
+206,BSCU Disarm command is issued before landing completion [H-2],Wheel Brakes maintain full pressure post-stop [H-2],False
+207,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+208,Flight Crew conducts BSCU mode change mid-flight [H-1],Autobrake disengages prematurely during emergency braking [H-3],False
+209,Flight Crew engages Steering control during high-speed approach [H-6],BSCU fault signal ignored during landing [H-2],False
+210,Hydraulic Controller closes valves during critical braking [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+211,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU Disarm command is not issued upon successful landing [H-2],False
+212,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+213,Wheels provide inaccurate Wheel Speed data [H-6],Flight Crew neglects reverse thrust check during systems test [H-6],False
+214,BSCU Disarm command is not issued upon successful landing [H-2],BSCU fault signal ignored during landing [H-2],True
+215,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Manual Braking State not entered after system fault detection [H-6],True
+216,Flight Crew does not engage Steering control during taxi [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+217,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Other subsystems trigger erroneous state transition [H-6],True
+218,Hydraulic Controller does not open valves during Autobrake mode [H-3],BSCU power does not turn off during system fault [H-2],False
+219,Hydraulic Controller closes valves during critical braking [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+220,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+221,Flight Crew maintains Manual control state unnecessarily long [H-2],Manual Braking State not entered after system fault detection [H-6],False
+222,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU fault signal ignored during landing [H-2],False
+223,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+224,Other subsystems receive erroneous Manual Controls causing hazard [H-6],BSCU fault falsely triggers emergency protocol [H-2],False
+225,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+226,Flight Crew enters Manual control state too late after Autobrake failure [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+227,BSCU power does not turn off during system fault [H-2],Other subsystems trigger erroneous state transition [H-6],False
+228,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Wheel Brakes provide inconsistent braking power [H-3],False
+229,Flight Crew maintains Manual control state unnecessarily long [H-2],Autobrake deceleration rate change too late for necessary correction [H-1],False
+230,Autobrake Controller does not provide Brake command during emergency landing [H-3],Other subsystems trigger erroneous state transition [H-6],True
+231,Hydraulic Controller provides excessive pressure to brakes [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+232,Autobrake disengages prematurely during emergency braking [H-3],Other subsystems trigger erroneous state transition [H-6],True
+233,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Hydraulic system remains engaged after command ends [H-3],True
+234,Flight Crew applies Reverse thrust during normal landing [H-2],Other subsystems trigger erroneous state transition [H-6],False
+235,BSCU triggers Brake too early upon detecting turbulence [H-6],Hydraulic system remains engaged after command ends [H-3],False
+236,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+237,Hydraulic Controller fails to provide adequate pressure [H-3],Other subsystems trigger erroneous state transition [H-6],False
+238,Wheels provide inaccurate Wheel Speed data [H-6],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+239,Autobrake Controller does not provide Brake command during emergency landing [H-3],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+240,Flight Crew maintains Manual control state unnecessarily long [H-2],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+241,Autobrake Controller provides Brake command during takeoff roll [H-3],Wheels provide inaccurate Wheel Speed data [H-6],False
+242,BSCU does not engage Autobrake mode when required [H-1],Brake System Control Unit switches to alternate mode without necessity [H-2],True
+243,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+244,BSCU does not engage Autobrake mode when required [H-1],Flight Crew enters Manual control state too late after Autobrake failure [H-3],False
+245,Flight Crew applies Reverse thrust during normal landing [H-2],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+246,Wheels do not provide feedback for Wheel Speed [H-6],BSCU triggers Brake too late after turbulence passes [H-6],False
+247,Hydraulic Controller provides excessive pressure to brakes [H-3],Other subsystems trigger erroneous state transition [H-6],False
+248,Flight Crew does not engage Steering control during taxi [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+249,BSCU does not engage Autobrake mode when required [H-1],Autobrake disengages prematurely during emergency braking [H-3],False
+250,BSCU does not engage Autobrake mode when required [H-1],Hydraulic Controller fails to provide adequate pressure [H-3],False
+251,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+252,BSCU engages Autobrake mode during normal taxi [H-3],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],True
+253,BSCU provides Arm and Set command too late for takeoff roll [H-1],Flight Crew does not utilize Reverse thrust on slippery runway [H-1],True
+254,BSCU provides Arm and Set command prematurely before required conditions [H-1],BSCU fault signal ignored during landing [H-2],False
+255,BSCU fault signal ignored during landing [H-2],Hydraulic system disengages prematurely [H-2],True
+256,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],BSCU triggers Brake too late after turbulence passes [H-6],True
+257,Hydraulic Controller closes valves during critical braking [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+258,Flight Crew maintains Manual control state unnecessarily long [H-2],Hydraulic Controller opens valves too early before receiving Brake command [H-3],False
+259,Hydraulic Controller does not open valves during Autobrake mode [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+260,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+261,BSCU engages Autobrake mode during normal taxi [H-3],Manual Braking State not entered after system fault detection [H-6],False
+262,BSCU Disarm command is issued before landing completion [H-2],Autobrake disengages prematurely during emergency braking [H-3],False
+263,BSCU engages Autobrake mode during normal taxi [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+264,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Hydraulic system disengages prematurely [H-2],False
+265,Autobrake deceleration rate set incorrectly [H-1],Flight Crew neglects reverse thrust check during systems test [H-6],False
+266,Flight Crew does not engage Steering control during taxi [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+267,BSCU engages Autobrake mode during normal taxi [H-3],Flight Crew enters Manual control state too late after Autobrake failure [H-3],True
+268,"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",Hydraulic system disengages prematurely [H-2],False
+269,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+270,BSCU power does not turn off during system fault [H-2],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+271,Autobrake Controller stops providing Brake command too early during landing [H-3],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],True
+272,Autobrake Controller provides Brake command during takeoff roll [H-3],Wheel Brakes maintain full pressure post-stop [H-2],True
+273,Flight Crew maintains Manual control state unnecessarily long [H-2],Wheel Brakes provide inconsistent braking power [H-3],False
+274,Flight Crew omits BSCU mode check during pre-flight [H-1],Autobrake deceleration rate set incorrectly [H-1],False
+275,Autobrake Controller provides Brake command during takeoff roll [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+276,BSCU power does not turn off during system fault [H-2],Flight Crew engages Steering control during high-speed approach [H-6],False
+277,BSCU provides Arm and Set command prematurely before required conditions [H-1],Hydraulic Controller closes valves during critical braking [H-3],True
+278,Flight Crew does not engage Steering control during taxi [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+279,Wheel Brakes maintain full pressure post-stop [H-2],Other subsystems trigger erroneous state transition [H-6],False
+280,BSCU provides Arm and Set command prematurely before required conditions [H-1],Flight Crew engages Steering control during high-speed approach [H-6],False
+281,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Manual Braking State not entered after system fault detection [H-6],True
+282,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU provides Arm and Set command prematurely before required conditions [H-1],False
+283,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+284,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+285,Wheels do not provide feedback for Wheel Speed [H-6],Flight Crew applies reverse thrust out of sequence [H-6],False
+286,Hydraulic Controller opens valves too early before receiving Brake command [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+287,Flight Crew applies Reverse thrust during normal landing [H-2],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+288,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU provides Arm and Set command prematurely before required conditions [H-1],False
+289,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],BSCU triggers Brake too early upon detecting turbulence [H-6],True
+290,Autobrake Controller does not provide Brake command during emergency landing [H-3],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],True
+291,BSCU triggers Brake too late after turbulence passes [H-6],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",True
+292,Flight Crew conducts BSCU mode change mid-flight [H-1],Other subsystems trigger erroneous state transition [H-6],False
+293,BSCU provides Arm and Set command too late for takeoff roll [H-1],BSCU fault signal ignored during landing [H-2],False
+294,Brake System Control Unit switches to alternate mode without necessity [H-2],BSCU Disarm command is issued before landing completion [H-2],True
+295,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Wheels do not provide feedback for Wheel Speed [H-6],True
+296,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Flight Crew does not engage Steering control during taxi [H-3],False
+297,Autobrake Controller does not provide Brake command during emergency landing [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+298,BSCU provides Arm and Set command too late for takeoff roll [H-1],Flight Crew enters Manual control state too late after Autobrake failure [H-3],False
+299,Manual Braking State not entered after system fault detection [H-6],Hydraulic system disengages prematurely [H-2],False
+300,Brake System Control Unit switches to alternate mode without necessity [H-2],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+301,Autobrake Controller provides Brake command during takeoff roll [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+302,Autobrake disengages prematurely during emergency braking [H-3],Hydraulic system disengages prematurely [H-2],True
+303,Flight Crew engages Steering control during high-speed approach [H-6],Wheel Brakes provide inconsistent braking power [H-3],False
+304,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Wheels do not provide feedback for Wheel Speed [H-6],False
+305,BSCU fault falsely triggers emergency protocol [H-2],Hydraulic system remains engaged after command ends [H-3],False
+306,Autobrake Controller provides Brake command during takeoff roll [H-3],Autobrake Controller stops providing Brake command too early during landing [H-3],False
+307,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+308,Autobrake disengages prematurely during emergency braking [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",True
+309,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Flight Crew omits BSCU mode check during pre-flight [H-1],True
+310,BSCU Disarm command is not issued upon successful landing [H-2],Autobrake deceleration rate set incorrectly [H-1],False
+311,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],BSCU power turns off during normal operation [H-2],False
+312,Wheels provide inaccurate Wheel Speed data [H-6],Flight Crew engages Steering control during high-speed approach [H-6],False
+313,BSCU does not engage Autobrake mode when required [H-1],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+314,BSCU power does not turn off during system fault [H-2],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+315,Hydraulic Controller opens valves too early before receiving Brake command [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+316,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Manual Braking State not entered after system fault detection [H-6],True
+317,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Wheels provide inaccurate Wheel Speed data [H-6],False
+318,BSCU Disarm command is not issued upon successful landing [H-2],Hydraulic system remains engaged after command ends [H-3],False
+319,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+320,BSCU provides Arm and Set command too late for takeoff roll [H-1],Autobrake deceleration rate set incorrectly [H-1],True
+321,BSCU does not engage Autobrake mode when required [H-1],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+322,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Wheels provide inaccurate Wheel Speed data [H-6],False
+323,BSCU Disarm command is issued before landing completion [H-2],Autobrake engages without command during manual operation [H-2],False
+324,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+325,Other subsystems fail to revert to safe state post-anomaly [H-6],Flight Crew neglects reverse thrust check during systems test [H-6],False
+326,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU power does not turn off during system fault [H-2],False
+327,Flight Crew does not engage Steering control during taxi [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+328,Autobrake Controller provides Brake command during takeoff roll [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+329,Brake System Control Unit switches to alternate mode without necessity [H-2],Hydraulic system disengages prematurely [H-2],True
+330,BSCU provides Arm and Set command prematurely before required conditions [H-1],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+331,BSCU provides Arm and Set command prematurely before required conditions [H-1],Flight Crew does not utilize Reverse thrust on slippery runway [H-1],False
+332,BSCU provides Arm and Set command too late for takeoff roll [H-1],Flight Crew engages Steering control during high-speed approach [H-6],False
+333,Autobrake Controller does not provide Brake command during emergency landing [H-3],Autobrake deceleration rate set incorrectly [H-1],True
+334,Flight Crew maintains Manual control state unnecessarily long [H-2],Wheel Brakes maintain full pressure post-stop [H-2],False
+335,BSCU does not engage Autobrake mode when required [H-1],Wheels do not provide feedback for Wheel Speed [H-6],False
+336,Autobrake Controller does not provide Brake command during emergency landing [H-3],Autobrake engages without command during manual operation [H-2],False
+337,Wheel Brakes provide inconsistent braking power [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+338,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Other subsystems receive erroneous Manual Controls causing hazard [H-6],True
+339,Hydraulic Controller does not open valves during Autobrake mode [H-3],Flight Crew does not engage Steering control during taxi [H-3],False
+340,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+341,Hydraulic Controller does not open valves during Autobrake mode [H-3],BSCU power turns off during normal operation [H-2],False
+342,Flight Crew omits BSCU mode check during pre-flight [H-1],Manual Braking State not entered after system fault detection [H-6],False
+343,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Autobrake engages without command during manual operation [H-2],False
+344,BSCU engages Autobrake mode during normal taxi [H-3],BSCU power turns off during normal operation [H-2],False
+345,Hydraulic Controller closes valves during critical braking [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],True
+346,Autobrake disengages prematurely during emergency braking [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+347,BSCU triggers Brake too late after turbulence passes [H-6],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+348,Flight Crew maintains Manual control state unnecessarily long [H-2],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+349,Wheels provide inaccurate Wheel Speed data [H-6],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+350,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+351,BSCU fault signal ignored during landing [H-2],Hydraulic system remains engaged after command ends [H-3],False
+352,Brake System Control Unit switches to alternate mode without necessity [H-2],Wheel Brakes maintain full pressure post-stop [H-2],False
+353,Autobrake Controller stops providing Brake command too early during landing [H-3],Flight Crew applies Reverse thrust during normal landing [H-2],False
+354,Brake System Control Unit does not switch to alternate braking mode when required [H-3],BSCU fault signal ignored during landing [H-2],True
+355,Hydraulic Controller provides excessive pressure to brakes [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+356,Autobrake engages without command during manual operation [H-2],Autobrake deceleration rate change too late for necessary correction [H-1],False
+357,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+358,BSCU triggers Brake too early upon detecting turbulence [H-6],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",True
+359,Other subsystems receive erroneous Manual Controls causing hazard [H-6],BSCU fault signal ignored during landing [H-2],False
+360,Autobrake Controller does not provide Brake command during emergency landing [H-3],Flight Crew does not utilize Reverse thrust on slippery runway [H-1],False
+361,Hydraulic Controller closes valves during critical braking [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+362,Autobrake Controller provides Brake command during takeoff roll [H-3],Hydraulic system remains engaged after command ends [H-3],True
+363,Autobrake Controller stops providing Brake command too early during landing [H-3],Hydraulic system remains engaged after command ends [H-3],False
+364,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Flight Crew does not engage Steering control during taxi [H-3],False
+365,BSCU power does not turn off during system fault [H-2],Wheel Brakes provide inconsistent braking power [H-3],False
+366,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU engages Autobrake mode during normal taxi [H-3],False
+367,Hydraulic Controller does not open valves during Autobrake mode [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+368,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU does not engage Autobrake mode when required [H-1],False
+369,Autobrake disengages prematurely during emergency braking [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+370,Wheels provide inaccurate Wheel Speed data [H-6],Autobrake disengages prematurely during emergency braking [H-3],False
+371,BSCU provides Arm and Set command too late for takeoff roll [H-1],Hydraulic Controller fails to provide adequate pressure [H-3],False
+372,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],BSCU power does not turn off during system fault [H-2],False
+373,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+374,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Manual Braking State not entered after system fault detection [H-6],False
+375,Brake System Control Unit switches to alternate mode without necessity [H-2],Autobrake deceleration rate change too late for necessary correction [H-1],False
+376,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],BSCU Disarm command is issued before landing completion [H-2],False
+377,Wheels provide inaccurate Wheel Speed data [H-6],Hydraulic system disengages prematurely [H-2],False
+378,Wheel Brakes maintain full pressure post-stop [H-2],Hydraulic system remains engaged after command ends [H-3],False
+379,BSCU engages Autobrake mode during normal taxi [H-3],Hydraulic system disengages prematurely [H-2],False
+380,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Wheels do not provide feedback for Wheel Speed [H-6],False
+381,Flight Crew engages Steering control during high-speed approach [H-6],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+382,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU does not engage Autobrake mode when required [H-1],False
+383,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Hydraulic Controller closes valves during critical braking [H-3],False
+384,BSCU power does not turn off during system fault [H-2],Autobrake deceleration rate change too late for necessary correction [H-1],False
+385,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+386,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Autobrake engages without command during manual operation [H-2],False
+387,Wheels provide inaccurate Wheel Speed data [H-6],BSCU triggers Brake too late after turbulence passes [H-6],False
+388,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+389,BSCU does not engage Autobrake mode when required [H-1],Other subsystems trigger erroneous state transition [H-6],True
+390,Hydraulic Controller does not open valves during Autobrake mode [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+391,BSCU power does not turn off during system fault [H-2],BSCU triggers Brake too late after turbulence passes [H-6],False
+392,BSCU Disarm command is not issued upon successful landing [H-2],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+393,Hydraulic Controller closes valves during critical braking [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+394,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],BSCU Disarm command is not issued upon successful landing [H-2],False
+395,Flight Crew conducts BSCU mode change mid-flight [H-1],Autobrake deceleration rate change too late for necessary correction [H-1],True
+396,Autobrake Controller stops providing Brake command too early during landing [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+397,BSCU Disarm command is not issued upon successful landing [H-2],BSCU fault falsely triggers emergency protocol [H-2],True
+398,Autobrake deceleration rate change too late for necessary correction [H-1],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+399,Wheels do not provide feedback for Wheel Speed [H-6],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+400,Autobrake Controller stops providing Brake command too early during landing [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+401,BSCU provides Arm and Set command too late for takeoff roll [H-1],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+402,Autobrake engages without command during manual operation [H-2],Hydraulic system remains engaged after command ends [H-3],False
+403,Flight Crew does not engage Steering control during taxi [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+404,BSCU Disarm command is issued before landing completion [H-2],Hydraulic system remains engaged after command ends [H-3],False
+405,BSCU provides Arm and Set command prematurely before required conditions [H-1],Manual Braking State not entered after system fault detection [H-6],False
+406,BSCU does not engage Autobrake mode when required [H-1],Flight Crew does not engage Steering control during taxi [H-3],False
+407,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+408,BSCU power turns off during normal operation [H-2],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+409,Wheel Brakes maintain full pressure post-stop [H-2],Autobrake deceleration rate change too late for necessary correction [H-1],False
+410,Flight Crew does not engage Steering control during taxi [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+411,Brake System Control Unit does not switch to alternate braking mode when required [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+412,Hydraulic Controller does not open valves during Autobrake mode [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+413,BSCU engages Autobrake mode during normal taxi [H-3],Flight Crew does not engage Steering control during taxi [H-3],False
+414,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Flight Crew applies Reverse thrust during normal landing [H-2],False
+415,Flight Crew omits BSCU mode check during pre-flight [H-1],Flight Crew applies reverse thrust out of sequence [H-6],False
+416,BSCU engages Autobrake mode during normal taxi [H-3],Hydraulic Controller closes valves during critical braking [H-3],True
+417,Flight Crew omits BSCU mode check during pre-flight [H-1],BSCU fault signal ignored during landing [H-2],True
+418,Hydraulic Controller does not open valves during Autobrake mode [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+419,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Hydraulic system disengages prematurely [H-2],False
+420,Wheels do not provide feedback for Wheel Speed [H-6],Wheel Brakes provide inconsistent braking power [H-3],False
+421,BSCU triggers Brake too early upon detecting turbulence [H-6],Autobrake deceleration rate set incorrectly [H-1],False
+422,Flight Crew does not engage Steering control during taxi [H-3],BSCU Disarm command is not issued upon successful landing [H-2],False
+423,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Hydraulic Controller opens valves too early before receiving Brake command [H-3],False
+424,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+425,BSCU triggers Brake too early upon detecting turbulence [H-6],Flight Crew applies reverse thrust out of sequence [H-6],True
+426,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Autobrake Controller stops providing Brake command too early during landing [H-3],False
+427,BSCU engages Autobrake mode during normal taxi [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+428,Hydraulic Controller fails to provide adequate pressure [H-3],BSCU fault signal ignored during landing [H-2],False
+429,Wheel Brakes provide inconsistent braking power [H-3],Hydraulic system disengages prematurely [H-2],False
+430,Hydraulic Controller closes valves during critical braking [H-3],BSCU Disarm command is not issued upon successful landing [H-2],True
+431,BSCU fault signal ignored during landing [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+432,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+433,Hydraulic Controller provides excessive pressure to brakes [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+434,BSCU Disarm command is issued before landing completion [H-2],Autobrake deceleration rate change too late for necessary correction [H-1],False
+435,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+436,BSCU Disarm command is not issued upon successful landing [H-2],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+437,Wheels do not provide feedback for Wheel Speed [H-6],Flight Crew engages Steering control during high-speed approach [H-6],True
+438,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Hydraulic Controller closes valves during critical braking [H-3],True
+439,BSCU power does not turn off during system fault [H-2],Wheel Brakes maintain full pressure post-stop [H-2],False
+440,Autobrake deceleration rate change too late for necessary correction [H-1],BSCU fault falsely triggers emergency protocol [H-2],False
+441,Wheels do not provide feedback for Wheel Speed [H-6],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+442,Flight Crew maintains Manual control state unnecessarily long [H-2],Autobrake deceleration rate set incorrectly [H-1],True
+443,Hydraulic Controller does not open valves during Autobrake mode [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+444,BSCU triggers Brake too early upon detecting turbulence [H-6],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+445,Autobrake Controller stops providing Brake command too early during landing [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+446,BSCU Disarm command is not issued upon successful landing [H-2],Autobrake deceleration rate change too late for necessary correction [H-1],False
+447,BSCU provides Arm and Set command prematurely before required conditions [H-1],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+448,BSCU Disarm command is issued before landing completion [H-2],Hydraulic system disengages prematurely [H-2],True
+449,Flight Crew engages Steering control during high-speed approach [H-6],BSCU triggers Brake too late after turbulence passes [H-6],False
+450,BSCU engages Autobrake mode during normal taxi [H-3],Flight Crew does not utilize Reverse thrust on slippery runway [H-1],False
+451,Wheels provide inaccurate Wheel Speed data [H-6],Flight Crew applies reverse thrust out of sequence [H-6],False
+452,BSCU power does not turn off during system fault [H-2],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+453,BSCU power turns off during normal operation [H-2],Wheels provide inaccurate Wheel Speed data [H-6],False
+454,BSCU triggers Brake too early upon detecting turbulence [H-6],Other subsystems trigger erroneous state transition [H-6],True
+455,Autobrake deceleration rate change too late for necessary correction [H-1],Hydraulic system remains engaged after command ends [H-3],False
+456,Autobrake Controller does not provide Brake command during emergency landing [H-3],Hydraulic system disengages prematurely [H-2],True
+457,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Autobrake deceleration rate change too late for necessary correction [H-1],False
+458,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+459,Hydraulic Controller closes valves during critical braking [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+460,Wheels provide inaccurate Wheel Speed data [H-6],Autobrake engages without command during manual operation [H-2],False
+461,Flight Crew does not engage Steering control during taxi [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+462,BSCU Disarm command is not issued upon successful landing [H-2],Autobrake disengages prematurely during emergency braking [H-3],False
+463,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+464,Wheels do not provide feedback for Wheel Speed [H-6],Flight Crew does not engage Steering control during taxi [H-3],False
+465,Hydraulic Controller does not open valves during Autobrake mode [H-3],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+466,BSCU engages Autobrake mode during normal taxi [H-3],Flight Crew applies Reverse thrust during normal landing [H-2],False
+467,BSCU triggers Brake too late after turbulence passes [H-6],Wheel Brakes provide inconsistent braking power [H-3],False
+468,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+469,BSCU engages Autobrake mode during normal taxi [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+470,Autobrake deceleration rate set incorrectly [H-1],Hydraulic system disengages prematurely [H-2],False
+471,Wheel Brakes provide inconsistent braking power [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+472,Hydraulic Controller opens valves too early before receiving Brake command [H-3],BSCU power does not turn off during system fault [H-2],False
+473,Autobrake deceleration rate set incorrectly [H-1],BSCU fault falsely triggers emergency protocol [H-2],True
+474,Other subsystems do not receive Manual Controls from Flight Crew [H-6],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",True
+475,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Wheels do not provide feedback for Wheel Speed [H-6],False
+476,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU fault falsely triggers emergency protocol [H-2],True
+477,Hydraulic Controller fails to provide adequate pressure [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+478,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+479,Wheels do not provide feedback for Wheel Speed [H-6],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+480,BSCU engages Autobrake mode during normal taxi [H-3],BSCU provides Arm and Set command too late for takeoff roll [H-1],False
+481,Hydraulic Controller closes valves during critical braking [H-3],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+482,Flight Crew engages Steering control during high-speed approach [H-6],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+483,BSCU provides Arm and Set command prematurely before required conditions [H-1],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+484,Autobrake Controller stops providing Brake command too early during landing [H-3],Hydraulic system disengages prematurely [H-2],True
+485,BSCU does not engage Autobrake mode when required [H-1],Wheel Brakes provide inconsistent braking power [H-3],True
+486,BSCU fault falsely triggers emergency protocol [H-2],Other subsystems trigger erroneous state transition [H-6],True
+487,Flight Crew omits BSCU mode check during pre-flight [H-1],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+488,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+489,Brake System Control Unit switches to alternate mode without necessity [H-2],Flight Crew omits BSCU mode check during pre-flight [H-1],True
+490,Flight Crew applies Reverse thrust during normal landing [H-2],Autobrake deceleration rate change too late for necessary correction [H-1],False
+491,Hydraulic Controller opens valves too early before receiving Brake command [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+492,Autobrake Controller stops providing Brake command too early during landing [H-3],Autobrake engages without command during manual operation [H-2],False
+493,BSCU provides Arm and Set command prematurely before required conditions [H-1],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+494,BSCU engages Autobrake mode during normal taxi [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+495,Autobrake Controller does not provide Brake command during emergency landing [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+496,"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",BSCU fault falsely triggers emergency protocol [H-2],False
+497,Brake System Control Unit does not switch to alternate braking mode when required [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+498,Autobrake deceleration rate change too late for necessary correction [H-1],Flight Crew neglects reverse thrust check during systems test [H-6],False
+499,BSCU engages Autobrake mode during normal taxi [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+500,Autobrake Controller stops providing Brake command too early during landing [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+501,Autobrake Controller does not provide Brake command during emergency landing [H-3],Flight Crew does not engage Steering control during taxi [H-3],False
+502,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Hydraulic system disengages prematurely [H-2],False
+503,BSCU provides Arm and Set command too late for takeoff roll [H-1],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+504,Flight Crew maintains Manual control state unnecessarily long [H-2],BSCU triggers Brake too late after turbulence passes [H-6],True
+505,Flight Crew conducts BSCU mode change mid-flight [H-1],Wheel Brakes provide inconsistent braking power [H-3],False
+506,Hydraulic system remains engaged after command ends [H-3],Other subsystems trigger erroneous state transition [H-6],False
+507,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+508,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+509,Wheel Brakes maintain full pressure post-stop [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],False
+510,BSCU power does not turn off during system fault [H-2],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+511,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+512,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Flight Crew enters Manual control state too late after Autobrake failure [H-3],True
+513,BSCU engages Autobrake mode during normal taxi [H-3],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+514,Wheels provide inaccurate Wheel Speed data [H-6],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+515,Flight Crew omits BSCU mode check during pre-flight [H-1],Autobrake disengages prematurely during emergency braking [H-3],False
+516,Flight Crew applies Reverse thrust during normal landing [H-2],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+517,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Hydraulic Controller fails to provide adequate pressure [H-3],False
+518,BSCU provides Arm and Set command too late for takeoff roll [H-1],Other subsystems trigger erroneous state transition [H-6],False
+519,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+520,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Autobrake deceleration rate change too late for necessary correction [H-1],False
+521,"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",Other subsystems trigger erroneous state transition [H-6],True
+522,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU Disarm command is issued before landing completion [H-2],True
+523,Hydraulic Controller does not open valves during Autobrake mode [H-3],Wheels do not provide feedback for Wheel Speed [H-6],False
+524,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+525,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Flight Crew does not engage Steering control during taxi [H-3],False
+526,BSCU triggers Brake too late after turbulence passes [H-6],Flight Crew applies reverse thrust out of sequence [H-6],True
+527,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Hydraulic system disengages prematurely [H-2],False
+528,BSCU does not engage Autobrake mode when required [H-1],Autobrake deceleration rate set incorrectly [H-1],True
+529,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+530,Autobrake deceleration rate set incorrectly [H-1],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+531,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+532,Hydraulic Controller closes valves during critical braking [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+533,Hydraulic Controller closes valves during critical braking [H-3],Flight Crew does not engage Steering control during taxi [H-3],False
+534,Wheels provide inaccurate Wheel Speed data [H-6],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+535,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Autobrake engages without command during manual operation [H-2],False
+536,BSCU power turns off during normal operation [H-2],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+537,Autobrake Controller does not provide Brake command during emergency landing [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+538,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU fault signal ignored during landing [H-2],False
+539,Flight Crew engages Steering control during high-speed approach [H-6],Autobrake engages without command during manual operation [H-2],False
+540,Flight Crew omits BSCU mode check during pre-flight [H-1],BSCU fault falsely triggers emergency protocol [H-2],True
+541,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+542,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU provides Arm and Set command too late for takeoff roll [H-1],False
+543,Autobrake Controller does not provide Brake command during emergency landing [H-3],Wheels do not provide feedback for Wheel Speed [H-6],False
+544,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Wheel Brakes provide inconsistent braking power [H-3],False
+545,BSCU fault signal ignored during landing [H-2],Other subsystems trigger erroneous state transition [H-6],False
+546,BSCU engages Autobrake mode during normal taxi [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+547,Flight Crew applies Reverse thrust during normal landing [H-2],Wheel Brakes provide inconsistent braking power [H-3],False
+548,BSCU provides Arm and Set command too late for takeoff roll [H-1],Hydraulic Controller does not open valves during Autobrake mode [H-3],False
+549,Wheels do not provide feedback for Wheel Speed [H-6],Other subsystems trigger erroneous state transition [H-6],False
+550,BSCU provides Arm and Set command prematurely before required conditions [H-1],BSCU triggers Brake too late after turbulence passes [H-6],False
+551,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+552,BSCU Disarm command is not issued upon successful landing [H-2],Other subsystems trigger erroneous state transition [H-6],False
+553,BSCU does not engage Autobrake mode when required [H-1],BSCU triggers Brake too late after turbulence passes [H-6],False
+554,BSCU provides Arm and Set command prematurely before required conditions [H-1],Wheels provide inaccurate Wheel Speed data [H-6],False
+555,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+556,BSCU engages Autobrake mode during normal taxi [H-3],Wheel Brakes maintain full pressure post-stop [H-2],True
+557,BSCU power does not turn off during system fault [H-2],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+558,Autobrake disengages prematurely during emergency braking [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+559,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+560,BSCU triggers Brake too early upon detecting turbulence [H-6],BSCU fault signal ignored during landing [H-2],False
+561,Flight Crew conducts BSCU mode change mid-flight [H-1],Wheel Brakes maintain full pressure post-stop [H-2],False
+562,Autobrake Controller provides Brake command during takeoff roll [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+563,Wheels do not provide feedback for Wheel Speed [H-6],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+564,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Flight Crew neglects reverse thrust check during systems test [H-6],True
+565,Autobrake Controller does not provide Brake command during emergency landing [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+566,Autobrake engages without command during manual operation [H-2],Wheel Brakes provide inconsistent braking power [H-3],False
+567,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+568,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Hydraulic system remains engaged after command ends [H-3],False
+569,Autobrake Controller stops providing Brake command too early during landing [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+570,Flight Crew applies Reverse thrust during normal landing [H-2],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+571,BSCU provides Arm and Set command prematurely before required conditions [H-1],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+572,Other subsystems do not receive Manual Controls from Flight Crew [H-6],BSCU Disarm command is not issued upon successful landing [H-2],False
+573,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+574,BSCU Disarm command is issued before landing completion [H-2],Manual Braking State not entered after system fault detection [H-6],False
+575,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Wheels provide inaccurate Wheel Speed data [H-6],True
+576,BSCU provides Arm and Set command too late for takeoff roll [H-1],BSCU provides Arm and Set command prematurely before required conditions [H-1],True
+577,Wheel Brakes provide inconsistent braking power [H-3],Other subsystems trigger erroneous state transition [H-6],False
+578,Flight Crew maintains Manual control state unnecessarily long [H-2],BSCU Disarm command is issued before landing completion [H-2],False
+579,BSCU does not engage Autobrake mode when required [H-1],Manual Braking State not entered after system fault detection [H-6],True
+580,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Hydraulic Controller closes valves during critical braking [H-3],True
+581,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+582,Brake System Control Unit does not switch to alternate braking mode when required [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+583,BSCU Disarm command is issued before landing completion [H-2],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+584,BSCU provides Arm and Set command too late for takeoff roll [H-1],Flight Crew conducts BSCU mode change mid-flight [H-1],True
+585,BSCU provides Arm and Set command prematurely before required conditions [H-1],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+586,Autobrake engages without command during manual operation [H-2],Wheel Brakes maintain full pressure post-stop [H-2],True
+587,Hydraulic Controller provides excessive pressure to brakes [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+588,Hydraulic Controller fails to provide adequate pressure [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+589,Autobrake Controller does not provide Brake command during emergency landing [H-3],Wheels provide inaccurate Wheel Speed data [H-6],False
+590,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],BSCU fault falsely triggers emergency protocol [H-2],True
+591,Manual Braking State not entered after system fault detection [H-6],Other subsystems trigger erroneous state transition [H-6],True
+592,BSCU does not engage Autobrake mode when required [H-1],BSCU Disarm command is not issued upon successful landing [H-2],False
+593,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU power turns off during normal operation [H-2],False
+594,Flight Crew applies Reverse thrust during normal landing [H-2],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+595,Flight Crew enters Manual control state too late after Autobrake failure [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+596,BSCU Disarm command is not issued upon successful landing [H-2],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+597,Hydraulic Controller provides excessive pressure to brakes [H-3],Autobrake engages without command during manual operation [H-2],True
+598,Flight Crew applies Reverse thrust during normal landing [H-2],Flight Crew does not engage Steering control during taxi [H-3],False
+599,BSCU power does not turn off during system fault [H-2],Hydraulic system remains engaged after command ends [H-3],False
+600,Wheel Brakes provide inconsistent braking power [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+601,BSCU does not engage Autobrake mode when required [H-1],Autobrake engages without command during manual operation [H-2],False
+602,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU power turns off during normal operation [H-2],False
+603,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Wheel Brakes maintain full pressure post-stop [H-2],False
+604,BSCU engages Autobrake mode during normal taxi [H-3],BSCU provides Arm and Set command prematurely before required conditions [H-1],False
+605,Autobrake Controller stops providing Brake command too early during landing [H-3],Hydraulic Controller closes valves during critical braking [H-3],True
+606,Flight Crew omits BSCU mode check during pre-flight [H-1],Autobrake engages without command during manual operation [H-2],False
+607,Brake System Control Unit switches to alternate mode without necessity [H-2],Autobrake deceleration rate set incorrectly [H-1],False
+608,BSCU triggers Brake too early upon detecting turbulence [H-6],Wheel Brakes provide inconsistent braking power [H-3],False
+609,Autobrake engages without command during manual operation [H-2],Other subsystems trigger erroneous state transition [H-6],False
+610,BSCU power turns off during normal operation [H-2],Brake System Control Unit switches to alternate mode without necessity [H-2],True
+611,BSCU Disarm command is issued before landing completion [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+612,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+613,BSCU triggers Brake too early upon detecting turbulence [H-6],BSCU triggers Brake too late after turbulence passes [H-6],True
+614,Autobrake Controller provides Brake command during takeoff roll [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+615,Flight Crew enters Manual control state too late after Autobrake failure [H-3],BSCU power turns off during normal operation [H-2],False
+616,BSCU provides Arm and Set command too late for takeoff roll [H-1],Flight Crew applies Reverse thrust during normal landing [H-2],False
+617,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],True
+618,Flight Crew maintains Manual control state unnecessarily long [H-2],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+619,Hydraulic Controller does not open valves during Autobrake mode [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+620,Wheels provide inaccurate Wheel Speed data [H-6],BSCU fault signal ignored during landing [H-2],False
+621,BSCU engages Autobrake mode during normal taxi [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+622,BSCU engages Autobrake mode during normal taxi [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+623,BSCU triggers Brake too late after turbulence passes [H-6],Autobrake engages without command during manual operation [H-2],False
+624,BSCU power does not turn off during system fault [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],False
+625,Autobrake Controller stops providing Brake command too early during landing [H-3],Flight Crew does not engage Steering control during taxi [H-3],False
+626,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Flight Crew does not engage Steering control during taxi [H-3],False
+627,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+628,Flight Crew applies Reverse thrust during normal landing [H-2],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+629,Flight Crew maintains Manual control state unnecessarily long [H-2],Hydraulic system remains engaged after command ends [H-3],False
+630,Hydraulic Controller closes valves during critical braking [H-3],Other subsystems trigger erroneous state transition [H-6],False
+631,Hydraulic Controller provides excessive pressure to brakes [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+632,BSCU provides Arm and Set command prematurely before required conditions [H-1],Flight Crew enters Manual control state too late after Autobrake failure [H-3],False
+633,Brake System Control Unit switches to alternate mode without necessity [H-2],Autobrake engages without command during manual operation [H-2],True
+634,Hydraulic Controller opens valves too early before receiving Brake command [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+635,Brake System Control Unit switches to alternate mode without necessity [H-2],Hydraulic system remains engaged after command ends [H-3],False
+636,BSCU power does not turn off during system fault [H-2],Hydraulic Controller fails to provide adequate pressure [H-3],False
+637,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU fault signal ignored during landing [H-2],False
+638,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+639,Hydraulic Controller fails to provide adequate pressure [H-3],Autobrake deceleration rate set incorrectly [H-1],True
+640,Wheels do not provide feedback for Wheel Speed [H-6],Autobrake disengages prematurely during emergency braking [H-3],False
+641,BSCU triggers Brake too early upon detecting turbulence [H-6],Wheel Brakes maintain full pressure post-stop [H-2],False
+642,Brake System Control Unit switches to alternate mode without necessity [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],False
+643,Flight Crew enters Manual control state too late after Autobrake failure [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+644,Hydraulic Controller does not open valves during Autobrake mode [H-3],Wheels provide inaccurate Wheel Speed data [H-6],False
+645,Autobrake Controller stops providing Brake command too early during landing [H-3],Manual Braking State not entered after system fault detection [H-6],False
+646,Autobrake engages without command during manual operation [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+647,Wheel Brakes provide inconsistent braking power [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+648,Flight Crew does not engage Steering control during taxi [H-3],Wheel Brakes provide inconsistent braking power [H-3],False
+649,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU provides Arm and Set command too late for takeoff roll [H-1],False
+650,Wheels do not provide feedback for Wheel Speed [H-6],Hydraulic system disengages prematurely [H-2],False
+651,BSCU engages Autobrake mode during normal taxi [H-3],Wheels do not provide feedback for Wheel Speed [H-6],False
+652,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Other subsystems trigger erroneous state transition [H-6],True
+653,Flight Crew maintains Manual control state unnecessarily long [H-2],Autobrake engages without command during manual operation [H-2],True
+654,Autobrake deceleration rate change too late for necessary correction [H-1],Hydraulic system disengages prematurely [H-2],False
+655,BSCU does not engage Autobrake mode when required [H-1],Hydraulic Controller closes valves during critical braking [H-3],False
+656,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Hydraulic system remains engaged after command ends [H-3],True
+657,Wheel Brakes provide inconsistent braking power [H-3],BSCU fault signal ignored during landing [H-2],False
+658,Flight Crew applies Reverse thrust during normal landing [H-2],Hydraulic Controller fails to provide adequate pressure [H-3],False
+659,Autobrake deceleration rate change too late for necessary correction [H-1],BSCU fault signal ignored during landing [H-2],False
+660,BSCU triggers Brake too late after turbulence passes [H-6],Autobrake deceleration rate change too late for necessary correction [H-1],True
+661,Hydraulic Controller closes valves during critical braking [H-3],Hydraulic system disengages prematurely [H-2],True
+662,Flight Crew maintains Manual control state unnecessarily long [H-2],Hydraulic Controller closes valves during critical braking [H-3],False
+663,Flight Crew engages Steering control during high-speed approach [H-6],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+664,Autobrake Controller does not provide Brake command during emergency landing [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+665,Wheels do not provide feedback for Wheel Speed [H-6],Wheels provide inaccurate Wheel Speed data [H-6],True
+666,Autobrake Controller stops providing Brake command too early during landing [H-3],Flight Crew enters Manual control state too late after Autobrake failure [H-3],False
+667,BSCU does not engage Autobrake mode when required [H-1],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+668,BSCU does not engage Autobrake mode when required [H-1],Hydraulic system disengages prematurely [H-2],True
+669,BSCU provides Arm and Set command too late for takeoff roll [H-1],Hydraulic system disengages prematurely [H-2],False
+670,Flight Crew conducts BSCU mode change mid-flight [H-1],Hydraulic system disengages prematurely [H-2],False
+671,BSCU Disarm command is issued before landing completion [H-2],Other subsystems trigger erroneous state transition [H-6],False
+672,BSCU provides Arm and Set command prematurely before required conditions [H-1],Hydraulic Controller fails to provide adequate pressure [H-3],False
+673,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Hydraulic system disengages prematurely [H-2],False
+674,BSCU power does not turn off during system fault [H-2],Autobrake engages without command during manual operation [H-2],True
+675,Hydraulic Controller does not open valves during Autobrake mode [H-3],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+676,BSCU provides Arm and Set command too late for takeoff roll [H-1],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+677,Autobrake Controller provides Brake command during takeoff roll [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+678,BSCU power turns off during normal operation [H-2],BSCU Disarm command is issued before landing completion [H-2],True
+679,Autobrake Controller stops providing Brake command too early during landing [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+680,Flight Crew maintains Manual control state unnecessarily long [H-2],Hydraulic Controller does not open valves during Autobrake mode [H-3],False
+681,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Hydraulic Controller fails to provide adequate pressure [H-3],False
+682,Flight Crew engages Steering control during high-speed approach [H-6],Autobrake deceleration rate change too late for necessary correction [H-1],False
+683,BSCU power turns off during normal operation [H-2],Wheel Brakes maintain full pressure post-stop [H-2],False
+684,Wheels provide inaccurate Wheel Speed data [H-6],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+685,Autobrake deceleration rate set incorrectly [H-1],Flight Crew applies reverse thrust out of sequence [H-6],False
+686,BSCU provides Arm and Set command prematurely before required conditions [H-1],BSCU power does not turn off during system fault [H-2],False
+687,BSCU power turns off during normal operation [H-2],Flight Crew engages Steering control during high-speed approach [H-6],False
+688,Hydraulic Controller closes valves during critical braking [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+689,BSCU Disarm command is not issued upon successful landing [H-2],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+690,Wheels do not provide feedback for Wheel Speed [H-6],Hydraulic system remains engaged after command ends [H-3],False
+691,Wheels do not provide feedback for Wheel Speed [H-6],Wheel Brakes maintain full pressure post-stop [H-2],False
+692,BSCU provides Arm and Set command too late for takeoff roll [H-1],Wheels provide inaccurate Wheel Speed data [H-6],False
+693,BSCU provides Arm and Set command too late for takeoff roll [H-1],Autobrake deceleration rate change too late for necessary correction [H-1],False
+694,Autobrake Controller does not provide Brake command during emergency landing [H-3],Autobrake Controller provides Brake command during takeoff roll [H-3],False
+695,Hydraulic Controller opens valves too early before receiving Brake command [H-3],BSCU power turns off during normal operation [H-2],False
+696,Flight Crew applies Reverse thrust during normal landing [H-2],Wheels do not provide feedback for Wheel Speed [H-6],False
+697,BSCU provides Arm and Set command too late for takeoff roll [H-1],Wheel Brakes provide inconsistent braking power [H-3],False
+698,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+699,BSCU power does not turn off during system fault [H-2],BSCU power turns off during normal operation [H-2],False
+700,Hydraulic system disengages prematurely [H-2],Other subsystems trigger erroneous state transition [H-6],False
+701,BSCU power turns off during normal operation [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+702,BSCU Disarm command is issued before landing completion [H-2],Flight Crew omits BSCU mode check during pre-flight [H-1],True
+703,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],BSCU fault signal ignored during landing [H-2],False
+704,Flight Crew applies Reverse thrust during normal landing [H-2],Autobrake disengages prematurely during emergency braking [H-3],False
+705,Hydraulic Controller fails to provide adequate pressure [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+706,Wheels do not provide feedback for Wheel Speed [H-6],BSCU fault falsely triggers emergency protocol [H-2],False
+707,Hydraulic Controller fails to provide adequate pressure [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+708,BSCU provides Arm and Set command too late for takeoff roll [H-1],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+709,Wheel Brakes provide inconsistent braking power [H-3],Manual Braking State not entered after system fault detection [H-6],False
+710,Wheel Brakes maintain full pressure post-stop [H-2],Hydraulic system disengages prematurely [H-2],False
+711,Flight Crew applies Reverse thrust during normal landing [H-2],Flight Crew engages Steering control during high-speed approach [H-6],False
+712,BSCU Disarm command is not issued upon successful landing [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],False
+713,BSCU provides Arm and Set command too late for takeoff roll [H-1],Hydraulic system remains engaged after command ends [H-3],False
+714,Flight Crew maintains Manual control state unnecessarily long [H-2],Other subsystems trigger erroneous state transition [H-6],False
+715,Brake System Control Unit does not switch to alternate braking mode when required [H-3],BSCU Disarm command is not issued upon successful landing [H-2],True
+716,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+717,BSCU fault signal ignored during landing [H-2],BSCU fault falsely triggers emergency protocol [H-2],False
+718,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+719,BSCU triggers Brake too late after turbulence passes [H-6],BSCU fault signal ignored during landing [H-2],False
+720,BSCU triggers Brake too late after turbulence passes [H-6],Other subsystems trigger erroneous state transition [H-6],True
+721,BSCU power turns off during normal operation [H-2],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+722,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Flight Crew does not engage Steering control during taxi [H-3],False
+723,Flight Crew applies Reverse thrust during normal landing [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+724,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+725,Hydraulic Controller fails to provide adequate pressure [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+726,BSCU power turns off during normal operation [H-2],Autobrake deceleration rate change too late for necessary correction [H-1],False
+727,Flight Crew does not engage Steering control during taxi [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+728,Hydraulic Controller does not open valves during Autobrake mode [H-3],BSCU fault signal ignored during landing [H-2],False
+729,Hydraulic Controller does not open valves during Autobrake mode [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+730,Flight Crew omits BSCU mode check during pre-flight [H-1],Flight Crew neglects reverse thrust check during systems test [H-6],False
+731,Autobrake disengages prematurely during emergency braking [H-3],BSCU fault signal ignored during landing [H-2],False
+732,Hydraulic Controller fails to provide adequate pressure [H-3],Hydraulic system remains engaged after command ends [H-3],True
+733,Wheels provide inaccurate Wheel Speed data [H-6],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+734,BSCU engages Autobrake mode during normal taxi [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+735,Autobrake engages without command during manual operation [H-2],BSCU fault signal ignored during landing [H-2],True
+736,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Hydraulic system disengages prematurely [H-2],True
+737,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Autobrake deceleration rate change too late for necessary correction [H-1],True
+738,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Hydraulic system remains engaged after command ends [H-3],False
+739,Hydraulic Controller does not open valves during Autobrake mode [H-3],Hydraulic Controller closes valves during critical braking [H-3],True
+740,Hydraulic Controller closes valves during critical braking [H-3],Manual Braking State not entered after system fault detection [H-6],True
+741,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Hydraulic Controller does not open valves during Autobrake mode [H-3],False
+742,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+743,BSCU provides Arm and Set command prematurely before required conditions [H-1],Autobrake deceleration rate change too late for necessary correction [H-1],False
+744,Flight Crew applies Reverse thrust during normal landing [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+745,Hydraulic Controller closes valves during critical braking [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+746,Hydraulic Controller fails to provide adequate pressure [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+747,Wheel Brakes maintain full pressure post-stop [H-2],BSCU fault falsely triggers emergency protocol [H-2],False
+748,Flight Crew engages Steering control during high-speed approach [H-6],Wheel Brakes maintain full pressure post-stop [H-2],False
+749,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+750,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU fault signal ignored during landing [H-2],False
+751,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+752,Flight Crew does not engage Steering control during taxi [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+753,Autobrake Controller does not provide Brake command during emergency landing [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+754,BSCU provides Arm and Set command prematurely before required conditions [H-1],Brake System Control Unit switches to alternate mode without necessity [H-2],True
+755,Hydraulic Controller provides excessive pressure to brakes [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+756,BSCU power turns off during normal operation [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],False
+757,Flight Crew applies Reverse thrust during normal landing [H-2],Hydraulic Controller closes valves during critical braking [H-3],False
+758,Flight Crew maintains Manual control state unnecessarily long [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+759,BSCU power does not turn off during system fault [H-2],BSCU fault signal ignored during landing [H-2],True
+760,BSCU provides Arm and Set command prematurely before required conditions [H-1],Hydraulic system disengages prematurely [H-2],False
+761,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Flight Crew engages Steering control during high-speed approach [H-6],True
+762,Autobrake Controller provides Brake command during takeoff roll [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+763,Hydraulic Controller provides excessive pressure to brakes [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+764,BSCU provides Arm and Set command prematurely before required conditions [H-1],Flight Crew does not engage Steering control during taxi [H-3],False
+765,Flight Crew applies Reverse thrust during normal landing [H-2],Hydraulic Controller opens valves too early before receiving Brake command [H-3],False
+766,BSCU does not engage Autobrake mode when required [H-1],Hydraulic Controller does not open valves during Autobrake mode [H-3],False
+767,BSCU power turns off during normal operation [H-2],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+768,Autobrake Controller does not provide Brake command during emergency landing [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+769,Flight Crew conducts BSCU mode change mid-flight [H-1],Flight Crew applies reverse thrust out of sequence [H-6],True
+770,BSCU does not engage Autobrake mode when required [H-1],Flight Crew neglects reverse thrust check during systems test [H-6],False
+771,BSCU provides Arm and Set command too late for takeoff roll [H-1],Manual Braking State not entered after system fault detection [H-6],False
+772,BSCU provides Arm and Set command prematurely before required conditions [H-1],Hydraulic system remains engaged after command ends [H-3],False
+773,BSCU triggers Brake too early upon detecting turbulence [H-6],Flight Crew neglects reverse thrust check during systems test [H-6],True
+774,BSCU does not engage Autobrake mode when required [H-1],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+775,BSCU does not engage Autobrake mode when required [H-1],BSCU fault signal ignored during landing [H-2],False
+776,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Other subsystems trigger erroneous state transition [H-6],False
+777,Autobrake engages without command during manual operation [H-2],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+778,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Wheel Brakes provide inconsistent braking power [H-3],False
+779,Flight Crew conducts BSCU mode change mid-flight [H-1],BSCU fault signal ignored during landing [H-2],True
+780,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+781,Autobrake deceleration rate change too late for necessary correction [H-1],Manual Braking State not entered after system fault detection [H-6],False
+782,BSCU engages Autobrake mode during normal taxi [H-3],Hydraulic system remains engaged after command ends [H-3],True
+783,Hydraulic Controller fails to provide adequate pressure [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+784,Other subsystems do not receive Manual Controls from Flight Crew [H-6],BSCU fault signal ignored during landing [H-2],False
+785,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+786,Flight Crew applies Reverse thrust during normal landing [H-2],BSCU Disarm command is not issued upon successful landing [H-2],True
+787,BSCU provides Arm and Set command prematurely before required conditions [H-1],BSCU Disarm command is not issued upon successful landing [H-2],False
+788,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Hydraulic system remains engaged after command ends [H-3],False
+789,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+790,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU Disarm command is not issued upon successful landing [H-2],False
+791,Flight Crew applies Reverse thrust during normal landing [H-2],BSCU Disarm command is issued before landing completion [H-2],False
+792,Autobrake Controller stops providing Brake command too early during landing [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+793,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU Disarm command is not issued upon successful landing [H-2],False
+794,BSCU Disarm command is issued before landing completion [H-2],BSCU fault falsely triggers emergency protocol [H-2],False
+795,BSCU Disarm command is not issued upon successful landing [H-2],Wheel Brakes maintain full pressure post-stop [H-2],True
+796,Other subsystems receive erroneous Manual Controls causing hazard [H-6],BSCU Disarm command is issued before landing completion [H-2],False
+797,BSCU power does not turn off during system fault [H-2],Wheels provide inaccurate Wheel Speed data [H-6],False
+798,BSCU Disarm command is issued before landing completion [H-2],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+799,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],True
+800,Wheels do not provide feedback for Wheel Speed [H-6],Hydraulic Controller fails to provide adequate pressure [H-3],False
+801,BSCU provides Arm and Set command prematurely before required conditions [H-1],Flight Crew neglects reverse thrust check during systems test [H-6],False
+802,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+803,BSCU power turns off during normal operation [H-2],Autobrake disengages prematurely during emergency braking [H-3],True
+804,Hydraulic Controller provides excessive pressure to brakes [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+805,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+806,Flight Crew engages Steering control during high-speed approach [H-6],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+807,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+808,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+809,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+810,BSCU provides Arm and Set command too late for takeoff roll [H-1],BSCU fault falsely triggers emergency protocol [H-2],False
+811,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+812,Autobrake engages without command during manual operation [H-2],Hydraulic system disengages prematurely [H-2],False
+813,"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",Other subsystems fail to revert to safe state post-anomaly [H-6],True
+814,Autobrake Controller stops providing Brake command too early during landing [H-3],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+815,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Wheels do not provide feedback for Wheel Speed [H-6],False
+816,Hydraulic Controller closes valves during critical braking [H-3],BSCU power turns off during normal operation [H-2],False
+817,Brake System Control Unit switches to alternate mode without necessity [H-2],BSCU triggers Brake too late after turbulence passes [H-6],False
+818,Autobrake Controller does not provide Brake command during emergency landing [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+819,Hydraulic Controller does not open valves during Autobrake mode [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+820,Autobrake Controller stops providing Brake command too early during landing [H-3],Hydraulic Controller does not open valves during Autobrake mode [H-3],True
+821,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+822,Hydraulic Controller provides excessive pressure to brakes [H-3],Autobrake deceleration rate set incorrectly [H-1],True
+823,Wheel Brakes maintain full pressure post-stop [H-2],Autobrake deceleration rate set incorrectly [H-1],True
+824,Flight Crew engages Steering control during high-speed approach [H-6],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+825,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+826,Flight Crew applies Reverse thrust during normal landing [H-2],BSCU fault signal ignored during landing [H-2],False
+827,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+828,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+829,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+830,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Flight Crew applies reverse thrust out of sequence [H-6],True
+831,Autobrake Controller stops providing Brake command too early during landing [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+832,BSCU engages Autobrake mode during normal taxi [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],True
+833,BSCU power does not turn off during system fault [H-2],Autobrake deceleration rate set incorrectly [H-1],False
+834,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],True
+835,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Flight Crew applies reverse thrust out of sequence [H-6],True
+836,BSCU provides Arm and Set command prematurely before required conditions [H-1],BSCU Disarm command is issued before landing completion [H-2],False
+837,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU does not engage Autobrake mode when required [H-1],False
+838,Autobrake Controller does not provide Brake command during emergency landing [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+839,Autobrake disengages prematurely during emergency braking [H-3],Manual Braking State not entered after system fault detection [H-6],False
+840,BSCU Disarm command is not issued upon successful landing [H-2],Hydraulic system disengages prematurely [H-2],True
+841,Flight Crew does not engage Steering control during taxi [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+842,Autobrake Controller provides Brake command during takeoff roll [H-3],Other subsystems trigger erroneous state transition [H-6],False
+843,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU engages Autobrake mode during normal taxi [H-3],False
+844,Flight Crew omits BSCU mode check during pre-flight [H-1],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+845,Flight Crew maintains Manual control state unnecessarily long [H-2],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+846,Flight Crew maintains Manual control state unnecessarily long [H-2],Hydraulic system disengages prematurely [H-2],False
+847,Flight Crew does not engage Steering control during taxi [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+848,BSCU power does not turn off during system fault [H-2],Autobrake disengages prematurely during emergency braking [H-3],False
+849,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+850,BSCU does not engage Autobrake mode when required [H-1],Flight Crew engages Steering control during high-speed approach [H-6],False
+851,BSCU provides Arm and Set command prematurely before required conditions [H-1],Wheel Brakes maintain full pressure post-stop [H-2],False
+852,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+853,BSCU does not engage Autobrake mode when required [H-1],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+854,Hydraulic Controller closes valves during critical braking [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+855,BSCU provides Arm and Set command too late for takeoff roll [H-1],BSCU power turns off during normal operation [H-2],False
+856,BSCU engages Autobrake mode during normal taxi [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+857,Autobrake Controller stops providing Brake command too early during landing [H-3],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+858,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Wheels provide inaccurate Wheel Speed data [H-6],False
+859,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Wheels do not provide feedback for Wheel Speed [H-6],True
+860,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU power does not turn off during system fault [H-2],False
+861,Flight Crew omits BSCU mode check during pre-flight [H-1],Autobrake deceleration rate change too late for necessary correction [H-1],True
+862,BSCU triggers Brake too early upon detecting turbulence [H-6],Autobrake engages without command during manual operation [H-2],True
+863,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+864,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Hydraulic Controller does not open valves during Autobrake mode [H-3],False
+865,BSCU power turns off during normal operation [H-2],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+866,BSCU provides Arm and Set command too late for takeoff roll [H-1],Autobrake engages without command during manual operation [H-2],False
+867,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Flight Crew does not engage Steering control during taxi [H-3],False
+868,Wheels provide inaccurate Wheel Speed data [H-6],Autobrake deceleration rate change too late for necessary correction [H-1],False
+869,BSCU power turns off during normal operation [H-2],Wheel Brakes provide inconsistent braking power [H-3],False
+870,Autobrake Controller does not provide Brake command during emergency landing [H-3],Flight Crew applies Reverse thrust during normal landing [H-2],False
+871,Manual Braking State not entered after system fault detection [H-6],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+872,BSCU power turns off during normal operation [H-2],Flight Crew does not engage Steering control during taxi [H-3],False
+873,Wheels provide inaccurate Wheel Speed data [H-6],Hydraulic Controller fails to provide adequate pressure [H-3],False
+874,Hydraulic Controller closes valves during critical braking [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+875,BSCU provides Arm and Set command too late for takeoff roll [H-1],Wheel Brakes maintain full pressure post-stop [H-2],False
+876,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+877,Hydraulic Controller does not open valves during Autobrake mode [H-3],Other subsystems trigger erroneous state transition [H-6],False
+878,Flight Crew does not engage Steering control during taxi [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+879,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Hydraulic Controller closes valves during critical braking [H-3],False
+880,Manual Braking State not entered after system fault detection [H-6],Hydraulic system remains engaged after command ends [H-3],False
+881,BSCU provides Arm and Set command too late for takeoff roll [H-1],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+882,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Flight Crew engages Steering control during high-speed approach [H-6],False
+883,BSCU engages Autobrake mode during normal taxi [H-3],Wheels provide inaccurate Wheel Speed data [H-6],False
+884,Brake System Control Unit switches to alternate mode without necessity [H-2],Autobrake disengages prematurely during emergency braking [H-3],False
+885,BSCU provides Arm and Set command prematurely before required conditions [H-1],BSCU fault falsely triggers emergency protocol [H-2],False
+886,Wheel Brakes provide inconsistent braking power [H-3],Hydraulic system remains engaged after command ends [H-3],True
+887,Brake System Control Unit does not switch to alternate braking mode when required [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+888,Flight Crew maintains Manual control state unnecessarily long [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+889,BSCU Disarm command is issued before landing completion [H-2],Autobrake deceleration rate set incorrectly [H-1],False
+890,Hydraulic Controller does not open valves during Autobrake mode [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+891,Autobrake Controller provides Brake command during takeoff roll [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+892,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Flight Crew does not utilize Reverse thrust on slippery runway [H-1],False
+893,Hydraulic Controller opens valves too early before receiving Brake command [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+894,BSCU power does not turn off during system fault [H-2],Flight Crew does not engage Steering control during taxi [H-3],False
+895,Wheel Brakes provide inconsistent braking power [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+896,Autobrake Controller does not provide Brake command during emergency landing [H-3],Flight Crew enters Manual control state too late after Autobrake failure [H-3],True
+897,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU Disarm command is issued before landing completion [H-2],False
+898,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Hydraulic Controller fails to provide adequate pressure [H-3],False
+899,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+900,BSCU triggers Brake too early upon detecting turbulence [H-6],BSCU fault falsely triggers emergency protocol [H-2],True
+901,BSCU provides Arm and Set command too late for takeoff roll [H-1],Autobrake disengages prematurely during emergency braking [H-3],False
+902,BSCU power does not turn off during system fault [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+903,BSCU power turns off during normal operation [H-2],Manual Braking State not entered after system fault detection [H-6],False
+904,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Manual Braking State not entered after system fault detection [H-6],False
+905,Flight Crew applies Reverse thrust during normal landing [H-2],Flight Crew enters Manual control state too late after Autobrake failure [H-3],False
+906,BSCU triggers Brake too late after turbulence passes [H-6],Flight Crew neglects reverse thrust check during systems test [H-6],True
+907,BSCU engages Autobrake mode during normal taxi [H-3],BSCU power does not turn off during system fault [H-2],False
+908,BSCU Disarm command is not issued upon successful landing [H-2],BSCU Disarm command is issued before landing completion [H-2],False
+909,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Flight Crew engages Steering control during high-speed approach [H-6],True
+910,BSCU power turns off during normal operation [H-2],Autobrake deceleration rate set incorrectly [H-1],False
+911,"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",Hydraulic system remains engaged after command ends [H-3],False
+912,BSCU engages Autobrake mode during normal taxi [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+913,Flight Crew conducts BSCU mode change mid-flight [H-1],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+914,Hydraulic Controller does not open valves during Autobrake mode [H-3],BSCU Disarm command is not issued upon successful landing [H-2],False
+915,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+916,Hydraulic Controller closes valves during critical braking [H-3],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],True
+917,BSCU power turns off during normal operation [H-2],BSCU Disarm command is not issued upon successful landing [H-2],True
+918,Autobrake deceleration rate set incorrectly [H-1],Manual Braking State not entered after system fault detection [H-6],True
+919,Autobrake Controller provides Brake command during takeoff roll [H-3],Wheel Brakes provide inconsistent braking power [H-3],False
+920,BSCU power does not turn off during system fault [H-2],Wheels do not provide feedback for Wheel Speed [H-6],False
+921,Autobrake Controller does not provide Brake command during emergency landing [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+922,Hydraulic Controller closes valves during critical braking [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+923,Autobrake deceleration rate change too late for necessary correction [H-1],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+924,BSCU engages Autobrake mode during normal taxi [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+925,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Autobrake deceleration rate set incorrectly [H-1],False
+926,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Wheel Brakes provide inconsistent braking power [H-3],True
+927,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+928,Flight Crew applies Reverse thrust during normal landing [H-2],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+929,BSCU engages Autobrake mode during normal taxi [H-3],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+930,Flight Crew omits BSCU mode check during pre-flight [H-1],Hydraulic system disengages prematurely [H-2],False
+931,BSCU power turns off during normal operation [H-2],Hydraulic system remains engaged after command ends [H-3],False
+932,Autobrake Controller provides Brake command during takeoff roll [H-3],Flight Crew does not engage Steering control during taxi [H-3],False
+933,Hydraulic Controller closes valves during critical braking [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+934,Autobrake Controller provides Brake command during takeoff roll [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+935,BSCU does not engage Autobrake mode when required [H-1],BSCU engages Autobrake mode during normal taxi [H-3],False
+936,Flight Crew does not engage Steering control during taxi [H-3],Other subsystems trigger erroneous state transition [H-6],False
+937,Autobrake Controller provides Brake command during takeoff roll [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+938,Flight Crew maintains Manual control state unnecessarily long [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],False
+939,BSCU Disarm command is issued before landing completion [H-2],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+940,Flight Crew omits BSCU mode check during pre-flight [H-1],Wheel Brakes maintain full pressure post-stop [H-2],False
+941,Hydraulic Controller does not open valves during Autobrake mode [H-3],Autobrake engages without command during manual operation [H-2],False
+942,Flight Crew does not engage Steering control during taxi [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+943,Brake System Control Unit switches to alternate mode without necessity [H-2],BSCU fault signal ignored during landing [H-2],True
+944,Autobrake engages without command during manual operation [H-2],Manual Braking State not entered after system fault detection [H-6],True
+945,Flight Crew maintains Manual control state unnecessarily long [H-2],BSCU power turns off during normal operation [H-2],False
+946,Hydraulic Controller closes valves during critical braking [H-3],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+947,Hydraulic Controller provides excessive pressure to brakes [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+948,Autobrake Controller provides Brake command during takeoff roll [H-3],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+949,BSCU provides Arm and Set command too late for takeoff roll [H-1],Flight Crew applies reverse thrust out of sequence [H-6],False
+950,Flight Crew conducts BSCU mode change mid-flight [H-1],Autobrake engages without command during manual operation [H-2],True
+951,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU power does not turn off during system fault [H-2],False
+952,Hydraulic Controller does not open valves during Autobrake mode [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+953,Other subsystems do not receive Manual Controls from Flight Crew [H-6],BSCU fault falsely triggers emergency protocol [H-2],False
+954,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+955,Autobrake Controller provides Brake command during takeoff roll [H-3],Hydraulic Controller does not open valves during Autobrake mode [H-3],False
+956,BSCU does not engage Autobrake mode when required [H-1],Wheel Brakes maintain full pressure post-stop [H-2],False
+957,BSCU provides Arm and Set command too late for takeoff roll [H-1],BSCU triggers Brake too late after turbulence passes [H-6],True
+958,Hydraulic Controller provides excessive pressure to brakes [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+959,Autobrake Controller stops providing Brake command too early during landing [H-3],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+960,Flight Crew maintains Manual control state unnecessarily long [H-2],BSCU Disarm command is not issued upon successful landing [H-2],True
+961,Manual Braking State not entered after system fault detection [H-6],Flight Crew neglects reverse thrust check during systems test [H-6],True
+962,BSCU power turns off during normal operation [H-2],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+963,Autobrake deceleration rate set incorrectly [H-1],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+964,BSCU Disarm command is not issued upon successful landing [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+965,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Autobrake deceleration rate set incorrectly [H-1],False
+966,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Autobrake engages without command during manual operation [H-2],False
+967,BSCU triggers Brake too late after turbulence passes [H-6],Hydraulic system remains engaged after command ends [H-3],False
+968,Wheel Brakes provide inconsistent braking power [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+969,Flight Crew enters Manual control state too late after Autobrake failure [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+970,Wheels do not provide feedback for Wheel Speed [H-6],Autobrake engages without command during manual operation [H-2],False
+971,Wheels do not provide feedback for Wheel Speed [H-6],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+972,BSCU Disarm command is issued before landing completion [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+973,BSCU engages Autobrake mode during normal taxi [H-3],BSCU fault signal ignored during landing [H-2],True
+974,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Hydraulic system remains engaged after command ends [H-3],False
+975,Autobrake Controller does not provide Brake command during emergency landing [H-3],Autobrake Controller stops providing Brake command too early during landing [H-3],True
+976,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+977,Autobrake Controller stops providing Brake command too early during landing [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],False
+978,Autobrake Controller provides Brake command during takeoff roll [H-3],Hydraulic Controller opens valves too early before receiving Brake command [H-3],True
+979,BSCU triggers Brake too late after turbulence passes [H-6],Autobrake deceleration rate set incorrectly [H-1],False
+980,Flight Crew applies Reverse thrust during normal landing [H-2],BSCU power does not turn off during system fault [H-2],False
+981,Flight Crew engages Steering control during high-speed approach [H-6],Autobrake disengages prematurely during emergency braking [H-3],False
+982,BSCU does not engage Autobrake mode when required [H-1],Flight Crew conducts BSCU mode change mid-flight [H-1],True
+983,Flight Crew maintains Manual control state unnecessarily long [H-2],Wheels do not provide feedback for Wheel Speed [H-6],False
+984,BSCU triggers Brake too early upon detecting turbulence [H-6],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+985,Flight Crew applies Reverse thrust during normal landing [H-2],Wheels provide inaccurate Wheel Speed data [H-6],False
+986,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+987,BSCU engages Autobrake mode during normal taxi [H-3],Hydraulic Controller opens valves too early before receiving Brake command [H-3],True
+988,Flight Crew does not engage Steering control during taxi [H-3],Hydraulic system disengages prematurely [H-2],False
+989,Other subsystems receive erroneous Manual Controls causing hazard [H-6],BSCU triggers Brake too late after turbulence passes [H-6],True
+990,Brake System Control Unit switches to alternate mode without necessity [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+991,Autobrake Controller provides Brake command during takeoff roll [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+992,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU power turns off during normal operation [H-2],False
+993,Flight Crew does not engage Steering control during taxi [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+994,Hydraulic Controller does not open valves during Autobrake mode [H-3],Hydraulic system remains engaged after command ends [H-3],True
+995,BSCU power turns off during normal operation [H-2],Wheels do not provide feedback for Wheel Speed [H-6],False
+996,Other subsystems trigger erroneous state transition [H-6],Flight Crew applies reverse thrust out of sequence [H-6],True
+997,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU provides Arm and Set command too late for takeoff roll [H-1],True
+998,Other subsystems trigger erroneous state transition [H-6],Flight Crew neglects reverse thrust check during systems test [H-6],True
+999,Flight Crew engages Steering control during high-speed approach [H-6],BSCU Disarm command is not issued upon successful landing [H-2],False
+1000,Hydraulic Controller fails to provide adequate pressure [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+1001,Wheels provide inaccurate Wheel Speed data [H-6],BSCU triggers Brake too early upon detecting turbulence [H-6],True
+1002,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+1003,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+1004,Brake System Control Unit switches to alternate mode without necessity [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+1005,Flight Crew engages Steering control during high-speed approach [H-6],Hydraulic system disengages prematurely [H-2],False
+1006,Manual Braking State not entered after system fault detection [H-6],BSCU fault signal ignored during landing [H-2],True
+1007,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+1008,Autobrake disengages prematurely during emergency braking [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+1009,Autobrake Controller stops providing Brake command too early during landing [H-3],Other subsystems trigger erroneous state transition [H-6],False
+1010,Wheel Brakes maintain full pressure post-stop [H-2],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+1011,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+1012,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+1013,Hydraulic Controller does not open valves during Autobrake mode [H-3],Manual Braking State not entered after system fault detection [H-6],False
+1014,BSCU does not engage Autobrake mode when required [H-1],Flight Crew applies Reverse thrust during normal landing [H-2],False
+1015,BSCU does not engage Autobrake mode when required [H-1],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+1016,BSCU engages Autobrake mode during normal taxi [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+1017,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],True
+1018,Hydraulic Controller fails to provide adequate pressure [H-3],Hydraulic system disengages prematurely [H-2],False
+1019,Wheels provide inaccurate Wheel Speed data [H-6],Flight Crew does not engage Steering control during taxi [H-3],False
+1020,BSCU provides Arm and Set command prematurely before required conditions [H-1],Flight Crew conducts BSCU mode change mid-flight [H-1],True
+1021,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Autobrake disengages prematurely during emergency braking [H-3],False
+1022,Flight Crew applies Reverse thrust during normal landing [H-2],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+1023,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+1024,BSCU does not engage Autobrake mode when required [H-1],BSCU power turns off during normal operation [H-2],False
+1025,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU power turns off during normal operation [H-2],False
+1026,BSCU Disarm command is not issued upon successful landing [H-2],Autobrake engages without command during manual operation [H-2],False
+1027,Wheels provide inaccurate Wheel Speed data [H-6],Hydraulic system remains engaged after command ends [H-3],False
+1028,Flight Crew does not engage Steering control during taxi [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+1029,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+1030,Flight Crew engages Steering control during high-speed approach [H-6],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+1031,Manual Braking State not entered after system fault detection [H-6],Flight Crew applies reverse thrust out of sequence [H-6],True
+1032,BSCU does not engage Autobrake mode when required [H-1],Flight Crew does not utilize Reverse thrust on slippery runway [H-1],False
+1033,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Autobrake engages without command during manual operation [H-2],False
+1034,Wheels provide inaccurate Wheel Speed data [H-6],Wheel Brakes provide inconsistent braking power [H-3],False
+1035,BSCU triggers Brake too early upon detecting turbulence [H-6],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+1036,Flight Crew maintains Manual control state unnecessarily long [H-2],Brake System Control Unit switches to alternate mode without necessity [H-2],True
+1037,BSCU Disarm command is not issued upon successful landing [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+1038,BSCU engages Autobrake mode during normal taxi [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+1039,Flight Crew applies Reverse thrust during normal landing [H-2],BSCU fault falsely triggers emergency protocol [H-2],False
+1040,Hydraulic Controller provides excessive pressure to brakes [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+1041,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+1042,Flight Crew maintains Manual control state unnecessarily long [H-2],BSCU power does not turn off during system fault [H-2],True
+1043,BSCU triggers Brake too early upon detecting turbulence [H-6],Hydraulic system disengages prematurely [H-2],False
+1044,BSCU power turns off during normal operation [H-2],Hydraulic Controller fails to provide adequate pressure [H-3],False
+1045,Autobrake Controller provides Brake command during takeoff roll [H-3],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+1046,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Hydraulic system remains engaged after command ends [H-3],False
+1047,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Autobrake engages without command during manual operation [H-2],False
+1048,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],BSCU Disarm command is not issued upon successful landing [H-2],False
+1049,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU engages Autobrake mode during normal taxi [H-3],False
+1050,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU power does not turn off during system fault [H-2],False
+1051,BSCU fault signal ignored during landing [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],True
+1052,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+1053,Autobrake Controller does not provide Brake command during emergency landing [H-3],Hydraulic system remains engaged after command ends [H-3],False
+1054,BSCU power turns off during normal operation [H-2],Hydraulic system disengages prematurely [H-2],True
+1055,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+1056,Flight Crew enters Manual control state too late after Autobrake failure [H-3],BSCU Disarm command is not issued upon successful landing [H-2],False
+1057,Flight Crew maintains Manual control state unnecessarily long [H-2],Autobrake disengages prematurely during emergency braking [H-3],False
+1058,BSCU engages Autobrake mode during normal taxi [H-3],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+1059,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+1060,BSCU triggers Brake too late after turbulence passes [H-6],Wheel Brakes maintain full pressure post-stop [H-2],False
+1061,Flight Crew engages Steering control during high-speed approach [H-6],Other subsystems trigger erroneous state transition [H-6],False
+1062,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+1063,Autobrake disengages prematurely during emergency braking [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+1064,BSCU power does not turn off during system fault [H-2],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+1065,Flight Crew applies Reverse thrust during normal landing [H-2],BSCU power turns off during normal operation [H-2],False
+1066,Flight Crew applies Reverse thrust during normal landing [H-2],Autobrake deceleration rate set incorrectly [H-1],True
+1067,Flight Crew does not engage Steering control during taxi [H-3],BSCU fault signal ignored during landing [H-2],False
+1068,Autobrake disengages prematurely during emergency braking [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+1069,BSCU provides Arm and Set command prematurely before required conditions [H-1],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+1070,BSCU Disarm command is issued before landing completion [H-2],Hydraulic Controller fails to provide adequate pressure [H-3],False
+1071,BSCU engages Autobrake mode during normal taxi [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+1072,BSCU engages Autobrake mode during normal taxi [H-3],Hydraulic Controller provides excessive pressure to brakes [H-3],True
+1073,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Other subsystems trigger erroneous state transition [H-6],False
+1074,Hydraulic Controller provides excessive pressure to brakes [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+1075,Autobrake Controller stops providing Brake command too early during landing [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+1076,Autobrake deceleration rate change too late for necessary correction [H-1],Flight Crew applies reverse thrust out of sequence [H-6],False
+1077,Flight Crew maintains Manual control state unnecessarily long [H-2],Wheels provide inaccurate Wheel Speed data [H-6],False
+1078,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+1079,Flight Crew maintains Manual control state unnecessarily long [H-2],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+1080,Hydraulic Controller closes valves during critical braking [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+1081,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+1082,BSCU does not engage Autobrake mode when required [H-1],Hydraulic system remains engaged after command ends [H-3],False
+1083,Autobrake Controller does not provide Brake command during emergency landing [H-3],Manual Braking State not entered after system fault detection [H-6],True
+1084,Hydraulic Controller provides excessive pressure to brakes [H-3],Autobrake disengages prematurely during emergency braking [H-3],False
+1085,BSCU power does not turn off during system fault [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+1086,Autobrake Controller does not provide Brake command during emergency landing [H-3],Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],False
+1087,Flight Crew omits BSCU mode check during pre-flight [H-1],Other subsystems trigger erroneous state transition [H-6],False
+1088,BSCU provides Arm and Set command prematurely before required conditions [H-1],BSCU power turns off during normal operation [H-2],False
+1089,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+1090,Autobrake engages without command during manual operation [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],True
+1091,BSCU fault falsely triggers emergency protocol [H-2],Hydraulic system disengages prematurely [H-2],True
+1092,Flight Crew conducts BSCU mode change mid-flight [H-1],Manual Braking State not entered after system fault detection [H-6],True
+1093,Hydraulic Controller closes valves during critical braking [H-3],BSCU triggers Brake too late after turbulence passes [H-6],False
+1094,BSCU does not engage Autobrake mode when required [H-1],Flight Crew omits BSCU mode check during pre-flight [H-1],True
+1095,BSCU triggers Brake too early upon detecting turbulence [H-6],Autobrake disengages prematurely during emergency braking [H-3],False
+1096,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Flight Crew enters Manual control state too late after Autobrake failure [H-3],False
+1097,Hydraulic Controller fails to provide adequate pressure [H-3],Manual Braking State not entered after system fault detection [H-6],True
+1098,Hydraulic Controller does not open valves during Autobrake mode [H-3],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+1099,Autobrake Controller does not provide Brake command during emergency landing [H-3],BSCU provides Arm and Set command prematurely before required conditions [H-1],False
+1100,Brake System Control Unit switches to alternate mode without necessity [H-2],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+1101,BSCU provides Arm and Set command prematurely before required conditions [H-1],Flight Crew applies Reverse thrust during normal landing [H-2],False
+1102,Flight Crew engages Steering control during high-speed approach [H-6],Manual Braking State not entered after system fault detection [H-6],True
+1103,Hydraulic Controller closes valves during critical braking [H-3],Wheels provide inaccurate Wheel Speed data [H-6],False
+1104,Flight Crew neglects reverse thrust check during systems test [H-6],Flight Crew applies reverse thrust out of sequence [H-6],True
+1105,"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",Flight Crew applies reverse thrust out of sequence [H-6],True
+1106,Autobrake deceleration rate set incorrectly [H-1],Autobrake deceleration rate change too late for necessary correction [H-1],True
+1107,Flight Crew conducts BSCU mode change mid-flight [H-1],Hydraulic system remains engaged after command ends [H-3],False
+1108,BSCU does not engage Autobrake mode when required [H-1],Flight Crew applies reverse thrust out of sequence [H-6],False
+1109,Autobrake Controller does not provide Brake command during emergency landing [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+1110,Flight Crew maintains Manual control state unnecessarily long [H-2],BSCU fault signal ignored during landing [H-2],False
+1111,Flight Crew omits BSCU mode check during pre-flight [H-1],Hydraulic system remains engaged after command ends [H-3],False
+1112,BSCU Disarm command is not issued upon successful landing [H-2],Wheel Brakes provide inconsistent braking power [H-3],False
+1113,Other subsystems receive erroneous Manual Controls causing hazard [H-6],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",True
+1114,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Flight Crew neglects reverse thrust check during systems test [H-6],True
+1115,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Wheel Brakes provide inconsistent braking power [H-3],False
+1116,Hydraulic system remains engaged after command ends [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+1117,BSCU provides Arm and Set command prematurely before required conditions [H-1],Hydraulic Controller opens valves too early before receiving Brake command [H-3],True
+1118,BSCU provides Arm and Set command too late for takeoff roll [H-1],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+1119,BSCU does not engage Autobrake mode when required [H-1],Autobrake deceleration rate change too late for necessary correction [H-1],True
+1120,Autobrake Controller provides Brake command during takeoff roll [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+1121,Autobrake Controller stops providing Brake command too early during landing [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+1122,Hydraulic Controller provides excessive pressure to brakes [H-3],Hydraulic system disengages prematurely [H-2],False
+1123,BSCU triggers Brake too early upon detecting turbulence [H-6],Autobrake deceleration rate change too late for necessary correction [H-1],False
+1124,BSCU provides Arm and Set command too late for takeoff roll [H-1],Flight Crew maintains Manual control state unnecessarily long [H-2],False
+1125,BSCU fault falsely triggers emergency protocol [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+1126,Other subsystems do not receive Manual Controls from Flight Crew [H-6],BSCU triggers Brake too late after turbulence passes [H-6],True
+1127,Wheels do not provide feedback for Wheel Speed [H-6],Flight Crew neglects reverse thrust check during systems test [H-6],False
+1128,Flight Crew engages Steering control during high-speed approach [H-6],BSCU Disarm command is issued before landing completion [H-2],True
+1129,Hydraulic Controller does not open valves during Autobrake mode [H-3],Hydraulic Controller fails to provide adequate pressure [H-3],True
+1130,Flight Crew conducts BSCU mode change mid-flight [H-1],Flight Crew neglects reverse thrust check during systems test [H-6],False
+1131,Flight Crew maintains Manual control state unnecessarily long [H-2],Flight Crew conducts BSCU mode change mid-flight [H-1],True
+1132,Other subsystems fail to revert to safe state post-anomaly [H-6],Other subsystems trigger erroneous state transition [H-6],True
+1133,Hydraulic Controller does not open valves during Autobrake mode [H-3],Flight Crew conducts BSCU mode change mid-flight [H-1],False
+1134,BSCU provides Arm and Set command too late for takeoff roll [H-1],Wheels do not provide feedback for Wheel Speed [H-6],False
+1135,Brake System Control Unit switches to alternate mode without necessity [H-2],Manual Braking State not entered after system fault detection [H-6],False
+1136,Wheels do not provide feedback for Wheel Speed [H-6],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",True
+1137,Hydraulic Controller fails to provide adequate pressure [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+1138,Flight Crew applies Reverse thrust during normal landing [H-2],Manual Braking State not entered after system fault detection [H-6],False
+1139,BSCU power does not turn off during system fault [H-2],BSCU triggers Brake too early upon detecting turbulence [H-6],False
+1140,Flight Crew applies Reverse thrust during normal landing [H-2],Wheel Brakes maintain full pressure post-stop [H-2],False
+1141,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+1142,Hydraulic Controller does not open valves during Autobrake mode [H-3],Autobrake deceleration rate change too late for necessary correction [H-1],False
+1143,Wheels provide inaccurate Wheel Speed data [H-6],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+1144,BSCU power does not turn off during system fault [H-2],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+1145,Hydraulic system remains engaged after command ends [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+1146,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Autobrake disengages prematurely during emergency braking [H-3],False
+1147,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Wheels do not provide feedback for Wheel Speed [H-6],False
+1148,BSCU power turns off during normal operation [H-2],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+1149,Flight Crew enters Manual control state too late after Autobrake failure [H-3],BSCU power does not turn off during system fault [H-2],False
+1150,Wheel Brakes provide inconsistent braking power [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+1151,Hydraulic Controller does not open valves during Autobrake mode [H-3],BSCU fault falsely triggers emergency protocol [H-2],False
+1152,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Wheel Brakes maintain full pressure post-stop [H-2],False
+1153,Brake System Control Unit switches to alternate mode without necessity [H-2],Other subsystems trigger erroneous state transition [H-6],True
+1154,BSCU provides Arm and Set command prematurely before required conditions [H-1],Wheels do not provide feedback for Wheel Speed [H-6],False
+1155,Other subsystems fail to revert to safe state post-anomaly [H-6],Flight Crew applies reverse thrust out of sequence [H-6],True
+1156,Flight Crew conducts BSCU mode change mid-flight [H-1],Autobrake deceleration rate set incorrectly [H-1],True
+1157,BSCU provides Arm and Set command prematurely before required conditions [H-1],Wheel Brakes provide inconsistent braking power [H-3],False
+1158,Autobrake Controller stops providing Brake command too early during landing [H-3],BSCU provides Arm and Set command too late for takeoff roll [H-1],False
+1159,Hydraulic Controller does not open valves during Autobrake mode [H-3],Wheel Brakes maintain full pressure post-stop [H-2],False
+1160,Flight Crew applies Reverse thrust during normal landing [H-2],Autobrake engages without command during manual operation [H-2],True
+1161,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+1162,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Flight Crew neglects reverse thrust check during systems test [H-6],True
+1163,BSCU provides Arm and Set command prematurely before required conditions [H-1],Other subsystems receive erroneous Manual Controls causing hazard [H-6],False
+1164,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Wheel Brakes maintain full pressure post-stop [H-2],False
+1165,Brake System Control Unit switches to alternate mode without necessity [H-2],Hydraulic Controller fails to provide adequate pressure [H-3],False
+1166,"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",Flight Crew neglects reverse thrust check during systems test [H-6],True
+1167,"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",BSCU fault signal ignored during landing [H-2],False
+1168,BSCU does not engage Autobrake mode when required [H-1],Wheels provide inaccurate Wheel Speed data [H-6],False
+1169,Hydraulic system disengages prematurely [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+1170,Autobrake Controller stops providing Brake command too early during landing [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+1171,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Other subsystems trigger erroneous state transition [H-6],False
+1172,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+1173,Autobrake Controller provides Brake command during takeoff roll [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+1174,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],Flight Crew neglects reverse thrust check during systems test [H-6],False
+1175,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],Autobrake deceleration rate set incorrectly [H-1],True
+1176,Other subsystems do not receive Manual Controls from Flight Crew [H-6],BSCU triggers Brake too early upon detecting turbulence [H-6],True
+1177,Hydraulic Controller closes valves during critical braking [H-3],Wheels do not provide feedback for Wheel Speed [H-6],False
+1178,Autobrake disengages prematurely during emergency braking [H-3],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+1179,Autobrake Controller stops providing Brake command too early during landing [H-3],Wheels provide inaccurate Wheel Speed data [H-6],False
+1180,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Autobrake disengages prematurely during emergency braking [H-3],True
+1181,BSCU engages Autobrake mode during normal taxi [H-3],BSCU Disarm command is not issued upon successful landing [H-2],False
+1182,Flight Crew conducts BSCU mode change mid-flight [H-1],BSCU fault falsely triggers emergency protocol [H-2],True
+1183,Brake System Control Unit switches to alternate mode without necessity [H-2],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",True
+1184,Autobrake Controller provides Brake command during takeoff roll [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+1185,Hydraulic Controller does not open valves during Autobrake mode [H-3],Flight Crew omits BSCU mode check during pre-flight [H-1],False
+1186,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+1187,Other subsystems do not receive Manual Controls from Flight Crew [H-6],Brake System Control Unit switches to alternate mode without necessity [H-2],False
+1188,BSCU does not engage Autobrake mode when required [H-1],Hydraulic Controller opens valves too early before receiving Brake command [H-3],False
+1189,Other subsystems receive erroneous Manual Controls causing hazard [H-6],Autobrake deceleration rate set incorrectly [H-1],False
+1190,Autobrake Controller stops providing Brake command too early during landing [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+1191,Hydraulic system disengages prematurely [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+1192,BSCU power turns off during normal operation [H-2],BSCU fault signal ignored during landing [H-2],True
+1193,Flight Crew applies Reverse thrust during normal landing [H-2],Hydraulic system disengages prematurely [H-2],False
+1194,BSCU provides Arm and Set command too late for takeoff roll [H-1],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+1195,BSCU fault signal ignored during landing [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],True
+1196,BSCU power turns off during normal operation [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+1197,Flight Crew does not engage Steering control during taxi [H-3],"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",False
+1198,BSCU provides Arm and Set command prematurely before required conditions [H-1],Hydraulic Controller does not open valves during Autobrake mode [H-3],False
+1199,Autobrake Controller does not provide Brake command during emergency landing [H-3],Hydraulic Controller closes valves during critical braking [H-3],True
+1200,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Brake System Control Unit does not switch to alternate braking mode when required [H-3],False
+1201,Brake System Control Unit does not switch to alternate braking mode when required [H-3],Hydraulic system remains engaged after command ends [H-3],True
+1202,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],False
+1203,Flight Crew does not engage Steering control during taxi [H-3],Autobrake disengages prematurely during emergency braking [H-3],True
+1204,Hydraulic system disengages prematurely [H-2],Flight Crew neglects reverse thrust check during systems test [H-6],False
+1205,Flight Crew applies Reverse thrust during normal landing [H-2],Hydraulic Controller does not open valves during Autobrake mode [H-3],False
+1206,Wheel Brakes maintain full pressure post-stop [H-2],Manual Braking State not entered after system fault detection [H-6],True
+1207,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU provides Arm and Set command prematurely before required conditions [H-1],False
+1208,Hydraulic Controller fails to provide adequate pressure [H-3],Flight Crew applies reverse thrust out of sequence [H-6],False
+1209,Flight Crew enters Manual control state too late after Autobrake failure [H-3],BSCU fault signal ignored during landing [H-2],False
+1210,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Hydraulic Controller opens valves too early before receiving Brake command [H-3],False
+1211,BSCU does not engage Autobrake mode when required [H-1],BSCU provides Arm and Set command too late for takeoff roll [H-1],False
+1212,Autobrake Controller provides Brake command during takeoff roll [H-3],Hydraulic Controller closes valves during critical braking [H-3],True
+1213,Autobrake Controller provides Brake command during takeoff roll [H-3],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+1214,Flight Crew does not engage Steering control during taxi [H-3],Manual Braking State not entered after system fault detection [H-6],False
+1215,BSCU fault falsely triggers emergency protocol [H-2],Flight Crew applies reverse thrust out of sequence [H-6],False
+1216,Autobrake Controller stops providing Brake command too early during landing [H-3],Autobrake deceleration rate set incorrectly [H-1],True
+1217,Autobrake engages without command during manual operation [H-2],Other subsystems fail to revert to safe state post-anomaly [H-6],False
+1218,BSCU does not engage Autobrake mode when required [H-1],Brake System Control Unit does not switch to alternate braking mode when required [H-3],True
+1219,BSCU provides Arm and Set command too late for takeoff roll [H-1],Hydraulic Controller opens valves too early before receiving Brake command [H-3],False
+1220,Flight Crew enters Manual control state too late after Autobrake failure [H-3],Flight Crew engages Steering control during high-speed approach [H-6],False
+1221,Flight Crew maintains Manual control state unnecessarily long [H-2],Hydraulic Controller fails to provide adequate pressure [H-3],False
+1222,Hydraulic Controller opens valves too early before receiving Brake command [H-3],Other subsystems do not receive Manual Controls from Flight Crew [H-6],False
+1223,Autobrake Controller provides Brake command during takeoff roll [H-3],BSCU does not engage Autobrake mode when required [H-1],False
+1224,BSCU does not engage Autobrake mode when required [H-1],BSCU fault falsely triggers emergency protocol [H-2],False

@@ -42,6 +42,9 @@ setup(
         'Tracker': 'https://github.com/blueskysolarracing/stpa/issues',
     },
     packages=find_packages(),
+    install_requires=[
+        'openai>=1.63.0,<2',
+    ],
     python_requires='>=3.11',
-    package_data={'stpa': ['py.typed']},
+    package_data={'stpa': ['py.typed', '**/*.png', '**/*.xml']},
 )

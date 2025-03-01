@@ -1,0 +1,50 @@
+BSCU Autobrake does not provide Brake during emergency landing [H-1]
+BSCU Autobrake provides Brake during taxiing [H-3]
+Crew does not power on BSCU when needed for braking [H-4]
+Flight Crew engages Reverse thrust too early before touchdown [H-1]
+Brake System engages WBS too long after stop is achieved [H-4]
+Hydraulic Controller does not open valves after brake command [H-2]
+BSCU switches to alternate mode without a fault in normal mode [H-2]
+Manual controls do not engage steering while taxiing [H-3]
+Anti-skid functionality not engaging in wet conditions [H-1]
+Wheel Brakes releasing too soon before complete stop [H-3]
+Flight Crew does not provide Manual Control action during emergency descent [H-1, L-1].
+Flight Crew stops Manual Override too soon before landing complete [H-6, L-1, L-2].
+Flight Crew provides Manual Control out of order during ice conditions [H-1, L-1].
+Hydraulic Controller maintains Valve operation too long in takeoff abort [H-3, L-2].
+Hydraulic Controller does not open Valve quickly during rejected landing [H-2, L-1].
+Hydraulic Controller continues operation despite system fault alert [H-2, L-1].
+**Flight Crew** provides **Reverse Thrust** during normal takeoff [H-3].
+**Flight Crew** provides **Manual Controls** out of correct sequence before touchdown [H-3].
+**Flight Crew** applies **Brake Pedal** too early in takeoff roll [H-6].
+**Wheel Brake Subsystem** stops transmitting **Wheel Speed** data too soon [H-4].
+**Manual Controls** are provided too late in response to a runway excursion alert [H-4].
+**Hydraulic Controller** provides incorrect **Valve Command** in icy conditions [H-4].
+**Flight Crew** provides **Brake Pedal** command prior to touchdown [H-4].
+**Manual Controls** conflict with automated **BSCU Command** during emergency [H-4].
+Autobrake Controller provides asymmetric Braking during crosswind conditions [H-1].
+Autobrake Controller engages while autopilot is active under manual control [H-7].
+Hydraulic Controller applies pressure out of sync during sequential stops [H-3]
+Flight Crew does not provide control actions to match weather conditions [H-2]
+Flight Crew fails to disengage Reverse Thrust when gear retracts [H-2]
+**Flight Crew** applies **Manual Controls** inappropriately during emergency [H-1, H-6].
+**Flight Crew** executes **Steer** too late leading to runway excursion [H-3].
+**Flight Crew** fails to power off **BSCU** after fault indication [H-6].
+**Flight Crew** applies **Brake** pedal too early causing instability [H-2].
+**BSCU** doesn't activate **Brake** in emergency descent [H-1, H-6].
+**Autobrake Controller** provides **Programmed decel rate** too aggressively, causing discomfort to passengers. [L-5]
+**Flight Crew** applies **Engine throttle** before full stop, risking collision with ground support. [H-4]
+**Hydraulic Controller** delays **Open/close valve** during icy conditions, reducing braking effectiveness. [H-4]
+**Hydraulic Controller** does not provide **Valve Closing** during hydraulic failure [H-2].
+**Flight Crew** does not power off **BSCU** during electrical anomalies [H-2].
+**Flight Crew** does not utilize **Reverse Thrust** in strong tailwind conditions [H-1].
+**Flight Crew** executes **Manual Control** intervention out of recommended sequence [H-5].
+Other Subsystems stop providing System modes command too soon in adverse weather [H-8].
+BSCU Autobrake provides Brake control action applied too long causing tire damage [H-2]
+Flight Crew provides Reverse Thrust during takeoff after V1 speed [H-1, H-2].
+BSCU power is not turned on during pre-flight checks [H-7]
+**Manual Controls** provide **reverse thrust** in flight **near a mountain** [H-6].
+**Flight Crew** stops providing **manual brake** too soon during **steep descent** [H-6].
+**Other Subsystems** initiate inappropriate **mode change** upon **brake failure** [H-2].
+**Manual Controls** are not provided **when approaching obstacles** [H-6].
+**Flight Crew** omits **reverse thrust** on icy **runway approach** [H-6].
