@@ -77,14 +77,14 @@ def main():
         )
 
     with open(FILTERED_RAW_UNSAFE_CONTROL_ACTIONS_PATH) as file:
-        lines = file.readlines()
+        lines = map(str.strip, file.readlines())
 
         raw_unsafe_control_actions.extend(
             zip(lines, repeat(QualityResponse.CORRECT_AND_USEFUL)),
         )
 
     with open(FILTERED_RAW_SCENARIOS_PATH) as file:
-        lines = file.readlines()
+        lines = map(str.strip, file.readlines())
 
         raw_scenarios.extend(
             zip(lines, repeat(QualityResponse.CORRECT_AND_USEFUL)),
