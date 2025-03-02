@@ -7,13 +7,13 @@ LOSSES = (
         'L-1', 'Two or more vehicles collide.'
     ),
     Loss(
-        'L-2', 'Vehicle collides with a non-fixed (mobile) obstacle.' 
+        'L-2', 'Vehicle collides with a non-fixed (mobile) obstacle.'
     ),
     Loss(
-        'L-3', 'Vehicle crashes into terrain (fixed obstacle).' 
+        'L-3', 'Vehicle crashes into terrain (fixed obstacle).'
     ),
     Loss(
-        'L-4', 'Vehicle occupants injured without a vehicle collision.' 
+        'L-4', 'Vehicle occupants injured without a vehicle collision.'
     ),
 )
 
