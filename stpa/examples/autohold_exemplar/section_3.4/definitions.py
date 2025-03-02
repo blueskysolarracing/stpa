@@ -1,0 +1,283 @@
+# type: ignore
+
+from stpa.definitions import (
+    Definition,         
+    UnsafeControlAction,
+    SystemLevelConstraintType1,
+    ScenarioType1,
+)
+
+
+UCAS_AUTO_HOLD = (
+    UnsafeControlAction(
+        name="UCA-AH-1",
+        source="Auto-Hold Module",
+        type_="Not providing {} is hazardous",
+        control_action="HOLD",
+        context="if AH is active and the vehicle comes to rest with the brake pedal on",
+        hazards=Definition.get_all("H-1", "H-2", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-2",
+        source="Auto-Hold Module",
+        type_="Providing {} is hazardous",
+        control_action="HOLD",
+        context="if driver is applying the accelerator",
+        hazards=Definition.get_all("H-1", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-3",
+        source="Auto-Hold Module",
+        type_="Providing {} is hazardous",
+        control_action="HOLD",
+        context="if the driver has inactivated AH",
+        hazards=Definition.get_all("H-1", "H-2", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-4",
+        source="Auto-Hold Module",
+        type_="Providing {} is hazardous",
+        control_action="HOLD",
+        context="if AH is DISABLED",
+        hazards=Definition.get_all("H-1", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-5",
+        source="Auto-Hold Module",
+        type_="Providing {} is hazardous",
+        control_action="HOLD",
+        context="if there is sufficient wheel torque",
+        hazards=Definition.get_all("H-1", "H-2", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-6",
+        source="Auto-Hold Module",
+        type_="Providing {} is hazardous",
+        control_action="HOLD",
+        context="if AH is ENABLED and vehicle is not at rest",
+        hazards=Definition.get_all("H-1", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-7",
+        source="Auto-Hold Module",
+        type_="Providing {} is hazardous",
+        control_action="HOLD",
+        context="if the required time at rest has not been met",
+        hazards=Definition.get_all("H-1", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-8",
+        source="Auto-Hold Module",
+        type_="Not providing {} is hazardous",
+        control_action="ADDITIONAL-PRESSURE",
+        context="if AH is in HOLD-MODE and vehicle is slipping",
+        hazards=Definition.get_all("H-1", "H-2", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-9",
+        source="Auto-Hold Module",
+        type_="Providing {} is hazardous",
+        control_action="ADDITIONAL-PRESSURE",
+        context="if AH is not in HOLD-MODE",
+        hazards=Definition.get_all("H-1", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-10",
+        source="Auto-Hold Module",
+        type_="Providing {} is hazardous",
+        control_action="ADDITIONAL-PRESSURE",
+        context="if it exceeds brake system specs",
+        hazards=Definition.get_all("H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-11",
+        source="Auto-Hold Module",
+        type_="Not providing {} is hazardous",
+        control_action="RELEASE",
+        context="if driver has commanded sufficient wheel torque via the accelerator pedal",
+        hazards=Definition.get_all("H-1", "H-2", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-12",
+        source="Auto-Hold Module",
+        type_="Providing {} is hazardous",
+        control_action="RELEASE",
+        context="if AH is in HOLD-MODE and driver has not commanded sufficient wheel torque",
+        hazards=Definition.get_all("H-1", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-13",
+        source="Auto-Hold Module",
+        type_="Providing {} is hazardous",
+        control_action="RELEASE",
+        context="before there is sufficient wheel torque",
+        hazards=Definition.get_all("H-1", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-14",
+        source="Auto-Hold Module",
+        type_="Not providing {} is hazardous",
+        control_action="RELEASE",
+        context="if the driver DISABLES AH",
+        hazards=Definition.get_all("H-1", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-15",
+        source="Auto-Hold Module",
+        type_="It is hazardous not to provide {}",
+        control_action="APPLY EPB",
+        context="if the driver has released AH w/o sufficient wheel torque or brake pedal pressure",
+        hazards=Definition.get_all("H-1", "H-2", "H-3"),
+    ),
+    UnsafeControlAction(
+        name="UCA-AH-16",
+        source="Auto-Hold Module",
+        type_="It is hazardous for {} to be provided",
+        control_action="APPLY EPB",
+        context="if AH is not in HOLD-MODE",
+        hazards=Definition.get_all("H-1", "H-3"),
+    ),
+)
+
+
+SAFETY_CONSTRAINTS_AUTO_HOLD = (
+    SystemLevelConstraintType1(
+        name="SC-AH-1",
+        system="Auto-Hold Module",
+        enforcement_condition="AH shall not provide any commands if the feature is not ENABLED. Rationale: UCA-AH-3,4",
+        hazards=[],
+    ),
+    SystemLevelConstraintType1(
+        name="SC-AH-2",
+        system="Auto-Hold Module",
+        enforcement_condition="AH shall not provide commands, other than HOLD, if it is not in HOLD-MODE. AH may interfere with the vehicle dynamics and prevent the driver from fully utilizing the service brake. Rationale: UCA-AH-4,9,16",
+        hazards=[],
+    ),
+    SystemLevelConstraintType1(
+        name="SC-AH-3",
+        system="Auto-Hold Module",
+        enforcement_condition="AH shall not interfere with the driver’s ability to accelerate. AH may interfere with the vehicle dynamics and prevent the driver from fully utilizing the service brake. AH should not compromise the UCA-AH-2,5,11",
+        hazards=[],
+    ),
+    SystemLevelConstraintType1(
+        name="SC-AH-4",
+        system="Auto-Hold Module",
+        enforcement_condition="AH shall not enter HOLD-MODE while the vehicle is in motion. Rationale: UCA-AH-5,6",
+        hazards=[],
+    ),
+    SystemLevelConstraintType1(
+        name="SC-AH-5",
+        system="Auto-Hold Module",
+        enforcement_condition="AH must keep the vehicle at a stand-still when in HOLD-MODE until the RELEASE criteria are satisfied. AH may interfere with the vehicle dynamics when it is not expected by the driver. Rationale: UCA-AH-8,12,13,15",
+        hazards=[],
+    ),
+    SystemLevelConstraintType1(
+        name="SC-AH-6",
+        system="Auto-Hold Module",
+        enforcement_condition="AH should issue RELEASE when the criteria are met.",
+        hazards=[],
+    ),
+    SystemLevelConstraintType1(
+        name="SC-AH-7",
+        system="Auto-Hold Module",
+        enforcement_condition="AH should not compromise the mechanical integrity of the vehicle. Rationale: UCA-AH-11",
+        hazards=[],
+    ),
+    SystemLevelConstraintType1(
+        name="SC-AH-8",
+        system="Auto-Hold Module",
+        enforcement_condition="AH must engage and disengage when the driver normally expects. Rationale: UCA-AH-10, UCA-AH-1,14",
+        hazards=[],
+    ),
+)
+
+
+
+uca_ah_8 = next(uca for uca in UCAS_AUTO_HOLD if uca.name == "UCA-AH-8")
+
+LOSS_SCENARIOS_AUTO_HOLD = (
+    ScenarioType1(
+        name="Scenario 1 for UCA-AH-8",
+        description="Algorithm does not respond quickly when the Process Model changes in response to the wheels rotating.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 2 for UCA-AH-8",
+        description="AH does not correctly combine data from the different wheel speed sensors and does not detect the vehicle slipping.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 3 for UCA-AH-8",
+        description="While in HOLD-MODE, the AH computer restarts and initializes to HOLD-MODE: No and thus does not take responsibility for holding the vehicle.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 4 for UCA-AH-8",
+        description="Wheel speed sensors degrade over time from poor connections and/or corrosion and do not detect the vehicle slipping.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 5 for UCA-AH-8",
+        description="Wheel speed sensors return data at an insufficient rate.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 6 for UCA-AH-8",
+        description="Wheel speed sensors do not detect sufficiently small/slow changes in value. E.g. the wheel speed sensors do not detect very slow rolling.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 7 for UCA-AH-8",
+        description="Seals in the brake system degrade over time such that braking pressure cannot be sustained to hold the vehicle.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 8 for UCA-AH-8",
+        description="Brake lines degrade due to weathering, salt, wear & tear, etc. and are not able to withstand the maximum pressure.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 9 for UCA-AH-8",
+        description="The pump physically degrades over time and is not able to reach its original max pressure.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 10 for UCA-AH-8",
+        description="The pump's seals degrade and begin to leak fluid when increasing pressure.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 11 for UCA-AH-8",
+        description="The pump does not have an adequate power supply to reach the required pressure.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+    ScenarioType1(
+        name="Scenario 12 for UCA-AH-8",
+        description="The pump does not stop increasing brake pressure and compromises the integrity of the hydraulic system.",
+        unsafe_control_action=uca_ah_8,
+        result=None,
+        hazard=None,
+    ),
+)
