@@ -1,0 +1,26 @@
+,scenario_0,scenario_1,equality
+0,Brake system power-off too early interrupting necessary deceleration. [H-4.1],"BSCU fails to disarm post-landing, resulting in abrupt brake engagement. [H-4.1]",False
+1,Brake system power-off too early interrupting necessary deceleration. [H-4.1],Late crew response to autobrake anomaly leads to braking inefficiencies. [H-4.1],False
+2,Crew's incorrect power-off decision causes unnecessary brake failure. [H-4.1],"Aircraft navigation error leads to unanticipated altitude drop, risking separation. [H-1]",False
+3,"Crew misinterprets autobrake feedback, delaying power-off decision. [H-4.1]",Late crew response to autobrake anomaly leads to braking inefficiencies. [H-4.1],True
+4,Hydraulic failure leads to asymmetric brake application. [H-4.2],Ground radar failure results in aircraft collision with ground object. [H-4],False
+5,"Aircraft autopilot malfunctions mid-flight, leading to loss of minimum separation standards. [H-1]",Structural failure of aircraft wing results in loss of airframe integrity. [H-2],False
+6,In-flight control system reset results in temporary loss of navigation capabilities. [H-4],Tire burst during landing roll causes deviation from runway. [H-3],False
+7,Satellite communication error prevents scientific data collection. [H-5],Late crew response to autobrake anomaly leads to braking inefficiencies. [H-4.1],False
+8,Hydraulic leak prevents adequate brake pressure application. [H-4.1],Failure in autobrake controller logic leads to brake application error during landing. [H-4.1],True
+9,Control system failure at nuclear plant leads to dangerous material release. [H-8],GPS failure results in UAV deviating from mission path. [H-4],False
+10,Autobrake controller incorrectly activates in normal takeoff scenario. [H-4.3],Ground radar failure results in aircraft collision with ground object. [H-4],False
+11,"Cargo aircraft inadvertently releases cargo mid-flight, violating separation standards. [H-1]",Pilot error in thrust control leads to unsafe proximity to terrain during descent. [H-6],False
+12,Structural failure of aircraft wing results in loss of airframe integrity. [H-2],Brake system power-off too early interrupting necessary deceleration. [H-4.1],False
+13,Control system failure at nuclear plant leads to dangerous material release. [H-8],"Aircraft navigation error leads to unanticipated altitude drop, risking separation. [H-1]",False
+14,"Sensor misalignment reports incorrect ground proximity, leading to hazards. [H-4]",Pilot error in thrust control leads to unsafe proximity to terrain during descent. [H-6],False
+15,"Aircraft autopilot malfunctions mid-flight, leading to loss of minimum separation standards. [H-1]",Late feedback to BSCU results in delayed braking upon touchdown. [H-4.1],False
+16,"Aircraft navigation error leads to unanticipated altitude drop, risking separation. [H-1]",Hydraulic control failure results in insufficient braking power application. [H-4.1],False
+17,Communication lag leads to failure in timely satellite repositioning for data collection. [H-5],Ground radar failure results in aircraft collision with ground object. [H-4],False
+18,Late feedback to BSCU results in delayed braking upon touchdown. [H-4.1],"Cargo aircraft inadvertently releases cargo mid-flight, violating separation standards. [H-1]",False
+19,Ground proximity system failure leads to aircraft nearing other ground objects. [H-4],"Aircraft navigation error leads to unanticipated altitude drop, risking separation. [H-1]",False
+20,Autobrake controller incorrectly activates in normal takeoff scenario. [H-4.3],Actuator delay results in insufficient braking force during landing. [H-4.1],False
+21,Aircraft taxiing system error causes deviation from designated taxiway. [H-3],Terrain detection issue causes aircraft to drift too close to a mountain. [H-6],True
+22,Crew's incorrect power-off decision causes unnecessary brake failure. [H-4.1],"Wet runway impacts braking efficiency, causing deceleration issues. [H-4.1]",True
+23,"Miscommunication between crew and BSCU, failing to apply brakes during landing roll. [H-4.1]","Cargo aircraft inadvertently releases cargo mid-flight, violating separation standards. [H-1]",False
+24,"Aircraft autopilot malfunctions mid-flight, leading to loss of minimum separation standards. [H-1]",Autobrake system erroneously applies breaks during takeoff. [H-4.3],False

@@ -116,3 +116,32 @@ python scripts/experiments/raw-equality-annotations.py gpt-3.5-turbo 42 1 \
     scripts/experiments/data/chapter-2-raw-unsafe-control-action-raw-equality-annotations.csv \
     scripts/experiments/data/chapter-2-raw-scenario-raw-equality-annotations.csv
 ```
+
+Compare with human annotations.
+
+```console
+# Chapter 2
+python scripts/experiments/human-annotations.py \
+    scripts/experiments/data/chapter-2-raw-unsafe-control-action-quality-human-annotations.csv \
+    scripts/experiments/data/chapter-2-raw-unsafe-control-action-quality-annotations.csv \
+    scripts/experiments/data/chapter-2-raw-unsafe-control-action-raw-equality-human-annotations.csv \
+    scripts/experiments/data/chapter-2-raw-unsafe-control-action-raw-equality-annotations.csv \
+    scripts/experiments/data/chapter-2-raw-scenario-quality-human-annotations.csv \
+    scripts/experiments/data/chapter-2-raw-scenario-quality-annotations.csv \
+    scripts/experiments/data/chapter-2-raw-scenario-raw-equality-human-annotations.csv \
+    scripts/experiments/data/chapter-2-raw-scenario-raw-equality-annotations.csv \
+    > scripts/experiments/data/chapter-2-human-annotations.json
+```
+
+Evaluate two generation schemes.
+
+```console
+# Chapter 2
+python scripts/experiments/evaluations.py \
+    scripts/experiments/data/chapter-2-raw-syntheses.json \
+    scripts/experiments/data/chapter-2-filtered-raw-unsafe-control-actions.txt \
+    scripts/experiments/data/chapter-2-filtered-raw-scenarios.txt \
+    scripts/experiments/data/chapter-2-raw-unsafe-control-action-quality-human-annotations.csv \
+    scripts/experiments/data/chapter-2-raw-scenario-quality-human-annotations.csv \
+    > scripts/experiments/data/chapter-2-evaluations.json
+```

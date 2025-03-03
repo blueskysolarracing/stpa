@@ -1,0 +1,10 @@
+{"filtered-raw-scenarios": {"CORRECT_AND_USEFUL": 44,
+                            "CORRECT_BUT_USELESS": 4,
+                            "INCORRECT": 2},
+ "filtered-raw-unsafe-control-actions": {"CORRECT_AND_USEFUL": 34,
+                                         "CORRECT_BUT_USELESS": 5,
+                                         "INCORRECT": 11},
+ "raw-scenarios": {"CORRECT_AND_USEFUL": 49, "CORRECT_BUT_USELESS": 1},
+ "raw-unsafe-control-actions": {"CORRECT_AND_USEFUL": 41,
+                                "CORRECT_BUT_USELESS": 4,
+                                "INCORRECT": 5}}

@@ -1,0 +1,101 @@
+,unsafe_control_action,quality
+0,BSCU fault signal ignored during landing [H-2],CORRECT_AND_USEFUL
+1,"Manual Braking State entered unnecessarily, disrupting sequence [H-6]",CORRECT_AND_USEFUL
+2,Other Subsystems stop providing System modes command too soon in adverse weather [H-8].,INCORRECT
+3,Flight Crew applies Reverse thrust during normal landing [H-2],INCORRECT
+4,"Hydraulic Controller continues operation despite system fault alert [H-2, L-1].",CORRECT_AND_USEFUL
+5,BSCU Autobrake does not provide Brake during emergency landing [H-1],CORRECT_AND_USEFUL
+6,Autobrake Controller provides Brake command during takeoff roll [H-3],CORRECT_AND_USEFUL
+7,**Manual Controls** are provided too late in response to a runway excursion alert [H-4].,CORRECT_AND_USEFUL
+8,BSCU power does not turn off during system fault [H-2],INCORRECT
+9,Flight Crew fails to disengage Reverse Thrust when gear retracts [H-2],INCORRECT
+10,**Manual Controls** conflict with automated **BSCU Command** during emergency [H-4].,INCORRECT
+11,Flight Crew enters Manual control state too late after Autobrake failure [H-3],CORRECT_AND_USEFUL
+12,Hydraulic Controller does not open valves after brake command [H-2],CORRECT_AND_USEFUL
+13,BSCU switches to alternate mode without a fault in normal mode [H-2],CORRECT_BUT_USELESS
+14,**Flight Crew** provides **Brake Pedal** command prior to touchdown [H-4].,CORRECT_AND_USEFUL
+15,Hydraulic system disengages prematurely [H-2],CORRECT_AND_USEFUL
+16,Flight Crew neglects reverse thrust check during systems test [H-6],CORRECT_AND_USEFUL
+17,BSCU Autobrake provides Brake control action applied too long causing tire damage [H-2],CORRECT_BUT_USELESS
+18,Hydraulic Controller applies pressure out of sync during sequential stops [H-3],CORRECT_AND_USEFUL
+19,Wheel Brakes maintain full pressure post-stop [H-2],CORRECT_BUT_USELESS
+20,BSCU triggers Brake too early upon detecting turbulence [H-6],INCORRECT
+21,Wheels provide inaccurate Wheel Speed data [H-6],CORRECT_AND_USEFUL
+22,Flight Crew omits BSCU mode check during pre-flight [H-1],CORRECT_AND_USEFUL
+23,**Flight Crew** stops providing **manual brake** too soon during **steep descent** [H-6].,CORRECT_AND_USEFUL
+24,**Flight Crew** executes **Steer** too late leading to runway excursion [H-3].,CORRECT_AND_USEFUL
+25,Flight Crew applies reverse thrust out of sequence [H-6],CORRECT_BUT_USELESS
+26,"**BSCU** doesn't activate **Brake** in emergency descent [H-1, H-6].",INCORRECT
+27,BSCU Disarm command is not issued upon successful landing [H-2],CORRECT_BUT_USELESS
+28,**Hydraulic Controller** does not provide **Valve Closing** during hydraulic failure [H-2].,CORRECT_AND_USEFUL
+29,Flight Crew conducts BSCU mode change mid-flight [H-1],CORRECT_AND_USEFUL
+30,Flight Crew does not utilize Reverse thrust on slippery runway [H-1],CORRECT_AND_USEFUL
+31,Other subsystems trigger erroneous state transition [H-6],INCORRECT
+32,Wheel Brakes releasing too soon before complete stop [H-3],CORRECT_AND_USEFUL
+33,"Hydraulic Controller maintains Valve operation too long in takeoff abort [H-3, L-2].",CORRECT_AND_USEFUL
+34,Autobrake Controller provides asymmetric Braking during crosswind conditions [H-1].,CORRECT_AND_USEFUL
+35,Hydraulic system remains engaged after command ends [H-3],CORRECT_AND_USEFUL
+36,**Manual Controls** are not provided **when approaching obstacles** [H-6].,CORRECT_AND_USEFUL
+37,Crew does not power on BSCU when needed for braking [H-4],CORRECT_AND_USEFUL
+38,"**Flight Crew** applies **Engine throttle** before full stop, risking collision with ground support. [H-4]",CORRECT_AND_USEFUL
+39,Hydraulic Controller does not open valves during Autobrake mode [H-3],CORRECT_AND_USEFUL
+40,Wheel Brakes provide inconsistent braking power [H-3],CORRECT_AND_USEFUL
+41,Flight Crew engages Steering control during high-speed approach [H-6],CORRECT_AND_USEFUL
+42,Autobrake deceleration rate change too late for necessary correction [H-1],CORRECT_AND_USEFUL
+43,Manual Braking State not entered after system fault detection [H-6],CORRECT_AND_USEFUL
+44,Other subsystems do not receive Manual Controls from Flight Crew [H-6],CORRECT_AND_USEFUL
+45,**Flight Crew** provides **Reverse Thrust** during normal takeoff [H-3].,CORRECT_AND_USEFUL
+46,"Flight Crew stops Manual Override too soon before landing complete [H-6, L-1, L-2].",CORRECT_AND_USEFUL
+47,"Flight Crew does not provide Manual Control action during emergency descent [H-1, L-1].",CORRECT_AND_USEFUL
+48,BSCU provides Arm and Set command prematurely before required conditions [H-1],CORRECT_AND_USEFUL
+49,Autobrake engages without command during manual operation [H-2],CORRECT_AND_USEFUL
+50,**Flight Crew** omits **reverse thrust** on icy **runway approach** [H-6].,CORRECT_AND_USEFUL
+51,Other subsystems fail to revert to safe state post-anomaly [H-6],CORRECT_AND_USEFUL
+52,Autobrake Controller provides Brake command too late after a rejected takeoff [H-3],CORRECT_AND_USEFUL
+53,BSCU Autobrake provides Brake during taxiing [H-3],CORRECT_BUT_USELESS
+54,BSCU power turns off during normal operation [H-2],CORRECT_AND_USEFUL
+55,Autobrake deceleration rate set incorrectly [H-1],CORRECT_AND_USEFUL
+56,Anti-skid functionality not engaging in wet conditions [H-1],INCORRECT
+57,**Flight Crew** applies **Brake Pedal** too early in takeoff roll [H-6].,CORRECT_AND_USEFUL
+58,Flight Crew does not engage Steering control during taxi [H-3],CORRECT_AND_USEFUL
+59,"Flight Crew provides Manual Control out of order during ice conditions [H-1, L-1].",CORRECT_AND_USEFUL
+60,Brake System Control Unit does not switch to alternate braking mode when required [H-3],CORRECT_AND_USEFUL
+61,BSCU engages Autobrake mode during normal taxi [H-3],CORRECT_AND_USEFUL
+62,BSCU provides Arm and Set command too late for takeoff roll [H-1],CORRECT_AND_USEFUL
+63,**Flight Crew** provides **Manual Controls** out of correct sequence before touchdown [H-3].,CORRECT_AND_USEFUL
+64,**Flight Crew** applies **Brake** pedal too early causing instability [H-2].,INCORRECT
+65,Other subsystems receive erroneous Manual Controls causing hazard [H-6],CORRECT_BUT_USELESS
+66,"**Flight Crew** applies **Manual Controls** inappropriately during emergency [H-1, H-6].",CORRECT_BUT_USELESS
+67,BSCU fault falsely triggers emergency protocol [H-2],CORRECT_AND_USEFUL
+68,**Flight Crew** executes **Manual Control** intervention out of recommended sequence [H-5].,CORRECT_AND_USEFUL
+69,Wheels do not provide feedback for Wheel Speed [H-6],CORRECT_AND_USEFUL
+70,Autobrake Controller does not provide Brake command during emergency landing [H-3],CORRECT_AND_USEFUL
+71,**Manual Controls** provide **reverse thrust** in flight **near a mountain** [H-6].,CORRECT_AND_USEFUL
+72,Manual controls do not engage steering while taxiing [H-3],CORRECT_AND_USEFUL
+73,"Flight Crew provides Reverse Thrust during takeoff after V1 speed [H-1, H-2].",CORRECT_AND_USEFUL
+74,Flight Crew engages Reverse thrust too early before touchdown [H-1],CORRECT_AND_USEFUL
+75,**Flight Crew** does not utilize **Reverse Thrust** in strong tailwind conditions [H-1].,INCORRECT
+76,Brake System Control Unit switches to alternate mode without necessity [H-2],CORRECT_AND_USEFUL
+77,**Hydraulic Controller** provides incorrect **Valve Command** in icy conditions [H-4].,CORRECT_AND_USEFUL
+78,"**Autobrake Controller** provides **Programmed decel rate** too aggressively, causing discomfort to passengers. [L-5]",INCORRECT
+79,Flight Crew does not provide control actions to match weather conditions [H-2],CORRECT_BUT_USELESS
+80,"Hydraulic Controller does not open Valve quickly during rejected landing [H-2, L-1].",INCORRECT
+81,Hydraulic Controller fails to provide adequate pressure [H-3],CORRECT_AND_USEFUL
+82,BSCU Disarm command is issued before landing completion [H-2],CORRECT_AND_USEFUL
+83,**Flight Crew** does not power off **BSCU** during electrical anomalies [H-2].,CORRECT_AND_USEFUL
+84,**Other Subsystems** initiate inappropriate **mode change** upon **brake failure** [H-2].,CORRECT_AND_USEFUL
+85,BSCU does not engage Autobrake mode when required [H-1],CORRECT_AND_USEFUL
+86,Brake System engages WBS too long after stop is achieved [H-4],CORRECT_AND_USEFUL
+87,Autobrake Controller engages while autopilot is active under manual control [H-7].,INCORRECT
+88,Flight Crew maintains Manual control state unnecessarily long [H-2],CORRECT_AND_USEFUL
+89,**Wheel Brake Subsystem** stops transmitting **Wheel Speed** data too soon [H-4].,INCORRECT
+90,"**Hydraulic Controller** delays **Open/close valve** during icy conditions, reducing braking effectiveness. [H-4]",CORRECT_AND_USEFUL
+91,Hydraulic Controller opens valves too early before receiving Brake command [H-3],CORRECT_AND_USEFUL
+92,Hydraulic Controller provides inadequate valve opening during maximum required braking [H-3],CORRECT_AND_USEFUL
+93,Hydraulic Controller provides excessive pressure to brakes [H-3],CORRECT_AND_USEFUL
+94,BSCU triggers Brake too late after turbulence passes [H-6],INCORRECT
+95,Autobrake disengages prematurely during emergency braking [H-3],CORRECT_AND_USEFUL
+96,BSCU power is not turned on during pre-flight checks [H-7],CORRECT_AND_USEFUL
+97,Autobrake Controller stops providing Brake command too early during landing [H-3],CORRECT_AND_USEFUL
+98,Hydraulic Controller closes valves during critical braking [H-3],CORRECT_AND_USEFUL
+99,**Flight Crew** fails to power off **BSCU** after fault indication [H-6].,CORRECT_AND_USEFUL
